@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Elan from '../../components/events page/Elan';
+import Esummit from '../../components/events page/Esummit';
+import Tedex from '../../components/events page/Tedex';
+import Milan from '../../components/events page/Milan';
+import AlumniDay from '../../components/events page/AlumniDay';
+import Diesta from '../../components/events page/Diesta';
+import Zozimus from '../../components/events page/Zozimus';
+export function getStaticPaths() {
+  return [
+    { params: { event: 'elan' } },
+    { params: { event: 'e-summit' } },
+    { params: { event: 'milan' } },
+    { params: { event: 'ted-talks' } },
+    { params: { event: 'abhyant' } },
+    { params: { event: 'diesta' } },
+    { params: { event: 'zozimus' } },
+    { params: { event: 'almuni-day' } },
+  ];
+}
+const { event } = Astro.params;
+
+const titles = {
+  elan: 'Elan & nVision',
+  'e-summit': 'E-Summit',
+  'ted-talks': 'Ted-Talks',
+  abhyant: 'Abhyant',
+  diesta: 'Diesta',
+  'alumni-day': 'Almuni Day',
+  zozimus: 'Zozimus',
+};
+---
+
+<Layout
+  title={titles[event]}
+  gutter={false}
+  blackOn={false}
+  disableAnimation={false}
+>
+  {event === 'ted-talks' && <Tedex client:visible />}
+  {event === 'elan' && <Elan client:visible />}
+  {event === 'e-summit' && <Esummit client:visible />}
+  {event === 'milan' && <Milan client:visible />}
+  {event === 'almuni-day' && <AlumniDay client:visible />}
+  {event === 'diesta' && <Diesta client:visible />}
+  {event === 'zozimus' && <Zozimus client:visible />}
+</Layout>

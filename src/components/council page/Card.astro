@@ -1,0 +1,11 @@
+---
+export interface Props{
+    imgUrl?: string,
+    title: string
+} 
+const {title} = Astro.props
+---
+
+<div class={`data-council=${title} bg-p lg:w-[8rem] cursor-pointer border-g border-2 px-0 py-3 rounded-2xl flex flex-col items-center`}>
+    <h2 class="text-white mt-2 text-[0.9rem] text-center">{title} Council</h2>
+</div>

@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/freshers-guide/Card.astro";
+---
+
+<Layout title="Documents & Constitutions">
+  <div class="p-8 md:p-12">
+    <div class="">
+      <div class="bg-r h-[6px] w-full self-center mb-6">
+        <div class="bg-p h-[6px] w-16 ml-16"></div>
+      </div>
+    </div>
+    <h1
+      class="font-bold text-center text-5xl md:text-7xl md:text-left lg:text-8xl"
+    >
+      Documents & Constitutions
+    </h1>
+  </div>
+  <div>
+    <div class="pb-8 px-8">
+      <div
+        class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:mt-8"
+      >
+        <Card
+          title={"Gymkhana Constitution"}
+          link={"/documents/gymkhana constituion.pdf"}
+          img={"https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/iith_syornf.png"}
+          alt={"Gymkhana IITH Logo"}
+        />
+        <Card
+          title={"Elan Fest Docs (For Students)"}
+          link={"/documents/Elan & ηVision 2023 Documentation.pdf"}
+          img={"https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/elan_lkitmb.png"}
+          alt={"IITH logo"}
+        />
+        <Card
+          title={"E-Cell Prospectus"}
+          link={"/documents/E-Cell IITH Prospectus.pdf"}
+          img={"https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/ecell_jcjlth.png"}
+          alt="E-Cell IITH logo"
+        />
+        <Card
+          title={"Student's Handbook"}
+          link={"/documents/Academic Handbook 2022 (50th senate).pdf"}
+          img={"https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/iith_syornf.png"}
+          alt="IITH logo"
+        />
+        <Card
+          title={"Acad FAQ Docs 2021"}
+          link={"/documents/Acad-FAQ-PhD-17-05-2021.pdf"}
+          img="https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/iith_syornf.png"
+          alt="IITH logo"
+        />
+        <!-- <Card title={'UG Course Booklet'} link={'/documents/Acad-FAQ-PhD-17-05-2021.pdf'}/>
+            <Card title={'PG Course Booklet'} link={'/documents/Acad-FAQ-PhD-17-05-2021.pdf'}/> -->
+      </div>
+    </div>
+  </div>
+</Layout>

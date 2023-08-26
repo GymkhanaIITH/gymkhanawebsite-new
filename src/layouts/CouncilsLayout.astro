@@ -1,0 +1,139 @@
+---
+import Layout from "./Layout.astro";
+
+export interface Props {
+  title: string;
+  desc: string;
+  imgUrl: string;
+}
+
+const { title, desc, imgUrl }: Props = Astro.props;
+---
+
+<Layout title="Councils">
+  <div class="bg-p p-5 m-4 rounded-xl lg:rounded-[1.25rem] lg:fixed z-10">
+    <div
+      class="council-menu hidden overflow-scroll md:overflow-hidden gap-4 p-2 lg:flex lg:py-0 lg:justify-between bg-p z-20"
+    >
+      <a href="/councils/general"
+        ><button
+          data-council="General"
+          class={`council-button  ${
+            title === "General" ? "bg-w text-p" : "bg-p text-white"
+          } text-xl  py-2 px-3 rounded-xl`}>General Council</button
+        >
+      </a>
+      <a href="/councils/cultural"
+        ><button
+          data-council="cultural"
+          class={`council-button  ${
+            title === "Cultural" ? "bg-w text-p" : "bg-p text-white"
+          } text-xl  py-2 px-3 rounded-xl`}>Cultural Council</button
+        >
+      </a>
+      <a href="/councils/scitech"
+        ><button
+          data-council="scitech"
+          class={`council-button ${
+            title === "Scitech" ? "bg-w text-p" : "bg-p text-white"
+          } text-xl  py-2 px-3 rounded-xl`}>Sci-Tech Council</button
+        >
+      </a>
+      <a href="/councils/media"
+        ><button
+          data-council="media"
+          class={`council-button  ${
+            title === "Media" ? "bg-w text-p" : "bg-p text-white"
+          }  text-xl py-2 px-3 rounded-xl`}>Media Council</button
+        >
+      </a>
+      <a href="/councils/mess"
+        ><button
+          data-council="mess"
+          class={`council-button  ${
+            title === "Mess" ? "bg-w text-p" : "bg-p text-white"
+          }  text-xl py-2 px-3 rounded-xl`}>Mess Council</button
+        >
+      </a>
+      <a href="/councils/sports"
+        ><button
+          data-council="sports"
+          class={`council-button ${
+            title === "Sports" ? "bg-w text-p" : "bg-p text-white"
+          }  text-xl  py-2 px-3 rounded-xl`}>Sports Council</button
+        >
+      </a>
+    </div>
+
+    <!-- For mobile -->
+    <select
+      name="council"
+      class="text-md lg:hidden p-3 bg-white text-p overflow-hidden rounded-md dropdown"
+    >
+      <option value="general">General Council</option>
+      <option value="cultural">Cultural Council</option>
+      <option value="media">Media Council</option>
+      <option value="scitech">Sci-Tech Council</option>
+      <option value="sports">Sports Council</option>
+      <option value="mess">Mess Council</option>
+    </select>
+  </div>
+  <div
+    class="p-6 pt-0 grid grid-cols-1 justify-items-center lg:justify-items-start lg:grid-cols-5 lg:mt-[8rem]"
+  >
+    <div class="lg:col-start-1 lg:col-end-6">
+      <h2
+        class="title text-black text-center lg:text-left font-bold text-4xl pt-3 lg:px-[4rem] lg:pt-[2rem] lg:text-5xl lg:font-bold"
+      >
+        {title} Council
+      </h2>
+    </div>
+    <div
+      class="lg:col-start-4 lg:col-span-2 lg:w-full lg:justify-center lg:flex lg:flex-col"
+    >
+      <img
+        src={imgUrl}
+        alt="academic"
+        class="council-img h-32 py-3 lg:h-[13rem] object-contain"
+      />
+    </div>
+    <div
+      class="lg:col-start-1 lg:col-span-3 lg:row-start-2 lg:px-[4rem] lg:mt-5"
+    >
+      <p class="council-desc lg:text-[1.125rem]">
+        {desc}
+      </p>
+    </div>
+  </div>
+  <div
+    class="p-6 px-0 pb-[4rem] pt-0 grid grid-cols-1 justify-items-center lg:px-[5.5rem] lg:justify-items-start lg"
+  >
+    <slot />
+  </div>
+</Layout>
+
+<script is:inline defer="true">
+  let options = document.querySelector("select");
+  window.addEventListener("load", () => {
+    newvalue = window.location.href.split("/");
+    if (newvalue[newvalue.length - 1] === "") {
+      newvalue.pop();
+    }
+    newvalue = newvalue[newvalue.length - 1];
+    options.value = newvalue;
+  });
+  options.addEventListener("change", () => {
+    console.log(options.value);
+    url = new URL(window.location.href);
+
+    new_url = url.toString().split("/");
+    if (new_url[new_url.length - 1] === "") {
+      new_url.pop();
+    }
+    new_url.pop();
+    new_url.push(options.value);
+    new_url = new_url.join("/");
+
+    window.location.href = new_url;
+  });
+</script>

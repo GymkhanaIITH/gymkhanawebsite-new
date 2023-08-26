@@ -1,0 +1,220 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OfficeBearerCard from '../components/OfficeBearerCard.astro';
+import gym2018 from '../constants/gymkhanaData/2018.json';
+import gym2019 from '../constants/gymkhanaData/2019.json';
+import gym2020 from '../constants/gymkhanaData/2020.json';
+import gym2021 from '../constants/gymkhanaData/2021.json';
+import gym2022 from '../constants/gymkhanaData/2022.json';
+import gym2023 from '../constants/gymkhanaData/2023.json';
+import Loader from '../components/Loader.astro';
+
+
+
+interface card {
+  name: string;
+  title: string;
+  imgUrl?: string;
+  linkedin?: string;
+  email?: string;
+  mobile?: string;
+}
+
+interface officeBearersObject {
+  [key: string]: card[];
+}
+
+const officeBearers: officeBearersObject = {
+  2023: gym2023,
+  2022: gym2022,
+  2021: gym2021,
+  2020: gym2020,
+  2019: gym2019,
+  2018: gym2018,
+};
+
+const imgId = {
+  'President': 'president.jpg',
+  'General Secretary 1': 'gen1.jpg',
+  'General Secretary 2': 'gen2.jpg',
+  'Student Welfare Secretary': 'welfare.jpg',
+  'Media and Public relations Secretary': 'media.jpg',
+  'Media and PR Secretary': 'media.jpg',
+  'Academic Affairs Secretary': 'acad.jpg',
+  'Science and Technology Secretary': 'sci.jpg',
+  'Cultural and Literary Secretary': 'cultural.jpg',
+  'Sports Secretary': 'sports.jpg',
+  'Undergraduate Representative 1': 'ug1.jpg',
+  'Undergraduate Representative 2': 'ug2.jpg',
+  'Postgraduate Representative': 'pg.jpg',
+  'Postgraduate Representative 1': 'pg1.jpg',
+  'Postgraduate Representative 2': 'pg2.jpg',
+  'Doctoral representative': 'phd.jpg',
+  'Doctoral representative 1': 'phd1.jpg',
+  'Doctoral representative 2': 'phd2.jpg',
+  'Mess Secretary': 'mess.jpg',
+  'Milan Overall Coordinator': 'milan.jpg',
+  'Transport Head': 'transport.jpg',
+  'Alumni Secretary': 'alumni.jpg',
+  'Transport Head 1': 'transport1.jpg',
+  'Transport Head 2': 'transport2.jpg',
+  'Elan & nVision Overall Coordinator': 'elan.jpg',
+};
+---
+
+<Loader client:load title='Office Bearers IITH Gymkhana' text='Loading Images...'/>
+<Layout title="Office Bearers" blackOn={true}>
+  <div class="py-8 px-6 bg-p">
+    <ul class="lg:flex flex-row gap-8 hidden text-white text-xl button-parent">
+      <li class="">
+        <button data-year="2023" class="year-button active inactive"
+          >Current Office</button>
+      </li>
+      <li class="">
+        <button data-year="2022" class="year-button inactive">2022-23</button>
+      </li>
+      <li class="">
+        <button data-year="2021" class="year-button inactive">2021-22</button>
+      </li>
+      <li class="">
+        <button data-year="2020" class="year-button inactive">2020-21</button>
+      </li>
+      <li class="">
+        <button data-year="2019" class="year-button inactive">2019-20</button>
+      </li>
+      <li class="">
+        <button data-year="2018" class="year-button inactive">2018-19</button>
+      </li>
+    </ul>
+    <select
+      name="year"
+      class="text-md lg:hidden p-3 bg-white text-p overflow-hidden rounded-md dropdown"
+    >
+      <option value="2023" class="">Current Office</option>
+      <option value="2022">2022-23</option>
+      <option value="2021">2021-22</option>
+      <option value="2020">2020-21</option>
+      <option value="2019">2019-20</option>
+      <option value="2018">2018-19</option>
+    </select>
+  </div>
+  <div class="bg-p p-6 pt-0">
+    <div class="bg-r h-[6px] w-full self-center mb-6">
+      <div class="bg-g h-[6px] w-16 ml-16"></div>
+    </div>
+    <h2
+      class="text-white font-semibold text-4xl pt-3 lg:px-[4rem] lg:pt-[2rem] lg:text-5xl lg:font-bold"
+    >
+      Office Bearers <span class="year-text">2023-24</span>
+    </h2>
+    {
+      Object.keys(officeBearers).map((year, index) => {
+        return (
+          <section
+            class={`year-${year} cards-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 justify-items-center gap-6 lg:px-[1rem] xl:px-[4rem] lg:pt-4 lg:mt-7 mt-7`}
+          >
+            {officeBearers[year].map((card, index) => (
+              <OfficeBearerCard
+                initial={index < 4 ? true : false}
+                name={card.name}
+                position={card.title}
+                email={card.email}
+                linkedin={card.linkedin}
+                mobile={card.mobile}
+                imgUrl={`/gymkhana-office/${year}/${imgId[card.title]}`}
+              />
+            ))}
+          </section>
+        );
+      })
+    }
+  </div>
+</Layout>
+<script defer="true">
+  document.addEventListener('DOMContentLoaded', function () {
+    let lazyloadImages = document.querySelectorAll('img.lazy');
+    let lazyloadThrottleTimeout;
+
+    function lazyload() {
+      if (lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }
+
+      lazyloadThrottleTimeout = setTimeout(function () {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function (img) {
+          if (img.offsetTop < window.innerHeight + scrollTop) {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+          }
+        });
+        if (lazyloadImages.length == 0) {
+          document.removeEventListener('scroll', lazyload);
+          window.removeEventListener('resize', lazyload);
+          window.removeEventListener('orientationChange', lazyload);
+        }
+      }, 20);
+    }
+
+    document.addEventListener('scroll', lazyload);
+    window.addEventListener('resize', lazyload);
+    window.addEventListener('orientationChange', lazyload);
+  });
+
+  //for setting all cards invisible
+
+  let activeYear = '2023';
+  function showOfficeForCurrentYear() {
+    const section = document.querySelectorAll('section');
+    for (let i = 0; i < section.length; i++) {
+      section[i].style.display = 'none';
+    }
+    document.querySelector(`.year-${activeYear}`).style.display = 'grid';
+  }
+
+  showOfficeForCurrentYear();
+
+  const buttonArray = document.querySelectorAll('.year-button');
+  for (let i = 0; i < buttonArray.length; i++) {
+    let yearText = buttonArray[i].dataset.year;
+    let year = Number(yearText);
+    let tenureEndYear = year + 1;
+    yearText = `${year}-${tenureEndYear - 2000}`;
+    buttonArray[i].addEventListener('click', () => {
+      document.querySelector('.year-text').innerHTML = yearText;
+      activeYear = buttonArray[i].dataset.year;
+      buttonArray[i].classList.add('inactive');
+      showOfficeForCurrentYear();
+    });
+  }
+
+  function activateButton() {
+    for (let i = 0; i < buttonArray.length; i++) {
+      buttonArray[i].classList.add('active');
+      if (buttonArray[i].dataset.year !== activeYear) {
+        buttonArray[i].classList.remove('active');
+      }
+    }
+  }
+  //This activates the active button
+
+  const dropdown = document.querySelector('.dropdown');
+  console.log(dropdown.value);
+
+  dropdown.addEventListener('change', () => {
+    activeYear = dropdown.value;
+    activateButton();
+    let yearText = dropdown.value;
+    let year = Number(yearText);
+    let tenureEndYear = year + 1;
+    yearText = `${year}-${tenureEndYear - 2000}`;
+    document.querySelector('.year-text').innerHTML = yearText;
+    showOfficeForCurrentYear();
+  });
+
+  document
+    .querySelector('.button-parent')
+    .addEventListener('click', activateButton);
+  document.querySelector('select').addEventListener('click', activateButton);
+</script>
+<style></style>
