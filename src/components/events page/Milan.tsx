@@ -30,7 +30,7 @@ function Milan() {
           </p>
           <div className="my-8 justify-end lg:flex text-black">
             <a
-              href="https://gymkhana.iith.ac.in/milan"
+              href="https://milan.org.in/"
               target="_blank"
               rel="noopener noreferrer"
             >
