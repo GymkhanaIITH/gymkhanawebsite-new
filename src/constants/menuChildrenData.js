@@ -27,7 +27,7 @@ export const specialClubsChildren = [
 ];
 
 export const moreChildren = [
-  { name: 'Docs and Consitutions', href: '/docs' },
+  // { name: 'Docs and Consitutions', href: '/docs' },
   { name: 'Forms & Schedules', href: '/forms' },
   { name: 'Research Scholars', href: 'https://researchers-iith.netlify.app/' },
   { name: 'Mess Registration', href: 'https://sva.iith.ac.in/vaccinedata' },
