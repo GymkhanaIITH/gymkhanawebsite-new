@@ -164,7 +164,7 @@
   resolved "https://registry.npmjs.org/@babel/compat-data/-/compat-data-7.20.1.tgz"
   integrity sha512-EWZ4mE2diW3QALKvDMiXnbZpRvlj+nayZ112nK93SnhqOtpdsbVD4W+2tEoT3YNBAG9RBR0ISY758ZkOgsn6pQ==
 
-"@babel/core@>=7.0.0-0 <8.0.0", "@babel/core@^7.18.2":
+"@babel/core@^7.18.2", "@babel/core@>=7.0.0-0 <8.0.0":
   version "7.19.6"
   resolved "https://registry.npmjs.org/@babel/core/-/core-7.19.6.tgz"
   integrity sha512-D2Ue4KHpc6Ys2+AxpIx1BZ8+UegLLLE2p3KJEuJRKmokHOtl49jQ5ny1773KsGLZs8MQvBidAF6yWUJxRqtKtg==
@@ -381,6 +381,9 @@
   integrity sha512-IqRuJtQff7YHHBk4G8YZ45uB9BaAGcwQeVzgj/zj8/UdOhtQpEIupUhSk8dys6spFIWVZVeK20CzGEnqR5SbqA==
 
 <<<<<<< HEAD
+"@esbuild/darwin-arm64@0.16.17":
+=======
+<<<<<<< HEAD
 "@esbuild/android-arm64@0.16.17":
   version "0.16.17"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.16.17.tgz#cf91e86df127aa3d141744edafcba0abdc577d23"
@@ -505,9 +508,10 @@
 =======
 "@esbuild/linux-x64@0.16.17":
 >>>>>>> main
+>>>>>>> main
   version "0.16.17"
-  resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.16.17.tgz"
-  integrity sha512-mdPjPxfnmoqhgpiEArqi4egmBAMYvaObgn4poorpUaqmvzzbvqbowRllQ+ZgzGVMGKaPkqUmPDOOFQRUFDmeUw==
+  resolved "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.16.17.tgz"
+  integrity sha512-/2agbUEfmxWHi9ARTX6OQ/KgXnOWfsNlTeLcoV7HSuSTv63E4DqtAc+2XqGw1KHxKMHGZgbVCZge7HXWX9Vn+w==
 
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
@@ -865,18 +869,25 @@ acorn-walk@^7.0.0:
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 "acorn@^6.0.0 || ^7.0.0 || ^8.0.0", acorn@^8.6.0, acorn@^8.7.1, acorn@^8.8.1:
   version "8.8.1"
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.8.1.tgz"
   integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
 
 >>>>>>> main
+>>>>>>> main
 acorn@^7.0.0:
   version "7.4.1"
   resolved "https://registry.npmjs.org/acorn/-/acorn-7.4.1.tgz"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
+<<<<<<< HEAD
+acorn@^8.6.0, acorn@^8.7.1, acorn@^8.8.1:
+=======
 acorn@^8.6.0, acorn@^8.7.1:
+>>>>>>> main
   version "8.8.1"
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.8.1.tgz"
   integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
@@ -1614,6 +1625,9 @@ es6-error@^4.1.1:
   integrity sha512-Um/+FxMr9CISWh0bi5Zv0iOD+4cFh5qLeks1qhAopKVAJw3drgKbKySikp7wGhDL0HPeaja0P5ULZrxLkniUVg==
 
 <<<<<<< HEAD
+esbuild-darwin-arm64@0.14.54:
+=======
+<<<<<<< HEAD
 esbuild-android-64@0.14.54:
   version "0.14.54"
   resolved "https://registry.yarnpkg.com/esbuild-android-64/-/esbuild-android-64-0.14.54.tgz#505f41832884313bbaffb27704b8bcaa2d8616be"
@@ -1775,14 +1789,20 @@ esbuild-openbsd-64@0.15.12:
   integrity sha512-1o1uAfRTMIWNOmpf8v7iudND0L6zRBYSH45sofCZywrcf7NcZA+c7aFsS1YryU+yN7aRppTqdUK1PgbZVaB1Dw==
 =======
 esbuild-linux-64@0.14.54:
+>>>>>>> main
   version "0.14.54"
-  resolved "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.14.54.tgz"
-  integrity sha512-EgjAgH5HwTbtNsTqQOXWApBaPVdDn7XcK+/PtJwZLT1UmpLoznPd8c5CxqsH2dQK3j05YsB3L17T8vE7cp4cCg==
+  resolved "https://registry.npmjs.org/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.54.tgz"
+  integrity sha512-OPafJHD2oUPyvJMrsCvDGkRrVCar5aVyHfWGQzY1dWnzErjrDuSETxwA2HSsyg2jORLY8yBfzc1MIpUkXlctmw==
 
-esbuild-linux-64@0.15.18:
+esbuild-darwin-arm64@0.15.18:
   version "0.15.18"
+<<<<<<< HEAD
+  resolved "https://registry.npmjs.org/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.15.18.tgz"
+  integrity sha512-tKPSxcTJ5OmNb1btVikATJ8NftlyNlc8BVNtyT/UAr62JFOhwHlnoPrhYWz09akBLHI9nElFVfWSTSRsrZiDUA==
+=======
   resolved "https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.15.18.tgz"
   integrity sha512-hNSeP97IviD7oxLKFuii5sDPJ+QHeiFTFLoLm7NZQligur8poNOWGIgpQ7Qf8Balb69hptMZzyOBIPtY09GZYw==
+>>>>>>> main
 >>>>>>> main
 
 esbuild-register@^3.4.1:
@@ -1792,6 +1812,9 @@ esbuild-register@^3.4.1:
   dependencies:
     debug "^4.3.4"
 
+<<<<<<< HEAD
+esbuild@^0.14.0:
+=======
 <<<<<<< HEAD
 esbuild-sunos-64@0.14.54:
   version "0.14.54"
@@ -1836,6 +1859,7 @@ esbuild-windows-arm64@0.15.12:
 esbuild@^0.14.0, esbuild@^0.14.43:
 =======
 esbuild@^0.14.0, "esbuild@>=0.12 <1":
+>>>>>>> main
 >>>>>>> main
   version "0.14.54"
   resolved "https://registry.npmjs.org/esbuild/-/esbuild-0.14.54.tgz"
@@ -2142,7 +2166,11 @@ fs.realpath@^1.0.0:
 
 fsevents@~2.3.2:
   version "2.3.3"
+<<<<<<< HEAD
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
+=======
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
+>>>>>>> main
   integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 function-bind@^1.1.1:
@@ -4781,12 +4809,16 @@ vfile@^5.0.0, vfile@^5.3.2:
     vfile-message "^3.0.0"
 
 <<<<<<< HEAD
+vite@~3.2.5:
+=======
+<<<<<<< HEAD
 vite@~3.2.1:
   version "3.2.2"
   resolved "https://registry.npmjs.org/vite/-/vite-3.2.2.tgz"
   integrity sha512-pLrhatFFOWO9kS19bQ658CnRYzv0WLbsPih6R+iFeEEhDOuYgYCX2rztUViMz/uy/V8cLCJvLFeiOK7RJEzHcw==
 =======
 "vite@^3.0.0 || ^4.0.0", vite@~3.2.5:
+>>>>>>> main
   version "3.2.7"
   resolved "https://registry.npmjs.org/vite/-/vite-3.2.7.tgz"
   integrity sha512-29pdXjk49xAP0QBr0xXqu2s5jiQIXNvE/xwd0vUizYT2Hzqe4BksNNoWllFVXJf4eLZ+UlVQmXfB4lWrc+t18g==
