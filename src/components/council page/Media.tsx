@@ -37,6 +37,7 @@ const Content = [];
 const Web = [];
 const Int = [];
 const Events = [];
+const Multimedia=[];
 
 const teams = {
   PR: [
@@ -208,6 +209,18 @@ const teams = {
       "ms22btech11012@iith.ac.in",
       "coordinator",
     ],
+    [
+      "Pritam",
+      "91 76027 90672",
+      "la23mh11006@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Rohan",
+      "+91 88975 64757",
+      "op23mtech11002@iith.ac.in",
+      "coordinator"
+    ]
   ],
 };
 
@@ -217,7 +230,7 @@ const teamTitles = {
   Web: "Web Development Team",
   ICT: "Interview & Hosting Team",
   Content: "Content Team",
-  Events: "Events Team",
+  Events: "Multimedia and Events Team",
 };
 
 function Media() {
