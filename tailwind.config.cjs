@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: {
+    relative:true,
+    transform: (content) => content.replace(/taos:/g, ''),
+    files:["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  },
   theme: {
     extend: {
       colors: {
@@ -14,5 +18,5 @@ module.exports = {
       button: "0px 1px 8px 2px #23232330",
     },
   },
-  plugins: [],
+  plugins: [ require('taos/plugin')],
 };
