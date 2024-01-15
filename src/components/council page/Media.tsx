@@ -216,7 +216,7 @@ const teams = {
       "coordinator"
     ],
     [
-      "Rohan",
+      "Rohan Seth",
       "+91 88975 64757",
       "op23mtech11002@iith.ac.in",
       "coordinator"
