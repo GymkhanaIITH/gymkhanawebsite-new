@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import hero from '../images/hero.webp';
-import members from '../images/members-small.jpg';
-import Card from '../components/Card.astro';
-import Gallery from '../components/Gallery.jsx';
-import Events from '../components/landing page/Events.astro';
-import Loader from '../components/Loader.astro';
-import UpdatesSection2 from '../components/UpdatesSection2';
+import Layout from "../layouts/Layout.astro";
+import hero from "../images/hero.webp";
+import members from "../images/members-small.jpg";
+import Card from "../components/Card.astro";
+import Gallery from "../components/Gallery.jsx";
+import Events from "../components/landing page/Events.astro";
+import Loader from "../components/Loader.astro";
+import UpdatesSection2 from "../components/UpdatesSection2";
 ---
 
 <Layout
@@ -90,24 +90,24 @@ import UpdatesSection2 from '../components/UpdatesSection2';
       <Card
         title="Cultural Council"
         link="/councils/cultural"
-        desc={'The Cultural Council are a motivated group of individuals who believe that a college should have its equal share of fun & frolic along with the case studies. They attempt to capture the vibrant persona of the students by offering them a platform to showcase  th...'}
+        desc={"The Cultural Council are a motivated group of individuals who believe that a college should have its equal share of fun & frolic along with the case studies. They attempt to capture the vibrant persona of the students by offering them a platform to showcase  th..."}
       />
       <Card
         title="Media Council"
         link="/councils/media"
-        desc={'The media council of IITH was formed on May 2014 and is a student council that helps in taking IITH to every individual in and outside IITH. We are involved in publicizing our institute though social media, social events, etc. Media Council is currently involved in var... '}
+        desc={"The media council of IITH was formed on May 2014 and is a student council that helps in taking IITH to every individual in and outside IITH. We are involved in publicizing our institute though social media, social events, etc. Media Council is currently involved in var... "}
       />
       <Card
         title="Sci-tech Council"
         link="councils/scitech"
         className="hidden lg:block"
-        desc={'The Sci-Tech council is headed by the Science and Technology Secretary. It encompasses nine societies : AeroClub (Aeronautics & Drone Design Club), Cepheid (Astronomy Club), Elektronica (Electronics & Signal Processing Club), Kludge (Information Securit...'}
+        desc={"The Sci-Tech council is headed by the Science and Technology Secretary. It encompasses nine societies : AeroClub (Aeronautics & Drone Design Club), Cepheid (Astronomy Club), Elektronica (Electronics & Signal Processing Club), Kludge (Information Securit..."}
       />
       <Card
         title="General Council"
         link="/councils/general"
         className="hidden lg:block"
-        desc={'The General Council is an umbrella term for various bodies which not only perform representation tasks, but also cater to student welfare, societies, entertainments etc. The General Council is led by two General Secretaries. One shall be a girl student and another...'}
+        desc={"The General Council is an umbrella term for various bodies which not only perform representation tasks, but also cater to student welfare, societies, entertainments etc. The General Council is led by two General Secretaries. One shall be a girl student and another..."}
       />
     </div>
     <a href="/councils/general" class="md:self-center"
@@ -149,21 +149,21 @@ import UpdatesSection2 from '../components/UpdatesSection2';
   </section>
 
   <script defer>
-    console.log('hey');
+    console.log("hey");
     gsap.registerPlugin(ScrollTrigger);
-    gsap.to('.heading', {
+    gsap.to(".heading", {
       yPercent: 10,
       scrollTrigger: {
-        trigger: '.about-us',
+        trigger: ".about-us",
         scrub: 3,
       },
     });
-    gsap.to(['.hostel-container'], {
+    gsap.to([".hostel-container"], {
       y: 300,
       scrollTrigger: {
-        trigger: '.about-us',
+        trigger: ".about-us",
         scrub: true,
-        end: '+=500  center',
+        end: "+=500  center",
       },
     });
   </script>
