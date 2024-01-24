@@ -1,13 +1,13 @@
-import React from 'react';
-import dummy from '../../images/diesta-big.png';
-const bg = '../../images/diestabg.jpg';
-import Options from './Options';
+import dummy from "../../images/diesta-big.png";
+const bg = "../../images/diestabg.jpg";
+import Options from "./Options";
+import Leaderboard from "../Leaderboard";
 
 function Diesta() {
   return (
     <section className="px-[2rem] py-[2rem] bg-[#000000d1] text-white relative lg:px-[7rem] lg:pt-[4rem] min-h-[100vh] lg:flex lg:flex-col lg:justify-center">
       <div className="w-full  h-[5rem]"></div>
-      <Options eventId={'diesta'} />
+      <Options eventId={"diesta"} />
       <div className="relative z-10">
         <h2 className="text-4xl font-semibold uppercase lg:text-[4rem] lg:font-bold">
           Diesta
@@ -27,9 +27,13 @@ function Diesta() {
         </div>
       </div>
 
-      <div className="h-full w-full absolute top-0 left-0 -z-10 blur-sm ">
-        <img src={bg} alt="" className="h-full w-full object-cover" />
+      <div className="w-full h-auto py-24">
+        <Leaderboard />
       </div>
+    
+      {/* <div className="h-full w-full absolute top-0 left-0 -z-10 blur-sm ">
+        <img src={bg} alt="" className="h-full w-full object-cover" />
+      </div> */}
     </section>
   );
 }

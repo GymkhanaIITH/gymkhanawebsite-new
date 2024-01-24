@@ -20,7 +20,7 @@ module.exports = {
         "screen/3": "calc(100vh / 3)",
         "screen/4": "calc(100vh / 4)",
         "screen/5": "calc(100vh / 5)",
-      },
+      }),
     },
     boxShadow: {
       button: "0px 1px 8px 2px #23232330",

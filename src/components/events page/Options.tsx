@@ -17,12 +17,12 @@ function Options({ eventId }) {
     }
     let la = new_url.pop();
     setLastAddress(la);
-    console.log(la);
+    // console.log(la);
     setEvent(la);
     optionsRef.current.value = la;
   }, []);
   useEffect(() => {
-    console.log(window.location.href.split('/').pop());
+    // console.log(window.location.href.split('/').pop());
     if (url) {
       if (event !== last_address) {
         let new_url: string | string[] = url.toString().split('/');
