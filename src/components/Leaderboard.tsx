@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import axios from "axios"
+import Papa from 'papaparse';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -78,30 +79,35 @@ const Leaderboard = () => {
 }, []);
 
 const fetchCSVData = () => {
-  const corsProxyUrl = 'https://cors-anywhere.herokuapp.com/';
-  const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS7PdI-RNY-MpSojeBZwgduXYLd01cMHomQy9mgpB8183SdLK7Sbb38w2oehb151Jq0BmS1UksNr2ij/pub?output=csv';
-  axios.get(corsProxyUrl + csvUrl)
+ //https://docs.google.com/spreadsheets/d/1TRX6LgL54LgR4Sh3dW6cFzF4wti5mVrc6znwv-eikQw/gviz/tq?tqx=out:csv&sheet=DIESTA_SCORE_TRACKER
+ //https://docs.google.com/spreadsheets/d/1TRX6LgL54LgR4Sh3dW6cFzF4wti5mVrc6znwv-eikQw/edit?usp=sharing
+  const csvUrl = 'https://docs.google.com/spreadsheets/d/1TRX6LgL54LgR4Sh3dW6cFzF4wti5mVrc6znwv-eikQw/gviz/tq?tqx=out:csv&sheet=DIESTA_SCORE_TRACKER';
+  axios.get(csvUrl)
   .then((response) => {
-    const parsedCsvData = parseCSV(response.data);
-
+    const parsedCsvData = Papa.parse(response.data, { header: true }).data;
    
     parsedCsvData.forEach((event) => {
    
       if (event.Type === 'Cultural' || event.Type === 'Sports (M)' || event.Type === 'Sports (W)') {
         teams.forEach((team) => {
-          const teamName = team.name;
-          const eventPoints = parseInt(event[teamName], 10);
-          if (event.Type === 'Cultural') {
-            team.cultural += eventPoints;
-          } else if (event.Type === 'Sports (M)') {
-            team.sportsBoys += eventPoints;
-          } else if (event.Type === 'Sports (W)') {
-            team.sportsGirls += eventPoints;
-          }
-          team.points = team.cultural + team.sportsBoys + team.sportsGirls;
+            const teamName = team.name;
+            const eventPoints = parseInt(event[teamName], 10);
+    
+            // Add points based on event type
+            if (event.Type === 'Cultural') {
+                team.cultural += eventPoints ;
+            } else if (event.Type === 'Sports (M)') {
+                team.sportsBoys += eventPoints ;
+            } else if (event.Type === 'Sports (W)') {
+                team.sportsGirls += eventPoints;
+            }
+    
+            
+            team.points = team.cultural + team.sportsBoys + team.sportsGirls;
         });
       }
     });
+    console.log( parsedCsvData)
     setTeams([...teams]);
   })
   .catch((error) => {
