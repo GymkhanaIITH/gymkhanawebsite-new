@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
+import axios from "axios"
+import Papa from 'papaparse';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -22,49 +24,49 @@ ChartJS.register(
 
 const Leaderboard = () => {
   const [view, setView] = useState("table"); // Default view
-
+  const [csvData, setCsvData] = useState([]);
   const [teams, setTeams] = useState([
     {
       name: "CSE/MNC/MATHS",
-      points: 100,
-      cultural: 30,
-      sportsBoys: 35,
-      sportsGirls: 35,
+      points: 0,
+      cultural: 0,
+      sportsBoys: 0,
+      sportsGirls: 0,
     },
     {
       name: "EE/AI/IC Design/CoE",
-      points: 90,
-      cultural: 20,
-      sportsBoys: 40,
-      sportsGirls: 30,
+      points: 0,
+      cultural: 0,
+      sportsBoys: 0,
+      sportsGirls: 0,
     },
     {
       name: "BME/BT/ES/EP/Physics",
-      points: 50,
-      cultural: 10,
-      sportsBoys: 30,
-      sportsGirls: 10,
+      points: 0,
+      cultural: 0,
+      sportsBoys: 0,
+      sportsGirls: 0,
     },
     {
       name: "ChE/Chy/IC/Design",
-      points: 200,
-      cultural: 80,
-      sportsBoys: 80,
-      sportsGirls: 40,
+      points: 0,
+      cultural: 0,
+      sportsBoys: 0,
+      sportsGirls: 0,
     },
     {
       name: "Civil/MSME/LA/EM",
-      points: 130,
-      cultural: 30,
-      sportsBoys: 50,
-      sportsGirls: 50,
+      points: 0,
+      cultural: 0,
+      sportsBoys: 0,
+      sportsGirls: 0,
     },
     {
       name: "MAE/Inter-Displinary/Climate Change/Heritage Science",
-      points: 45,
-      cultural: 10,
-      sportsBoys: 30,
-      sportsGirls: 5,
+      points: 0,
+      cultural: 0,
+      sportsBoys: 0,
+      sportsGirls: 0,
     },
   ]);
 
@@ -72,6 +74,62 @@ const Leaderboard = () => {
     key: null,
     direction: "ascending",
   });
+  useEffect(() => {
+    fetchCSVData();   
+}, []);
+
+const fetchCSVData = () => {
+ //https://docs.google.com/spreadsheets/d/1TRX6LgL54LgR4Sh3dW6cFzF4wti5mVrc6znwv-eikQw/gviz/tq?tqx=out:csv&sheet=DIESTA_SCORE_TRACKER
+ //https://docs.google.com/spreadsheets/d/1TRX6LgL54LgR4Sh3dW6cFzF4wti5mVrc6znwv-eikQw/edit?usp=sharing
+  const csvUrl = 'https://docs.google.com/spreadsheets/d/1TRX6LgL54LgR4Sh3dW6cFzF4wti5mVrc6znwv-eikQw/gviz/tq?tqx=out:csv&sheet=DIESTA_SCORE_TRACKER';
+  axios.get(csvUrl)
+  .then((response) => {
+    const parsedCsvData = Papa.parse(response.data, { header: true }).data;
+   
+    parsedCsvData.forEach((event) => {
+   
+      if (event.Type === 'Cultural' || event.Type === 'Sports (M)' || event.Type === 'Sports (W)') {
+        teams.forEach((team) => {
+            const teamName = team.name;
+            const eventPoints = parseInt(event[teamName], 10);
+    
+            // Add points based on event type
+            if (event.Type === 'Cultural') {
+                team.cultural += eventPoints ;
+            } else if (event.Type === 'Sports (M)') {
+                team.sportsBoys += eventPoints ;
+            } else if (event.Type === 'Sports (W)') {
+                team.sportsGirls += eventPoints;
+            }
+    
+            
+            team.points = team.cultural + team.sportsBoys + team.sportsGirls;
+        });
+      }
+    });
+    console.log( parsedCsvData)
+    setTeams([...teams]);
+  })
+  .catch((error) => {
+    console.error('Error fetching data:', error);
+  });
+
+  }
+
+  function parseCSV(csvText) {
+    const rows = csvText.split(/\r?\n/);   
+    const headers = rows[0].split(',');    
+    const data = [];       
+    for (let i = 1; i < rows.length; i++) {
+        const rowData = rows[i].split(',');          // Use the regular expression to split the row while handling '\r'
+        const rowObject = {};
+        for (let j = 0; j < headers.length; j++) {
+            rowObject[headers[j]] = rowData[j];
+        }
+        data.push(rowObject);
+    }
+    return data;
+}
 
   const sortTeams = (column) => {
     let direction = "ascending";
@@ -95,7 +153,6 @@ const Leaderboard = () => {
     setTeams(sortedTeams);
     setSortConfig({ key: column, direction });
   };
-
   useEffect(() => {
     sortTeams("points");
   }, []);
