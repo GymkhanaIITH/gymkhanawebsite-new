@@ -156,12 +156,12 @@ const Leaderboard = () => {
         });
         // console.log(parsedCsvData);
         setTeams([...teams]);
+        sortTeams("points");
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   };
-
 
   const sortTeams = (column) => {
     let direction = "ascending";
@@ -185,9 +185,6 @@ const Leaderboard = () => {
     setTeams(sortedTeams);
     setSortConfig({ key: column, direction });
   };
-  useEffect(() => {
-    sortTeams("points");
-  }, []);
 
   const chartData = {
     labels: teams.map((team) => team.name),
