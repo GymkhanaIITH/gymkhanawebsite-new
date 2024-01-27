@@ -27,7 +27,7 @@ function Diesta() {
         </div>
       </div>
 
-      <div className="w-full h-auto py-24">
+      <div className=" h-auto py-24">
         <Leaderboard />
       </div>
     
