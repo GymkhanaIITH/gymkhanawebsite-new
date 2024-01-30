@@ -20,7 +20,7 @@ function Esummit() {
         E-Summit is the flagship event of E-Cell IITH which aims to bring early entrepreneurs, students, corporates, venture capitalists and start-ups with burgeoning ideas from all over the county to one platform to share their entrepreneur ventures and wisdom. This summit provides a medium for healthy discussion and inculcates an entrepreneurial mindset into minds through a plethora of events like debates and panel discussions.
         </p>
         <div className="my-8 justify-end  lg:flex">
-        <a href='https://elan.org.in/' target='_blank' rel='noopener noreferrer'> <button className=" scale-90 disabled text-xl bg-white text-black px-4 py-3 rounded-lg">
+        <a href='https://ecell.iith.ac.in/esummit' target='_blank' rel='noopener noreferrer'> <button className=" scale-90 disabled text-xl bg-white text-black px-4 py-3 rounded-lg">
           Navigate to Website
         </button></a>
         </div>
