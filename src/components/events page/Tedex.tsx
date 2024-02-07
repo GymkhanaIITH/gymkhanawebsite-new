@@ -9,15 +9,15 @@ function Tedex() {
       <div className="w-full  h-[5rem]"></div>
       <Options eventId={'ted-talks'} />
       <div className="relative z-10">
-        <h2 className="text-4xl font-semibold uppercase lg:text-[4rem] lg:font-bold">
-          TedxIITHyderabad
+        <h2 className="text-4xl font-semibold lg:text-[4rem] lg:font-bold sm:text-xl">
+          TEDx IIT Hyderabad
         </h2>
       </div>
       <div className="lg:grid lg:grid-cols-5 lg:grow">
-        <div className="w-full h-auto my-6 px-[2rem] lg:col-span-2 lg:flex justify-center items-center">
-          <img src={dummy} alt="tedex" />
-        </div>
-        <div className="py-5 lg:col-span-3 self-center">
+  <div className="w-full h-auto my-6 px-[2rem] lg:col-span-2 lg:flex justify-center items-center">
+    <img src={dummy} alt="tedex" className="w-full sm:w-32 md:w-8/12 lg:w-full" /> {/* Adjusted size based on screen width */}
+  </div>
+        <div className="lg:col-span-3 pt-6 self-center mt-12">
           <p className="lg:text-[1.25rem]">
             TEDxIITHyderabad is an annual programme aimed at educating,
             inspiring and connecting great minds. Ours is a information seeking
@@ -41,7 +41,7 @@ function Tedex() {
               rel="noopener noreferrer"
             >
               {' '}
-              <button className=" scale-90 disabled text-xl bg-[#ff2b06] text-white px-4 py-3 rounded-lg">
+              <button className=" scale-90 disabled mt-4 text-xl bg-[#ff2b06] text-white px-4 py-3 rounded-lg">
                 Navigate to Website
               </button>
             </a>
