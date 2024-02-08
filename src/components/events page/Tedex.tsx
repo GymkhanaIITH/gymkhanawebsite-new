@@ -1,5 +1,4 @@
-import React from 'react';
-const dummy = '/public/tedx.iithyderabad.jpg';
+const dummy = '/tedx.iithyderabad.jpg';
 const bg = 'https://www.tedxgangtok.com/assets/images/tedx-photo.jpg';
 import Options from './Options';
 
