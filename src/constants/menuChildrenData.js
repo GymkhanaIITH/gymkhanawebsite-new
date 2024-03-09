@@ -11,9 +11,9 @@ export const eventsChildren = [
   { name: 'Elan & nVision', href: '/events/elan' },
   { name: 'E-Summit', href: '/events/e-summit' },
   { name: 'Milan', href: '/events/milan' },
-  { name: 'TedxIITHyderabad', href: '/events/ted-talks' },
+  { name: 'TedxIITHyderabad', href: '/events/tedtalks' },
   { name: 'Diesta', href: '/events/diesta' },
-  { name: 'Alumni Day', href: '/events/almuni-day' },
+  { name: 'Alumni Day', href: '/events/almuniday' },
   { name: 'Zozimus', href: '/events/zozimus' },
 ];
 

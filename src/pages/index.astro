@@ -7,6 +7,9 @@ import Gallery from "../components/Gallery.jsx";
 import Events from "../components/landing page/Events.astro";
 import Loader from "../components/Loader.astro";
 import UpdatesSection2 from "../components/UpdatesSection2";
+import bgvideo from "../images/bgvideo.gif";
+
+import generalCouncilIcon from "../images/icons/general_council.png";
 ---
 
 <Layout
@@ -20,29 +23,32 @@ import UpdatesSection2 from "../components/UpdatesSection2";
     class="h-[100vh] w-full relative landing overflow-hidden hostel-container"
   >
     <img
-      src={hero}
+      src={bgvideo}
       alt="IITH Hostels"
-      class="absolute object-cover -z-10 h-full hostel md:w-full"
+      class="absolute object-fill -z-10 h-full hostel md:w-full"
     />
+
     <div
       class="absolute bg-gradient-to-r from-[#00423ba6] to-[#190d57cf] z-10 w-full h-full bg-opacity-20"
     >
     </div>
     <div
-      class="relative z-20 text-3xl text-white -translate-y-[50%] top-[50%] pl-4 lg:px-[4rem] heading"
+      class="relative z-20 text-3xl text-white -translate-y-[50%] top-[50%] pl-4 lg:px-[4rem] heading flex flex-col justify-center h-full items-center"
     >
-      <h2 class="relative z-20 font-semibold text-r lg:text-4xl xl:text-6xl">
-        IIT HYDERABAD
+      <h2
+        class="relative z-20 text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold mb-6"
+      >
+        IIT Hyderabad
       </h2>
       <h2
-        class="relative z-20 text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-semibold lg:font-bold"
+        class="relative z-20 text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-semibold"
       >
-        STUDENT GYMKHANA
+        Students' Gymkhana
       </h2>
     </div>
   </section>
   <section
-    class="lg:grid lg:grid-cols-2 lg:py-5 lg:px-[4rem] bg-white about-us relative z-10"
+    class="lg:grid lg:grid-cols-2 lg:py-5 lg:px-[4rem] bg-[#1B1A16] about-us relative z-10 text-white"
   >
     <h2 class="text-4xl p-5 font-[600] md:text-5xl md:p-7 lg:hidden">
       About Us
@@ -56,6 +62,10 @@ import UpdatesSection2 from "../components/UpdatesSection2";
     </div>
     <div>
       <h2 class="hidden lg:block lg:text-5xl font-bold p-7 pb-0">About Us</h2>
+      <hr
+        class="mx-7 my-5"
+        style="height:4px;border-width:0;color:#B74224;background-color:#B74224"
+      />
       <p class="font-[400] p-5 lg:text-lg lg:pb-8 lg:pr-5">
         Student Gymkhana IITH is the student body of IIT Hyderabad which aims to
         bring the students together for their mutual all-round development. All
@@ -75,9 +85,170 @@ import UpdatesSection2 from "../components/UpdatesSection2";
       </p>
     </div>
   </section>
+
+  <hr
+    class="lg:mx-40 mx-20 my-5"
+    style="height:4px;border-width:0;color:#B74224;background-color:#B74224"
+  />
+  <section class="text-white lg:mx-40 md:mx-20 flex flex-col justify-center">
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0">
+      Councils
+    </h2>
+    <div class="flex justify-center">
+      <div
+        class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-16"
+      >
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+      </div>
+    </div>
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0">
+      Councils
+    </h2>
+    <div class="flex justify-center">
+      <div
+        class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-16"
+      >
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+      </div>
+    </div>
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0">
+      Councils
+    </h2>
+    <div class="flex justify-center">
+      <div
+        class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-16"
+      >
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">General Council</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr
+    class="lg:mx-40 mx-20 my-5"
+    style="height:4px;border-width:0;color:#B74224;background-color:#B74224"
+  />
+
+  <section class="text-white lg:mx-40 md:mx-20 flex flex-col justify-center">
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0">
+      Echo IITH
+    </h2>
+    <div class="flex justify-center items-center">
+      <iframe
+        src="https://www.youtube.com/embed/l9xf7kidx4k"
+        class="m-8 lg:w-1/2 h-screen/2 w-full"
+      >
+      </iframe>
+    </div>
+  </section>
+
   <!-- <UpdatesSection client:load /> -->
-  <UpdatesSection2 client:load />
-  <section class="bg-p p-5 px-7 flex flex-col lg:py-[3rem]">
+  <!-- <UpdatesSection2 client:load /> -->
+  <!-- <section class="bg-p p-5 px-7 flex flex-col lg:py-[3rem]">
     <div class="bg-r h-[6px] w-full self-center">
       <div class="bg-g h-[6px] w-16 ml-16"></div>
     </div>
@@ -116,7 +287,7 @@ import UpdatesSection2 from "../components/UpdatesSection2";
         >More Councils</button
       >
     </a>
-  </section>
+  </section> -->
 
   <!-- <section
     class="lg:grid lg:grid-cols-2 lg:py-5 lg:px-[4rem] bg-white relative z-10"
@@ -131,7 +302,7 @@ import UpdatesSection2 from "../components/UpdatesSection2";
     </div>
   </section> -->
 
-  <Events />
+  <!-- <Events />
   <section class="bg-w p-5 px-0 flex flex-col py-[1.5rem] lg:py-[3rem]">
     <div class="px-7">
       <div class="bg-r h-[6px] w-full self-center">
@@ -146,7 +317,7 @@ import UpdatesSection2 from "../components/UpdatesSection2";
     <div>
       <Gallery client:load />
     </div>
-  </section>
+  </section> -->
 
   <script defer>
     console.log("hey");

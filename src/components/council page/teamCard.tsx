@@ -4,7 +4,7 @@ function TCard({ name, mobile, email, position, activePosition = "head" }) {
   return (
     <div
       className={`p-2 mt-4 ${
-        position === "head" ? " bg-g px-6 text-p py-3 rounded-lg " : "mr-0"
+         " bg-[#2F2F2F] px-6 text-p py-3 rounded-lg "
       }`}
     >
       <h3

@@ -312,27 +312,15 @@ function Scitech() {
     setDesc(description[0].desc);
   }, [club]);
   return (
-    <React.Fragment>
+    <div className="my-8">
       <div>
-        <a
-          href="https://scitech-iith.netlify.app/"
-          target="_blank"
-          rel="noopener"
-        >
-          <button className="bg-p text-w px-3 py-2 rounded-md hover:scale-105 transition-all mb-8">
-            Know More
-          </button>
-        </a>
-      </div>
-
-      <div>
-        <h2 className="lg:text-4xl text-3xl font-bold text-center text-black lg:text-left">
+        <h2 className="lg:text-4xl text-3xl font-bold text-center lg:text-left">
           Science and Technology Secretary
         </h2>
         <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start">
-          <div className="bg-white text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl border-[0.25rem] border-g">
+          <div className="bg-[#2F2F2F] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
             <h4 className=" text-p">Science and Technology Secretary </h4>
-            <h3 className="lg:text-2xl text-xl font-semibold text-black">
+            <h3 className="lg:text-2xl text-xl font-semibold">
               Bapatu Manoj Kumar Reddy
             </h3>
             <address className="pt-3">
@@ -348,15 +336,15 @@ function Scitech() {
             </address>
           </div>
         </div>
-        <h2 className="hidden lg:block lg:text-4xl text-4xl font-bold text-center text-black lg:text-left mt-[2rem] mb-[1rem]">
+        <h2 className="hidden lg:block lg:text-4xl text-4xl font-bold text-center lg:text-left mt-[2rem] mb-[1rem]">
           Clubs
         </h2>
         <div className="lg:grid lg:grid-cols-5 pt-4 hidden z-0 relative">
           <ul
-            className={`lg:col-span-1 hidden text-2xl lg:flex lg:flex-col gap-3 [&>li]:cursor-pointer `}
+            className={`lg:col-span-1 hidden text-2xl lg:flex lg:flex-col gap-3 [&>li]:cursor-pointer bg-[#2F2F2F] p-8 flex-col justify-center items-start rounded-xl`}
           >
             <li
-              className={`text-p ${club === "aero" ? "" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${club === "aero" ? "bg-[#B74224]" : "text-opacity-40"}`}
               onClick={() => {
                 setClub("aero");
               }}
@@ -364,8 +352,8 @@ function Scitech() {
               Aero Club
             </li>
             <li
-              className={`text-p ${
-                club === "cepheid" ? "" : "text-opacity-40"
+              className={`px-4 py-2 rounded-md ${
+                club === "cepheid" ? "bg-[#B74224]" : "text-opacity-40"
               }`}
               onClick={() => {
                 setClub("cepheid");
@@ -374,8 +362,8 @@ function Scitech() {
               Cepheid
             </li>
             <li
-              className={`text-p ${
-                club === "elektronica" ? "" : "text-opacity-40"
+              className={`px-4 py-2 rounded-md ${
+                club === "elektronica" ? "bg-[#B74224]" : "text-opacity-40"
               }`}
               onClick={() => {
                 setClub("elektronica");
@@ -384,7 +372,7 @@ function Scitech() {
               Elektronica
             </li>
             <li
-              className={`text-p ${club === "kludge" ? "" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${club === "kludge" ? "bg-[#B74224]" : "text-opacity-40"}`}
               onClick={() => {
                 setClub("kludge");
               }}
@@ -393,7 +381,7 @@ function Scitech() {
             </li>
 
             <li
-              className={`text-p ${club === "infero" ? "" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${club === "infero" ? "bg-[#B74224]" : "text-opacity-40"}`}
               onClick={() => {
                 setClub("infero");
               }}
@@ -401,7 +389,7 @@ function Scitech() {
               Infero
             </li>
             <li
-              className={`text-p ${club === "lambda" ? "" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${club === "lambda" ? "bg-[#B74224]" : "text-opacity-40"}`}
               onClick={() => {
                 setClub("lambda");
               }}
@@ -409,7 +397,7 @@ function Scitech() {
               Lambda
             </li>
             <li
-              className={`text-p ${club === "epoch" ? "" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${club === "epoch" ? "bg-[#B74224]" : "text-opacity-40"}`}
               onClick={() => {
                 setClub("epoch");
               }}
@@ -417,8 +405,8 @@ function Scitech() {
               Epoch
             </li>
             <li
-              className={`text-p ${
-                club === "prakriti" ? "" : "text-opacity-40"
+              className={`px-4 py-2 rounded-md ${
+                club === "prakriti" ? "bg-[#B74224]" : "text-opacity-40"
               }`}
               onClick={() => {
                 setClub("prakriti");
@@ -427,8 +415,8 @@ function Scitech() {
               Prakriti
             </li>
             <li
-              className={`text-p ${
-                club === "robotix" ? "" : "text-opacity-40"
+              className={`px-4 py-2 rounded-md ${
+                club === "robotix" ? "bg-[#B74224]" : "text-opacity-40"
               }`}
               onClick={() => {
                 setClub("robotix");
@@ -437,7 +425,7 @@ function Scitech() {
               Robotix
             </li>
             <li
-              className={`text-p ${club === "torque" ? "" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${club === "torque" ? "bg-[#B74224]" : "text-opacity-40"}`}
               onClick={() => {
                 setClub("torque");
               }}
@@ -445,7 +433,7 @@ function Scitech() {
               Torque
             </li>
             <li
-              className={`text-p ${club === "glitch" ? "" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${club === "glitch" ? "bg-[#B74224]" : "text-opacity-40"}`}
               onClick={() => {
                 setClub("glitch");
               }}
@@ -454,9 +442,9 @@ function Scitech() {
             </li>
           </ul>
           <div className="lg:col-span-4 col-span-6 grid grid-cols-6 gap-6 lg:gap-[2rem] items-center relative">
-            <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full ">
+            <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full m-8">
               <p className="mt-8 justify-self-start">{desc}</p>
-              <div className="grid grid-cols-2">
+              <div className="grid grid-cols-2 gap-2">
                 {coords[club]?.map((coord) => {
                   return (
                     <TCard
@@ -481,7 +469,7 @@ function Scitech() {
         </div>
       </div>
       <div></div>
-    </React.Fragment>
+    </div>
   );
 }
 

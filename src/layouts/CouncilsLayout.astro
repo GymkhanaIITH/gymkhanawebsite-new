@@ -11,56 +11,63 @@ const { title, desc, imgUrl }: Props = Astro.props;
 ---
 
 <Layout title="Councils">
-  <div class="bg-p p-5 m-4 rounded-xl lg:rounded-[1.25rem] lg:fixed z-10">
+  <div
+    class="text-white w-full h-40 bg-[url('/images/councils_hero.png')] bg-no-repeat bg-cover fixed flex items-center z-30"
+  >
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold lg:ml-20">
+      Councils
+    </h2>
+  </div>
+  <div class="px-20 m-4 rounded-xl lg:rounded-[1.25rem] mt-52 z-10">
     <div
-      class="council-menu hidden overflow-scroll md:overflow-hidden gap-4 p-2 lg:flex lg:py-0 lg:justify-between bg-p z-20"
+      class="council-menu hidden overflow-scroll md:overflow-hidden gap-2 p-2 lg:flex lg:py-0 lg:justify-between z-20"
     >
       <a href="/councils/general"
         ><button
           data-council="General"
           class={`council-button  ${
-            title === "General" ? "bg-w text-p" : "bg-p text-white"
-          } text-xl  py-2 px-3 rounded-xl`}>General Council</button
+            title === "General" ? "bg-[#B74224] text-white" : "bg-white"
+          } text-lg  py-2 px-10 rounded-xl font-bold `}>General Council</button
         >
       </a>
       <a href="/councils/cultural"
         ><button
           data-council="cultural"
           class={`council-button  ${
-            title === "Cultural" ? "bg-w text-p" : "bg-p text-white"
-          } text-xl  py-2 px-3 rounded-xl`}>Cultural Council</button
+            title === "Cultural" ? "bg-[#B74224] text-white" : "bg-white"
+          } text-lg  py-2 px-10 rounded-xl font-bold `}>Cultural Council</button
         >
       </a>
       <a href="/councils/scitech"
         ><button
           data-council="scitech"
           class={`council-button ${
-            title === "Scitech" ? "bg-w text-p" : "bg-p text-white"
-          } text-xl  py-2 px-3 rounded-xl`}>Sci-Tech Council</button
+            title === "Scitech" ? "bg-[#B74224] text-white" : "bg-white"
+          } text-lg  py-2 px-10 rounded-xl font-bold `}>Sci-Tech Council</button
         >
       </a>
       <a href="/councils/media"
         ><button
           data-council="media"
           class={`council-button  ${
-            title === "Media" ? "bg-w text-p" : "bg-p text-white"
-          }  text-xl py-2 px-3 rounded-xl`}>Media Council</button
+            title === "Media" ? "bg-[#B74224] text-white" : "bg-white"
+          } text-lg py-2 px-10 rounded-xl font-bold `}>Media Council</button
         >
       </a>
       <a href="/councils/mess"
         ><button
           data-council="mess"
           class={`council-button  ${
-            title === "Mess" ? "bg-w text-p" : "bg-p text-white"
-          }  text-xl py-2 px-3 rounded-xl`}>Mess Council</button
+            title === "Mess" ? "bg-[#B74224] text-white" : "bg-white"
+          } text-lg py-2 px-10 rounded-xl font-bold `}>Mess Council</button
         >
       </a>
       <a href="/councils/sports"
         ><button
           data-council="sports"
           class={`council-button ${
-            title === "Sports" ? "bg-w text-p" : "bg-p text-white"
-          }  text-xl  py-2 px-3 rounded-xl`}>Sports Council</button
+            title === "Sports" ? "bg-[#B74224] text-white" : "bg-white"
+          }  text-lg  py-2 px-10 rounded-xl font-bold `}>Sports Council</button
         >
       </a>
     </div>
@@ -78,12 +85,40 @@ const { title, desc, imgUrl }: Props = Astro.props;
       <option value="mess">Mess Council</option>
     </select>
   </div>
-  <div
-    class="p-6 pt-0 grid grid-cols-1 justify-items-center lg:justify-items-start lg:grid-cols-5 lg:mt-[8rem]"
+  <section class="text-white lg:mx-40 m-20">
+    <div class="flex items-center justify-between">
+      <h2 class="lg:text-4xl md:text-3xl text-2xl font-semibold p-7">
+        {title} Council
+      </h2>
+      <div></div>
+      <a class="text-xl hover:underline cursor-pointer underline-offset-4"
+        >Navigate to Webiste</a
+      >
+    </div>
+    <hr
+      class="my-5"
+      style="height:4px;border-width:0;color:#B74224;background-color:#B74224"
+    />
+    <div
+      class="lg:col-start-1 lg:col-span-3 lg:row-start-2 lg:px-[4rem] lg:mt-10"
+    >
+      <p class="council-desc lg:text-[1.125rem]">
+        {desc}
+      </p>
+    </div>
+    <div
+      class="p-6 px-0 pb-[4rem] pt-0 grid grid-cols-1 justify-items-center lg:px-[2.5rem] lg:justify-items-start lg:first-letter"
+    >
+      <slot />
+    </div>
+  </section>
+
+  <!-- <div
+    class="p-6 pt-0 grid grid-cols-1 justify-items-center lg:justify-items-start lg:grid-cols-5 lg:mt-[2rem] lg:mx-40"
   >
     <div class="lg:col-start-1 lg:col-end-6">
       <h2
-        class="title text-black text-center lg:text-left font-bold text-4xl pt-3 lg:px-[4rem] lg:pt-[2rem] lg:text-5xl lg:font-bold"
+        class="title text-white text-center lg:text-left font-bold text-4xl pt-3 lg:px-[4rem] lg:pt-[2rem] lg:text-5xl lg:font-bold"
       >
         {title} Council
       </h2>
@@ -97,6 +132,7 @@ const { title, desc, imgUrl }: Props = Astro.props;
         class="council-img h-32 py-3 lg:h-[13rem] object-contain"
       />
     </div>
+
     <div
       class="lg:col-start-1 lg:col-span-3 lg:row-start-2 lg:px-[4rem] lg:mt-5"
     >
@@ -106,10 +142,10 @@ const { title, desc, imgUrl }: Props = Astro.props;
     </div>
   </div>
   <div
-    class="p-6 px-0 pb-[4rem] pt-0 grid grid-cols-1 justify-items-center lg:px-[5.5rem] lg:justify-items-start lg"
+    class="p-6 px-0 pb-[4rem] pt-0 grid grid-cols-1 justify-items-center lg:px-[5.5rem] lg:justify-items-start lg:first-letter lg:mx-40"
   >
     <slot />
-  </div>
+  </div> -->
 </Layout>
 
 <script is:inline defer="true">

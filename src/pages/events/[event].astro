@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import EventLayout from '../../layouts/EventsLayout.astro';
 import Elan from '../../components/events page/Elan';
 import Esummit from '../../components/events page/Esummit';
 import Tedex from '../../components/events page/Tedex';
@@ -10,39 +10,50 @@ import Zozimus from '../../components/events page/Zozimus';
 export function getStaticPaths() {
   return [
     { params: { event: 'elan' } },
-    { params: { event: 'e-summit' } },
+    { params: { event: 'eSummit' } },
     { params: { event: 'milan' } },
-    { params: { event: 'ted-talks' } },
-    { params: { event: 'abhyant' } },
+    { params: { event: 'tedtalks' } },
     { params: { event: 'diesta' } },
     { params: { event: 'zozimus' } },
-    { params: { event: 'almuni-day' } },
+    { params: { event: 'alumniday' } },
   ];
 }
 const { event } = Astro.params;
 
 const titles = {
   elan: 'Elan & nVision',
-  'e-summit': 'E-Summit',
-  'ted-talks': 'Ted-Talks',
-  abhyant: 'Abhyant',
+  eSummit: 'E-Summit',
+  tedtalks: 'Ted-Talks',
   diesta: 'Diesta',
-  'alumni-day': 'Almuni Day',
+  alumniday: 'Alumni Day',
   zozimus: 'Zozimus',
+  milan: 'Milan',
+};
+const descList = {
+  elan:
+    "Elan & ηVision is the annual techno-cultural fest of IIT Hyderabad and is one of the largest fests in South India. It is entirely organized by IITH students. Elan refers to the cultural part and ηVision cites the technological part of the fest. This festival features several professional and semi-professional crowd-pulling events and promises to be a grand event showcasing the best of cultural performances, technical solutions, and student community advances 2022",
+  eSummit:
+    "E-Summit is the flagship event of E-Cell IITH which aims to bring early entrepreneurs, students, corporates, venture capitalists and start-ups with burgeoning ideas from all over the county to one platform to share their entrepreneur ventures and wisdom. This summit provides a medium for healthy discussion and inculcates an entrepreneurial mindset into minds through a plethora of events like debates and panel discussions.",
+  milan:
+    "Milan is the annual techno-cultural-sports General Championship of IIT Hyderabad. It consists of 19 Sports, 18 Cultural and 11 technical events conducted between all the hostel blocks. In this second edition of Milan, presented by SBI YONO, the sports, cultural, and technical events will start from 9th September and will conclude on 18th September",
+  tedtalks:
+    "TEDxIITHyderabad is an annual programme aimed at educating, inspiring and connecting great minds. Ours is a information seeking age and we are constantly bombarded by it. TEDx is a platform where open-minded, spirited people are brought together to share novel ideas to provoke innovations and ideas that matter. The TEDxIITHyderabad event will be a day long feature where the speakers go live and the TED Talks Videos will be presented, with the goal of realizing and promoting remarkable thinking. At TEDxIITHyderabad, we believe it is important to invest in areas where the local community finds its relevance. Consequently, TEDxIITHyderabad is an effort to bring together and showcase the bright minds from the local scene- we are continuously in awe of how much Hyderabad has to offer in terms of the quality of ideas and number of people ready to share their stories with the world.",
+  diesta: "Introduced in 2021, Diesta is an annual Interdepartmental sports & cultural fest of IIT Hyderabad. All the departments are divided into 7-10 teams. All the teams put their best foot forward to take away the ultimate trophy, the glory of being the best of them all.",
+  alumniday: "Organised once every year, Alumni Day is a day specifically dedicated to the wonderful alums of IIT Hyderabad. Various events, ranging from cultural to technical to sports, are organised exclusively for the alums along with the campus tours. Exemplary alums are recognised by giving away awards in categories and special decennial celebrations are held for the batches completing 10 years of their graduation from IIT Hyderabad.",
+  zozimus: "The IITH Literary Fest is back on April 8th and 9th, 2023, and it's going to be amazing! We're calling it Zozimus: Through the looking glass, and it's all about celebrating literature in a fresh, creative way. We'll be taking iconic literature and putting our own surreal twist on them but still keeping their heart and soul alive.\n One of the highlights is the Zoz MUN, where you'll participate in a thrilling and challenging Model United Nations. But that's not all - there will also be quizzes, debates, a cool treasure hunt, and plenty of chances to chat with fellow book lovers and maybe even discover some new literary favorites. So come along, spread the word, and have fun!",
 };
 ---
 
-<Layout
+<EventLayout
+  desc={descList[event]}
   title={titles[event]}
-  gutter={false}
-  blackOn={false}
-  disableAnimation={false}
+  imgUrl=''
 >
-  {event === 'ted-talks' && <Tedex client:visible />}
+  <!-- {event === 'tedtalks' && <Tedex client:visible />}
   {event === 'elan' && <Elan client:visible />}
-  {event === 'e-summit' && <Esummit client:visible />}
+  {event === 'eSummit' && <Esummit client:visible />}
   {event === 'milan' && <Milan client:visible />}
-  {event === 'almuni-day' && <AlumniDay client:visible />}
+  {event === 'alumniday' && <AlumniDay client:visible />}
   {event === 'diesta' && <Diesta client:visible />}
-  {event === 'zozimus' && <Zozimus client:visible />}
-</Layout>
+  {event === 'zozimus' && <Zozimus client:visible />} -->
+</EventLayout>
