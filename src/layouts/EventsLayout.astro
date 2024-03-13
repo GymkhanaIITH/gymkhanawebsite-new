@@ -1,6 +1,16 @@
 ---
 import Layout from "./Layout.astro";
-
+import ecell from "../images/icons/ecell.png"
+import tinkererlogo from "../images/icons/tinkerers.jpeg"
+import sunshinelogo from "../images/icons/sunshine.png"
+import ebsblogo from "../images/icons/ebsb.png"
+import elanlogo from "../images/elanlogo.png";
+import milanlogo from "../images/milanlogo.png";
+import Zozimuslogo from "../images/zozimus.png";
+import tedexlogo from "../images/tedxlogo.png";
+import diestalogo from "../images/diesta.png"
+import ecell from "../images/icons/ecell.png"
+import adaylogo from "../images/Almuni-day-logo.jpg"
 export interface Props {
   title: string;
   desc: string;
@@ -34,7 +44,7 @@ import generalCouncilIcon from "../images/icons/general_council.png";
             title === "Elan & nVision" ? "border-white border-2" : ""
           } p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl text-white`}
         >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <img src={elanlogo} class="w-16 h-16" />
           <span class="font-bold text-lg">Elan</span>
         </button>
       </a>
@@ -44,7 +54,7 @@ import generalCouncilIcon from "../images/icons/general_council.png";
           class={`event-button  ${
             title === "Milan" ? "border-white border-2" : ""
           } p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl text-white `}
-          ><img src={generalCouncilIcon} class="w-16 h-16" />
+          ><img src={milanlogo} class="w-16 h-16" />
           <span class="font-bold text-lg">Milan</span></button
         >
       </a>
@@ -54,7 +64,7 @@ import generalCouncilIcon from "../images/icons/general_council.png";
           class={`event-button ${
             title === "Zozimus" ? "border-white border-2" : ""
           } p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl text-white `}
-          ><img src={generalCouncilIcon} class="w-16 h-16" />
+          ><img src={Zozimuslogo} class="w-16 h-16" />
           <span class="font-bold text-lg">Zozimus</span></button
         >
       </a>
@@ -64,7 +74,7 @@ import generalCouncilIcon from "../images/icons/general_council.png";
           class={`event-button  ${
             title === "Ted-Talks" ? "border-white border-2" : ""
           } p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl text-white `}
-          ><img src={generalCouncilIcon} class="w-16 h-16" />
+          ><img src={tedexlogo} class="w-16 h-16" />
           <span class="font-bold text-lg">TedX</span></button
         >
       </a>
@@ -74,7 +84,7 @@ import generalCouncilIcon from "../images/icons/general_council.png";
           class={`event-button  ${
             title === "Diesta" ? "border-white border-2" : ""
           } p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl text-white `}
-          ><img src={generalCouncilIcon} class="w-16 h-16" />
+          ><img src={diestalogo} class="w-16 h-16" />
           <span class="font-bold text-lg">Diesta</span></button
         >
       </a>
@@ -84,7 +94,7 @@ import generalCouncilIcon from "../images/icons/general_council.png";
           class={`event-button ${
             title === "Alumni Day" ? "border-white border-2" : ""
           }  p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl text-white `}
-          ><img src={generalCouncilIcon} class="w-16 h-16" />
+          ><img src={adaylogo} class="w-16 h-16" />
           <span class="font-bold text-lg">Alumni Day</span></button
         >
       </a>
@@ -94,7 +104,7 @@ import generalCouncilIcon from "../images/icons/general_council.png";
           class={`event-button ${
             title === "E-Summit" ? "border-white border-2" : ""
           }  p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl text-white `}
-          ><img src={generalCouncilIcon} class="w-16 h-16" />
+          ><img src={ecell} class="w-16 h-16" />
           <span class="font-bold text-lg">E-Summit</span></button
         >
       </a>
