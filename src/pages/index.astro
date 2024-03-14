@@ -8,8 +8,25 @@ import Events from "../components/landing page/Events.astro";
 import Loader from "../components/Loader.astro";
 import UpdatesSection2 from "../components/UpdatesSection2";
 import bgvideo from "../images/bgvideo.gif";
-
+import elanlogo from "../images/elanlogo.png";
+import esummitlogo from "../images/ecell-logo.png";
+import tedexlogo from "../images/tedxlogo.png";
 import generalCouncilIcon from "../images/icons/general_council.png";
+import milanlogo from "../images/milanlogo.png";
+import Zozimuslogo from "../images/zozimus.png";
+import adaylogo from "../images/Almuni-day-logo.jpg"
+import diestalogo from "../images/diesta.png"
+import medialogo from "../images/icons/media_council.png"
+import messlogo from "../images/icons/mess_council.png"
+import scitechlogo from "../images/icons/scitech_council.png"
+import sportslogo from "../images/icons/sports_council.png"
+import cultilogo from "../images/icons/cultural_council.png"
+import fcclogo from "../images/icons/fcc.png"
+import emllogo from "../images/icons/eml.png"
+import ecell from "../images/icons/ecell.png"
+import tinkererlogo from "../images/icons/tinkerers.jpeg"
+import sunshinelogo from "../images/icons/sunshine.png"
+import ebsblogo from "../images/icons/ebsb.png"
 ---
 
 <Layout
@@ -98,132 +115,217 @@ import generalCouncilIcon from "../images/icons/general_council.png";
       <div
         class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-16"
       >
+      <a href="/councils/general">
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
           <span class="text-sm">General Council</span>
         </div>
+      </a>
+      <a href="/councils/scitech">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={scitechlogo} class="w-16 h-16" />
+          <span class="text-sm">Sci-Tech Council</span>
+        </div>
+      </a>
+      <a href="/councils/cultural">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={cultilogo} class="w-16 h-16" />
+          <span class="text-sm">Cultural Council</span>
+        </div>
+      </a>
+      <a href="/councils/media">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={medialogo} class="w-16 h-16" />
+          <span class="text-sm">Media Council</span>
+        </div>
+      </a>
+      <a href="/councils/sports">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={sportslogo} class="w-16 h-16" />
+          <span class="text-sm">Sports Council</span>
+        </div>
+      </a>
+      <a href="/councils/mess">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={messlogo} class="w-16 h-16" />
+          <span class="text-sm">Mess Council</span>
+        </div>
+      </a>
+      </div>
+    </div>
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0">Clubs</h2>
+    <div class="flex justify-center">
+      <div
+        class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-16"
+      >
+      <a href="/special-clubs">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={fcclogo} class="w-16 h-16" />
+          <span class="text-sm">FCC</span>
+        </div>
+      </a>
+        <a href="/special-clubs">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={ecell} class="w-16 h-16" />
+          <span class="text-sm">E-Cell</span>
+        </div>
+      </a>
+      <a href="/special-clubs">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={tinkererlogo} class="w-16 h-16" />
+          <span class="text-sm">Tinkerers Lab</span>
+        </div>
+      </a>
+      <a href="/special-clubs">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={tedexlogo} class="w-16 h-16" />
+          <span class="text-sm">Tedx IITH</span>
+        </div>
+        <a/>
+        <a href="/special-clubs">
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
+          <span class="text-sm">Echo IITH</span>
+        </div>
+      </a>
+      <a href="/special-clubs">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={emllogo} class="w-16 h-16" />
+          <span class="text-sm">EML</span>
+        </div>
+      </a>
+     
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={generalCouncilIcon} class="w-16 h-16" />
+          <span class="text-sm">Cultural Clubs</span>
         </div>
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
+          <span class="text-sm">Sci-Tech Clubs</span>
         </div>
+        <a href="/special-clubs">
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
+          <img src={sunshinelogo} class="w-16 h-16" />
+          <span class="text-sm">Sunshine</span>
         </div>
+      </a>
+      <a href="/special-clubs">
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
+          <img src={ebsblogo} class="w-16 h-16" />
+          <span class="text-sm">EBSB</span>
         </div>
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
+      </a>
       </div>
     </div>
     <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0">
-      Councils
+      Events and fests
     </h2>
     <div class="flex justify-center">
       <div
         class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-16"
       >
+      <a href="/events/elan">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={elanlogo} class="w-16 h-16" />
+          <span class="text-sm">Elan and nVision</span>
+        </div>
+      </a>
+      <a href="/events/tedtalks">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={tedexlogo} class="w-16 h-16" />
+          <span class="text-sm">Tedx</span>
+        </div>
+      </a>
+      <a href="/events/eSummit">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={esummitlogo} class="w-16 h-16" />
+          <span class="text-sm">E-summit</span>
+        </div>
+      </a>
+      <a href="/events/horizon">
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
+          <span class="text-sm">Horizon</span>
         </div>
+      </a>
+      <a href="/events/milan">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={milanlogo} class="w-16 h-16" />
+          <span class="text-sm">milan</span>
+        </div>
+      </a>
+      <a href="/events/diesta">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={diestalogo} class="w-16 h-16" />
+          <span class="text-sm">Diesta</span>
+        </div>
+      </a>
+      <a href="/events/alumniday">
+        <div
+          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+        >
+          <img src={adaylogo} class="w-16 h-16" />
+          <span class="text-sm">Alumni day</span>
+        </div>
+      </a>
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
+          <span class="text-sm">RSD</span>
         </div>
+        <a href="/events/zozimus">
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
+          <img src={Zozimuslogo} class="w-16 h-16" />
+          <span class="text-sm">Zozimus</span>
         </div>
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
-      </div>
-    </div>
-    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0">
-      Councils
-    </h2>
-    <div class="flex justify-center">
-      <div
-        class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-16"
-      >
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
-        <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
+      </a>
       </div>
     </div>
   </section>
