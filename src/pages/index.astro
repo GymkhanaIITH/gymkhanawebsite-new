@@ -8,6 +8,7 @@ import Events from "../components/landing page/Events.astro";
 import Loader from "../components/Loader.astro";
 import UpdatesSection2 from "../components/UpdatesSection2";
 import bgvideo from "../images/bgvideo.gif";
+import bgvideo2 from "../images/mobile.gif";
 import elanlogo from "../images/elanlogo.png";
 import esummitlogo from "../images/ecell-logo.png";
 import tedexlogo from "../images/tedxlogo.png";
@@ -44,7 +45,16 @@ import ebsblogo from "../images/icons/ebsb.png"
       alt="IITH Hostels"
       class="absolute object-fill -z-10 h-full hostel md:w-full"
     />
+    <img 
+     class="absolute object-fill -z-10 h-full hostel md:w-full"
+      src={bgvideo}  
+      alt="IITH Hostels"
+    />
 
+    <img class="absolute object-fill -z-10 h-full hostel md:w-full md:hidden"
+      src={bgvideo2} 
+      alt="IITH Hostels" 
+    />
     <div
       class="absolute bg-gradient-to-r from-[#00423ba6] to-[#190d57cf] z-10 w-full h-full bg-opacity-20"
     >
