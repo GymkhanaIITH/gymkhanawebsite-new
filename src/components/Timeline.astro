@@ -28,7 +28,7 @@ import Slider from "./slider.astro";
                                 <a
                                     href="#0"
                                     data-date="06/04/2024"
-                                    class="cd-h-timeline__date cd-h-timeline__date--selected"
+                                    class="cd-h-timeline__date"
                                     >6th April 2024
                                 </a>
                             </li>
@@ -137,8 +137,9 @@ import Slider from "./slider.astro";
                             >
                             <p class="cd-h-timeline__event-description">
                                 Tedx Talk by Honourable Justice Sree Sudha High
-                                court judge of Telangana
-                                State.Graduated in Pulivendula of Kadapa District. Secured Law Degree from A.C. College of Law, Guntur.
+                                court judge of Telangana State.Graduated in
+                                Pulivendula of Kadapa District. Secured Law
+                                Degree from A.C. College of Law, Guntur.
                             </p>
                         </div>
                     </li>
@@ -1590,7 +1591,7 @@ import Slider from "./slider.astro";
             white-space: nowrap;
             text-decoration: none;
             line-height: 1;
-            font-size: 1em;
+            font-size: 2em;
             font-size: var(--btn-font-size, 1em);
             padding-top: 0.5em;
             padding-top: var(--btn-padding-y, 0.5em);
@@ -3634,7 +3635,7 @@ import Slider from "./slider.astro";
         }
         @media (min-width: 64rem) {
             .js .cd-h-timeline__date {
-                font-size: 0.7em;
+                font-size: 1rem;
             }
         }
         .js .cd-h-timeline__date--selected {
@@ -3763,12 +3764,14 @@ import Slider from "./slider.astro";
             /* font-family: var(--font-secondary); */
             font-weight: 700;
             font-size: 2.48832em;
+
             /* font-size: var(--text-xxxl); */
         }
         .js .cd-h-timeline__event-date {
             display: block;
             font-style: italic;
             margin: 0.5em auto;
+
             /* margin: var(--space-xs) auto; */
         }
         .js .cd-h-timeline__event-date::before {
