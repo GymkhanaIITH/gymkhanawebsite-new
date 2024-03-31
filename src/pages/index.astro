@@ -8,7 +8,7 @@ import Events from "../components/landing page/Events.astro";
 import Loader from "../components/Loader.astro";
 import UpdatesSection2 from "../components/UpdatesSection2";
 import bgvideo from "../images/bgvideo.gif";
-import bgvideo2 from "../images/mobile.gif";
+import bgvideo2 from "../images/newbg.gif";
 import elanlogo from "../images/elanlogo.png";
 import esummitlogo from "../images/ecell-logo.png";
 import tedexlogo from "../images/tedxlogo.png";
@@ -28,6 +28,8 @@ import ecell from "../images/icons/ecell.png"
 import tinkererlogo from "../images/icons/tinkerers.jpeg"
 import sunshinelogo from "../images/icons/sunshine.png"
 import ebsblogo from "../images/icons/ebsb.png"
+import Timeline from "../components/Timeline.astro";
+import Slider from "../components/slider.astro";
 ---
 
 <Layout
@@ -111,6 +113,15 @@ import ebsblogo from "../images/icons/ebsb.png"
       </p>
     </div>
   </section>
+
+  <div class="py-8 bg-[#11093A] text-white flex flex-col items-start">
+    <h2
+    class="text-4xl p-5 font-bold md:text-5xl md:p-7 "
+  >
+    TIMELINE
+  </h2>
+    <Timeline></Timeline>
+  </div>
 
   <hr
     class="lg:mx-40 mx-20 my-5"
