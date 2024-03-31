@@ -30,6 +30,8 @@ import sunshinelogo from "../images/icons/sunshine.png"
 import ebsblogo from "../images/icons/ebsb.png"
 import Timeline from "../components/Timeline.astro";
 import Slider from "../components/slider.astro";
+import tedexwhite from "../images/tedexwhite.png";
+import esummitnew from "../images/esummitnewlogo.png";
 ---
 
 <Layout
@@ -113,14 +115,14 @@ import Slider from "../components/slider.astro";
       </p>
     </div>
   </section>
-
-  <div class="py-8 bg-[#11093A] text-white flex flex-col items-start">
-    <h2
-    class="text-4xl p-5 font-bold md:text-5xl md:p-7 "
-  >
-    TIMELINE
-  </h2>
-    <Timeline></Timeline>
+  <hr
+  class="lg:mx-40 mx-20 my-5"
+  style="height:4px;border-width:0;color:#B74224;background-color:#B74224"
+/>
+  <div class="py-8 text-white flex flex-col items-start lg:mx-40 md:mx-20">
+    <!-- Adjusted margin-left (ml-5) -->
+    <h2 class="text-4xl p-5 font-bold md:text-5xl md:p-7">TIMELINE</h2>
+    <Timeline />
   </div>
 
   <hr
@@ -202,7 +204,7 @@ import Slider from "../components/slider.astro";
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
-          <img src={ecell} class="w-16 h-16" />
+          <img src={esummitnew} class="w-16 h-16" />
           <span class="text-sm">E-Cell</span>
         </div>
       </a>
@@ -218,7 +220,7 @@ import Slider from "../components/slider.astro";
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
-          <img src={tedexlogo} class="w-16 h-16" />
+          <img src={tedexwhite} class="w-16 h-16" />
           <span class="text-sm">Tedx IITH</span>
         </div>
         <a/>
@@ -288,7 +290,7 @@ import Slider from "../components/slider.astro";
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
-          <img src={tedexlogo} class="w-16 h-16" />
+          <img src={tedexwhite} class="w-16 h-16" />
           <span class="text-sm">Tedx</span>
         </div>
       </a>
@@ -296,7 +298,7 @@ import Slider from "../components/slider.astro";
         <div
           class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
-          <img src={esummitlogo} class="w-16 h-16" />
+          <img src={esummitnew} class="w-16 h-16" />
           <span class="text-sm">E-summit</span>
         </div>
       </a>
