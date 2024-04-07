@@ -2,75 +2,74 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/freshers-guide/Card.astro";
 import generalCouncilIcon from "../images/icons/general_council.png";
-
 ---
 
 <Layout title={"Fresher's guide"}>
   <div
-    class="text-white w-full h-40 bg-[url('/images/councils_hero.png')] bg-no-repeat bg-cover fixed flex items-center z-30"
+    class="text-white w-full h-40 bg-[url('/images/councils_hero.png')] bg-no-repeat bg-cover flex items-center z-30"
   >
     <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold lg:ml-20">
       Students Guide
     </h2>
   </div>
-  <div class="text-white lg:mx-40 mx-20 mt-[12rem]">
+  <div class="text-white lg:mx-40 mx-20 mt-[8rem]">
     <h2 class="lg:text-2xl text-4xl font-bold text-center lg:text-left">
       Important Links
     </h2>
     <ul class="m-8 text-lg">
-      <li class="m-2"><a href="#">ERP Portal</a></li>
-      <li class="m-2"><a href="#">E-Pay Portal</a></li>
-      <li class="m-2"><a href="#">IITH VPN Guide</a></li>
-      <li class="m-2"><a href="#">SVA Portal (Mess Registration)</a></li>
-      <li class="m-2"><a href="#">Bus Schedule</a></li>
-      <li class="m-2"><a href="#">Cab Sharing Portal</a></li>
-      <li class="m-2"><a href="#">Campus Navigation</a></li>
+      <li class="m-2">
+        <a href="https://erp.iith.ac.in/Default/Authenticate.html"
+          >ERP Portal</a>
+      </li>
+      <li class="m-2"><a href="https://epay.iith.ac.in/">E-Pay Portal</a></li>
+      <li class="m-2">
+        <a href="https://support.comp.iith.ac.in/kb/faq.php?id=21"
+          >IITH VPN Guide</a>
+      </li>
+      <li class="m-2">
+        <a href="https://sva.iith.ac.in/">SVA Portal (Mess Registration)</a>
+      </li>
+      <li class="m-2">
+        <a href="https://iithbus.vercel.app/">Bus Schedule</a>
+      </li>
+      <li class="m-2">
+        <a href="https://cabsharing.iith.dev/">Cab Sharing Portal</a>
+      </li>
+      <li class="m-2">
+        <a href="https://cins.iith.ac.in/">Campus Navigation</a>
+      </li>
     </ul>
     <h2 class="lg:text-2xl text-4xl font-bold text-center lg:text-left">
       Constitutions & Documents
     </h2>
-      <div class="flex justify-center">
-        <div class="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-8">
-          <a href="#">
-            <div
-            class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-                    >
-            <span class="text-sm">General Council</span>
-                    </div>
-          </a>
-        <a href="#">
-          <div
-            class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-          >
-            <span class="text-sm">General Council</span>
+    <div class="flex justify-center">
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:m-16 m-2 gap-8">
+        <a href="https://gymkhana.iith.ac.in/documents/gymkhana%20constitution.pdf" target="_blank">
+          <div class="p-4 bg-[#040404] flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+            <span class="text-lg">Constitution</span>
           </div>
         </a>
-        <a href="#">
-          <div
-            class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-          >
-            <span class="text-sm">General Council</span>
+        <a href="https://gymkhana.iith.ac.in/documents/Elan%20&%20%CE%B7Vision%202023%20Documentation.pdf" target="_blank">
+          <div class="p-4 bg-[#040404] flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+            <span class="text-lg">Elan and Nvision </span>
           </div>
         </a>
-        <a href="#">
-          <div
-            class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-          >
-            <span class="text-sm">General Council</span>
+        <a href="https://gymkhana.iith.ac.in/documents/E-Cell%20IITH%20Prospectus.pdf" target="_blank">
+          <div class="p-4 bg-[#040404] flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+            <span class="text-lg">E-Cell Prospectus</span>
           </div>
         </a>
-        <a href="#">
-          <div
-            class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-          >
-            <span class="text-sm">General Council</span>
+        <a href="https://gymkhana.iith.ac.in/documents/Academic%20Handbook%202022%20(50th%20senate).pdf" target="_blank">
+          <div class="p-4 bg-[#040404] flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+            <span class="text-lg">Students handbook</span>
           </div>
         </a>
-        </div>
       </div>
-      <h2 class="lg:text-2xl text-4xl font-bold text-center lg:text-left">
-        How to Reach IITH
-      </h2>
+      
+    </div>
+    <!-- <h2 class="lg:text-2xl text-4xl font-bold text-center lg:text-left">
+      How to Reach IITH
+    </h2> -->
   </div>
   <!-- <div class="md:px-[4rem] lg:px-[8rem]">
     <div class="pb-8 px-8">

@@ -55,7 +55,7 @@ function LinkButton(props: LinkButton) {
   if (type === "BUTTON") {
     return (
       <>
-        
+
         <a
           href={href}
           onMouseEnter={(e) => {
@@ -244,9 +244,8 @@ function MainNavbar({ blackOn, disableAnimation }) {
     <>
       <nav
         ref={navRef}
-        className={`fixed justify-between ${
-          blackOn ? "text-black bg-white" : "text-white bg-transparent"
-        } px-4 py-2 w-full z-40 hidden lg:flex lg:items-center lg:flex-row`}
+        className={`fixed justify-between ${blackOn ? "text-black bg-white" : "text-white bg-transparent"
+          } px-4 py-2 w-full z-40 hidden lg:flex lg:items-center lg:flex-row`}
       >
         <div className="inline-block">
           <a href="/">
@@ -256,8 +255,8 @@ function MainNavbar({ blackOn, disableAnimation }) {
                   disableAnimation
                     ? Logo
                     : scrollPosition !== 0
-                    ? Logo
-                    : WhiteLogo
+                      ? Logo
+                      : WhiteLogo
                 }
                 alt="gymkhana logo"
               />
@@ -285,7 +284,7 @@ function MainNavbar({ blackOn, disableAnimation }) {
       {activeSubMenu && (
         <div
           ref={subMenuRef}
-          className="bg-white text-black inline-block fixed z-40"
+          className="bg-white text-black inline-block fixed z-40 rounded-lg"
           style={{
             left: activeSubMenu !== 7 ? left : left - 165,
             top: top + 60,
