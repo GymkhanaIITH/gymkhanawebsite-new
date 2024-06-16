@@ -7,9 +7,8 @@ import gym2020 from '../constants/gymkhanaData/2020.json';
 import gym2021 from '../constants/gymkhanaData/2021.json';
 import gym2022 from '../constants/gymkhanaData/2022.json';
 import gym2023 from '../constants/gymkhanaData/2023.json';
+import gym2024 from '../constants/gymkhanaData/2024.json';
 import Loader from '../components/Loader.astro';
-
-
 
 interface card {
   name: string;
@@ -25,6 +24,7 @@ interface officeBearersObject {
 }
 
 const officeBearers: officeBearersObject = {
+  2024: gym2024,
   2023: gym2023,
   2022: gym2022,
   2021: gym2021,
@@ -59,6 +59,7 @@ const imgId = {
   'Transport Head 1': 'transport1.jpg',
   'Transport Head 2': 'transport2.jpg',
   'Elan & nVision Overall Coordinator': 'elan.jpg',
+  'Elan & nVision Vice Coordinator' : 'elan_vc.jpg'
 };
 ---
 
@@ -67,8 +68,10 @@ const imgId = {
   <div class="py-8 px-6 bg-p">
     <ul class="lg:flex flex-row gap-8 hidden text-white text-xl button-parent">
       <li class="">
-        <button data-year="2023" class="year-button active inactive"
-          >Current Office</button>
+        <button data-year="2024" class="year-button active inactive">Current Office</button>
+      </li>
+      <li class="">
+        <button data-year="2023" class="year-button inactive">2023-24</button>
       </li>
       <li class="">
         <button data-year="2022" class="year-button inactive">2022-23</button>
@@ -90,7 +93,8 @@ const imgId = {
       name="year"
       class="text-md lg:hidden p-3 bg-white text-p overflow-hidden rounded-md dropdown"
     >
-      <option value="2023" class="">Current Office</option>
+      <option value="2024" class="">Current Office</option>
+      <option value="2023">2023-24</option>
       <option value="2022">2022-23</option>
       <option value="2021">2021-22</option>
       <option value="2020">2020-21</option>
@@ -105,7 +109,7 @@ const imgId = {
     <h2
       class="text-white font-semibold text-4xl pt-3 lg:px-[4rem] lg:pt-[2rem] lg:text-5xl lg:font-bold"
     >
-      Office Bearers <span class="year-text">2023-24</span>
+      Office Bearers <span class="year-text">2024-25</span>
     </h2>
     {
       Object.keys(officeBearers).map((year, index) => {
@@ -161,9 +165,8 @@ const imgId = {
     window.addEventListener('orientationChange', lazyload);
   });
 
-  //for setting all cards invisible
-
-  let activeYear = '2023';
+  // for setting all cards invisible
+  let activeYear = '2024';
   function showOfficeForCurrentYear() {
     const section = document.querySelectorAll('section');
     for (let i = 0; i < section.length; i++) {
@@ -196,7 +199,7 @@ const imgId = {
       }
     }
   }
-  //This activates the active button
+  // This activates the active button
 
   const dropdown = document.querySelector('.dropdown');
   console.log(dropdown.value);
