@@ -17,9 +17,8 @@ function Elan() {
       </div>
       <div className="py-5 lg:col-span-3 self-center">
         <p className="lg:text-[1.25rem]">
-        Elan & ηVision is the annual techno-cultural fest of IIT Hyderabad and is one of the largest fests in South India. It is entirely organized by IITH students.
+        Elan & ηVision is the annual techno-cultural fest of IIT Hyderabad, entirely organized by the student community of IIT Hyderabad. Elan represents the cultural wing of the fest while ηVision cites the technical part. Several pre-events and workshops throughout the tenure lead on to our college fest; a grand showcase of live performances, crowd-pulling cultural and technical competitions, workshops, games - all of it with a simple message to celebrate the friendship and harmony in the student community. The members of this cell are responsible for ideating and executing plans to provide a memorable college fest to all the students.
 
-Elan refers to the cultural part and ηVision cites the technological part of the fest. This festival features several professional and semi-professional crowd-pulling events and promises to be a grand event showcasing the best of cultural performances, technical solutions, and student community advances 2022
         </p>
         <div className="my-8 justify-end lg:flex">
         <a href='https://elan.org.in/' target='_blank' rel='noopener noreferrer'> <button className=" scale-90 disabled text-xl bg-blue-700 text-white px-4 py-3 rounded-lg">

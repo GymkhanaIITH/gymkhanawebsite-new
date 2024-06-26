@@ -9,11 +9,11 @@ export const councilChildren = [
 
 export const eventsChildren = [
   { name: 'Elan & nVision', href: '/events/elan' },
-  { name: 'E-Summit', href: '/events/e-summit' },
+  { name: 'E-Summit', href: '/events/eSummit' },
   { name: 'Milan', href: '/events/milan' },
   { name: 'TedxIITHyderabad', href: '/events/tedtalks' },
   { name: 'Diesta', href: '/events/diesta' },
-  { name: 'Alumni Day', href: '/events/almuniday' },
+  { name: 'Alumni Day', href: '/events/alumniday' },
   { name: 'Zozimus', href: '/events/zozimus' },
 ];
 
