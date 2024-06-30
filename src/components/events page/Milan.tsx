@@ -21,12 +21,8 @@ function Milan() {
         </div>
         <div className="py-5 lg:col-span-3 self-center">
           <p className="lg:text-[1.25rem]">
-            "Milan" is the annual techno-cultural-sports General Championship of
-            IIT Hyderabad. It consists of 19 Sports, 18 Cultural and 11
-            technical events conducted between all the hostel blocks. In this
-            second edition of Milan, presented by SBI YONO, the sports,
-            cultural, and technical events will start from 9th September and
-            will conclude on 18th September
+          Milan is IIT Hyderabad’s General championship between the Hostels, it is packed with sports, cultural, and tech competitions. It's so prestigious and one of the largest tournaments in Telugu states. We can expect this event for 10 days of a big blast of intense competition between the hostels in September of this year.
+          MILAN stands out as one of the most significant events at IIT Hyderabad due to its inclusive approach. With a football of over 5000 students, it transforms the campus into a hub of excitement. The event not only highlights the exceptional abilities of IIT Hyderabad students but also promotes teamwork, innovation, and cultural exchange. MILAN is a celebration of talent, creativity, and sportsmanship, making it a cornerstone of student life at IIT Hyderabad.
           </p>
           <div className="my-8 justify-end lg:flex text-black">
             <a

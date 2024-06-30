@@ -20,7 +20,7 @@ function AlumniDay() {
         Organised once every year, Alumni Day is a day specifically dedicated to the wonderful alums of IIT Hyderabad. Various events, ranging from cultural to technical to sports, are organised exclusively for the alums along with the campus tours. Exemplary alums are recognised by giving away awards in categories and special decennial celebrations are held for the batches completing 10 years of their graduation from IIT Hyderabad.
         </p>
       <div className="my-8 justify-end lg:flex">
-        <a href='https://iith.ac.in/alumni-relations/' target='_blank' rel='noopener noreferrer'> <button className=" scale-90 disabled text-xl bg-blue-700 text-white px-4 py-3 rounded-lg">
+        <a href='https://acr.iith.ac.in/' target='_blank' rel='noopener noreferrer'> <button className=" scale-90 disabled text-xl bg-blue-700 text-white px-4 py-3 rounded-lg">
           Navigate to Website
         </button></a>
         </div>
