@@ -11,15 +11,15 @@ interface club {
 const clubs: club[] = [
   {
     name: "infocus",
-    desc: "Life is all about memories. We at InFocus work hard to glorify those moments which add up to your journey making it worthwhile. The club was awarded the best cultural club of the year 2015-16. We not only take photos but also conduct sessions for students who are willing to learn photography. We conduct events throughout the year and have them approachable for everyone out there. Our aim is to expand the club to newer horizons and make the learning experience comfortable for everyone interested.",
+    desc: "The photography club of IIT Hyderabad",
   },
   {
     name: "litsoc",
-    desc: "LitSoc, short for The Literary Society, is a hobby club for a number of activities of “literary nature”. Originally started by two fiery young men, with unabated passion, as a club for quizzing every week, the LitSoc quickly encompassed a number of activities, besides quizzing. The Lexicon ( https://theiithlexicon.wordpress.com ) is our online blog/magazine where young writers weave words of their choice, be it hot opinions, satire or evocative pieces that surprise your way of thinking or tales worthy of a college level bard. Debates are held on both pressing current topics and more nuanced policy based ones. We also have a readers circle that meets up every once in a while to discuss books and literature. The LitSoc hopes to hold many more interesting literary activities, encourage fresh ideas and have fun.  ",
+    desc: "The IITH Quiz Club is a group for people enthusiastic about testing their knowledge on a variety of subjects. The club members meet regularly to compete in quizzes about anything ranging to science to pop culture. The club give people a fun opportunity to learn new trivia, meet new people, and challenge oneself mentally.We are a bunch of people who call ourselves writers. We gather our fellow writing enthusiasts at a place and conduct events, sessions and competitions. We, in short, enjoy, promote and indulge in having fun through the art of writing.",
   },
   {
     name: "btl",
-    desc: "The behind the lens club exists to Foster the appreciation and study of film making. The purpose of our club is to give students the opportunity to approach all aspects of film and film making in a serious, meaningful, and in-depth manner. By offering film screenings, speakers, and production opportunities, we strive to expose and educate our student body about the medium we love. If you love watching films, talking about them, making them, or just have interest in connecting with other film lovers, you've come to the right place. Come join us in our weekly meetings - we'd love to have you.",
+    desc: "The behind the lens club exists to Foster the appreciation and study of film making. The purpose of our club is to give students the opportunity to approach all aspects of film and film making in a serious, meaningful, and in-depth manner.",
   },
   {
     name: "vibes",
@@ -27,11 +27,11 @@ const clubs: club[] = [
   },
   {
     name: "shuffle",
-    desc: "An assorted collection of quirky energy - that's the shuffle crew for you. Dance is the ideal workout for both mind and body. This is the excuse we often give for our indelible love for dance, which is only second to our love for food. (one needs to eat after a tough practice session!) We, the dance club of IIT Hyderabad, never miss out on the opportunity to showcase our moves and our talent. Mostly, we focus on becoming a better, classier version of ourselves with each performance. But sometimes, we simply focus on enjoying the dance. :)",
+    desc: "IIT Hyderabad’s dance club is a lively and vigorous student organization focusing on promoting dance culture in the campus. It offers opportunity for the students to express themselves in different dance categories such as classical or modern and street dances such as hip-hop and break-dancing. A club arranges for weekend classes and dance-offs as well as competitions to create the spirit of teamwork and innovative ideas amongst the dancers.",
   },
   {
     name: "gesture",
-    desc: "Creativity and imagination leads to innovation and inventions. Gestures, the arts and craft club of IIT Hyderabad, guarantees the students a fun filled ride with a lots of activities. It promises a whimsical escape from the stressful and hectic college life. It does not matter if you're a noob or a ninja, there is place for everyone",
+    desc: "The Official Art Club of IIT Hyderabad, is a space to create, design and discover oneself in the traditional and modern realms of art and craft. Every year, our team comprises of like-minded people who bring out the best of creativity in themselves for the ultimate betterment of the Gesture. We are deeply passionate about art, and highly encourage people to join the group for any sessions or collaborations. Gesture is a strong platform for artistic talent and exploration.",
   },
   {
     name: "rang",
@@ -40,15 +40,14 @@ const clubs: club[] = [
 ];
 
 const clubLogos = {
-  infocus:
-    "https://res.cloudinary.com/dwsverefw/image/upload/v1671964399/media%20council/cultural%20clubs/infocus_bqjbml.png",
+  infocus: "/public/images/councils/infocus.png",
   vibes:
     "https://res.cloudinary.com/dwsverefw/image/upload/c_fit,h_208,q_29,w_318/v1671964501/media%20council/cultural%20clubs/vibes_nr2iou.png",
   litsoc:
     "https://res.cloudinary.com/dwsverefw/image/upload/c_scale,w_293/v1671968750/media%20council/cultural%20clubs/litsoc_awwkkd.png",
-  btl: "/public/images/councils/btl.jpg",
+  btl: "/public/images/councils/btl.png",
   rang: "/public/images/councils/rdm.jpg",
-  shuffle: "/public/images/councils/shuffle.jpg",
+  shuffle: "/public/images/councils/shuffle.png",
   gesture: "/public/images/councils/gesture.jpg",
 };
 

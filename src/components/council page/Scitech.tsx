@@ -11,7 +11,7 @@ interface club {
 const clubs: club[] = [
   {
     name: "aero",
-    desc: "Want some thrilling flying stuff? Fascinated with flying things? Wanna blow your mind with the flow of wind? Come join us for an exciting experience! Aeromodelling is the art of designing and getting the design to build some awe-inspiring stuff to meet the skies. At IITH; we aviation enthusiasts fuel innovation to re-invent “flying” like it has never been before. Let’s re-energise aviation.",
+    desc: "Aeronautics and Drone Designing Club of IIT Hyderabad, is a community dedicated to explore the world of planes and drones. We build cool stuff in our projects, organize interesting and engaging events explaining aerodynamics in a simple way and conduct exciting competitions.",
   },
   {
     name: "cepheid",
@@ -19,7 +19,7 @@ const clubs: club[] = [
   },
   {
     name: "elektronica",
-    desc: "Elektronika is the de facto electronics, artificial intelligence andmachine learning club of IIT Hyderabad.This is the platform for our students to dream innovative practical projects and achieve them. We strive to create interest in the students for electronics..",
+    desc: "Elektronica is the Electronics & Signal Processing club of IIT Hyderabad. Here people interested in electronics & signal processing work together, build projects and learn from one another. We also conduct sessions & contests to spread the knowledge with the rest of the community. We also participate and represent IIT Hyderabad in various other competitions and even Inter IIT Tech Meet.",
   },
   {
     name: "kludge",
@@ -31,43 +31,42 @@ const clubs: club[] = [
   },
   {
     name: "lambda",
-    desc: "We are the software development club of IITH. We build solutions and help others to do the same. Contributing to a quality piece of open source software can be a great learning experience. Keeping this in mind Hacktoberfest is conducted every year. It is open to everyone and is aimed to encourage involvement in the open source community.",
+    desc: "Lambda is the software development club at IIT Hyderabad, focusing on building software, applications, and websites that benefit the entire IITH community. As part of these efforts, we have developed the Main Gate Application, IITH Dashboard, and many others. Whether you're a seasoned coder or a complete beginner, Lambda provides an inclusive environment to grow. Join us to dream, develop, and accomplish extraordinary things with technology.",
   },
   {
     name: "epoch",
-    desc: "Epoch is the AI & Machine Learning of IIT Hyderabad, we conduct events and workshops, hold lectures and talks, and even host Kaggle competitions and hackathons. We create a platform that allows students to gain assistance and mentorship to enhance their AI & ML skills. Our aim is to propagate the enthusiasm for AI & ML in the institute and especially amongst freshmen. The secret of getting ahead is getting started and we aim to provide every student with the right start.",
+    desc: "Epoch is a club at IITH that helps students learn and grow in AI and Data Science. Members can join hands-on sessions, hackathons, and work on projects in areas like Computer Vision, NLP, and more. It's a great place to connect with peers and gain practical experience.",
   },
   {
     name: "prakriti",
-    desc: "Prakriti is the Nature Club of IIT Hyderabad. Prakriti is be a place where anyone interested in Nature, and willing to stay engaged, should be able to contribute with minimal procedural or structural hindrances.I",
+    desc: "Nature club of IITH. Bringing naturalists together to enjoy, appreciate and be grateful for nature.Club to increase awareness regarding current pressing issues surrounding nature, sustainable technology and real life problem statements surrounding nature",
   },
   {
     name: "robotix",
-    desc: "Since the first appearance of a robot in a movie in 1927, robots have intrigued us through innumerable appearances in fictional stories in the media, be it the print or the film. The Robotix club IIT Hyderabad is a place where some of the most hardworking individuals strive to achieve perfection in the field of Robotics. The club came up in 2009 and since its formation, it has come a long way in terms of development and technology.",
+    desc: "The Robotix Club at the Indian Institute of Technology Hyderabad (IITH) is a dynamic hub for enthusiasts passionate about robotics, machine learning, electronics, and mechanical modeling. Our club is dedicated to fostering innovation and technical excellence through hands-on projects and collaborative learning. At the Robotix Club, we take pride in our diverse portfolio of cutting-edge projects, ranging from the intricate design and flight of Ornithopters to the advanced engineering of Drones. Our members gain practical experience in integrating machine learning algorithms with robotics, developing sophisticated electronic circuits, and constructing robust mechanical systems.",
   },
   {
     name: "torque",
-    desc: "Torque, a club started by automobile aficionados, is aimed to nourish the passion of automobile enthusiasts. The purpose of this club is to enhance the mechanical knowledge amongst student enthusiasts at IITH. We aim to motivate the students, to coordinate and participate in co-curricular Activities along with their regular Academics which helps them to be more competitive in the era of industrialisation.",
+    desc: "Torque, the automobile club at IIT Hyderabad, is dedicated to fostering the passion of automobile enthusiasts. Our mission is to enhance mechanical knowledge among students. We conduct regular sessions, work on hands-on projects, and participate in competitions. Like other college automobile clubs, we host workshops, collaborate on vehicle design and construction, and engage in industry visits and networking events to provide a comprehensive learning experience.",
   },
   {
     name: "glitch",
-    desc: "Glitch is the official video game club of IIT Hyderabad.",
+    desc: "The esports and game dev club of IITH.",
   },
 ];
 
 const clubLogos = {
-  aero: "https://scitech-iith.netlify.app/images/aero_logo.png",
+  aero: "/public/images/councils/aero.png",
   cepheid: "https://scitech-iith.netlify.app/images/cepheid.jpg",
   elektronica: "https://scitech-iith.netlify.app/images/elektronica.png",
   kludge: "https://scitech-iith.netlify.app/images/kludge.jpeg",
   infero: "https://scitech-iith.netlify.app/images/infero_logo.png",
-  lambda: "https://scitech-iith.netlify.app/images/lambda_logo.png",
+  lambda: "/public/images/councils/lambda.png",
   prakriti: "https://scitech-iith.netlify.app/images/prakriti_logo.png",
   robotix: "https://scitech-iith.netlify.app/images/robotix_logo.png",
   torque: "https://scitech-iith.netlify.app/images/torque_logo.png",
-  glitch:
-    "https://static-cdn.jtvnw.net/jtv_user_pictures/e91b853c-5709-4786-afc3-01e956dfbea5-profile_image-300x300.png",
-  epoch: "https://avatars.githubusercontent.com/u/55585020?s=200&v=4"
+  glitch:"/public/images/councils/glitch.png",
+  epoch: "/public/images/councils/epoch.png",
 };
 
 const coords = {
