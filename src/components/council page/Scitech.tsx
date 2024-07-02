@@ -56,18 +56,17 @@ const clubs: club[] = [
 ];
 
 const clubLogos = {
-  aero: "https://scitech-iith.netlify.app/images/aero_logo.png",
+  aero: "/public/images/councils/aero.png",
   cepheid: "https://scitech-iith.netlify.app/images/cepheid.jpg",
   elektronica: "https://scitech-iith.netlify.app/images/elektronica.png",
   kludge: "https://scitech-iith.netlify.app/images/kludge.jpeg",
   infero: "https://scitech-iith.netlify.app/images/infero_logo.png",
-  lambda: "https://scitech-iith.netlify.app/images/lambda_logo.png",
+  lambda: "/public/images/councils/lambda.png",
   prakriti: "https://scitech-iith.netlify.app/images/prakriti_logo.png",
   robotix: "https://scitech-iith.netlify.app/images/robotix_logo.png",
   torque: "https://scitech-iith.netlify.app/images/torque_logo.png",
-  glitch:
-    "https://static-cdn.jtvnw.net/jtv_user_pictures/e91b853c-5709-4786-afc3-01e956dfbea5-profile_image-300x300.png",
-  epoch: "https://avatars.githubusercontent.com/u/55585020?s=200&v=4"
+  glitch:"/public/images/councils/glitch.png",
+  epoch: "/public/images/councils/epoch.png",
 };
 
 const coords = {

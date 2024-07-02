@@ -40,15 +40,14 @@ const clubs: club[] = [
 ];
 
 const clubLogos = {
-  infocus:
-    "https://res.cloudinary.com/dwsverefw/image/upload/v1671964399/media%20council/cultural%20clubs/infocus_bqjbml.png",
+  infocus: "/public/images/councils/infocus.png",
   vibes:
     "https://res.cloudinary.com/dwsverefw/image/upload/c_fit,h_208,q_29,w_318/v1671964501/media%20council/cultural%20clubs/vibes_nr2iou.png",
   litsoc:
     "https://res.cloudinary.com/dwsverefw/image/upload/c_scale,w_293/v1671968750/media%20council/cultural%20clubs/litsoc_awwkkd.png",
-  btl: "/public/images/councils/btl.jpg",
+  btl: "/public/images/councils/btl.png",
   rang: "/public/images/councils/rdm.jpg",
-  shuffle: "/public/images/councils/shuffle.jpg",
+  shuffle: "/public/images/councils/shuffle.png",
   gesture: "/public/images/councils/gesture.jpg",
 };
 
