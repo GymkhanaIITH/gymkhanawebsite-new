@@ -319,12 +319,10 @@ function Scitech() {
         <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start">
           <div className="bg-[#2F2F2F] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
             <h4 className=" text-p">Science and Technology Secretary </h4>
-            <h3 className="lg:text-2xl text-xl font-semibold">
-              Bapatu Manoj Kumar Reddy
-            </h3>
+            <h3 className="lg:text-2xl text-xl font-semibold">ARMAAN</h3>
             <address className="pt-3">
               <h4 className="lg:text-xl text-lg font-semibold">
-                +91 7569521250
+                +91 6309818915
               </h4>
               <a
                 href="mailto:scitech_secy@gymkhana.iith.ac.in"
@@ -343,7 +341,9 @@ function Scitech() {
             className={`lg:col-span-1 hidden text-2xl lg:flex lg:flex-col gap-3 [&>li]:cursor-pointer bg-[#2F2F2F] p-8 flex-col justify-center items-start rounded-xl`}
           >
             <li
-              className={`px-4 py-2 rounded-md ${club === "aero" ? "bg-[#B74224]" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${
+                club === "aero" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
               onClick={() => {
                 setClub("aero");
               }}
@@ -371,7 +371,9 @@ function Scitech() {
               Elektronica
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${club === "kludge" ? "bg-[#B74224]" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${
+                club === "kludge" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
               onClick={() => {
                 setClub("kludge");
               }}
@@ -380,7 +382,9 @@ function Scitech() {
             </li>
 
             <li
-              className={`px-4 py-2 rounded-md ${club === "infero" ? "bg-[#B74224]" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${
+                club === "infero" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
               onClick={() => {
                 setClub("infero");
               }}
@@ -388,7 +392,9 @@ function Scitech() {
               Infero
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${club === "lambda" ? "bg-[#B74224]" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${
+                club === "lambda" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
               onClick={() => {
                 setClub("lambda");
               }}
@@ -396,7 +402,9 @@ function Scitech() {
               Lambda
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${club === "epoch" ? "bg-[#B74224]" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${
+                club === "epoch" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
               onClick={() => {
                 setClub("epoch");
               }}
@@ -424,7 +432,9 @@ function Scitech() {
               Robotix
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${club === "torque" ? "bg-[#B74224]" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${
+                club === "torque" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
               onClick={() => {
                 setClub("torque");
               }}
@@ -432,7 +442,9 @@ function Scitech() {
               Torque
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${club === "glitch" ? "bg-[#B74224]" : "text-opacity-40"}`}
+              className={`px-4 py-2 rounded-md ${
+                club === "glitch" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
               onClick={() => {
                 setClub("glitch");
               }}
