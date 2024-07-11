@@ -70,11 +70,9 @@ function Mess() {
       <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start">
         <div className="bg-[#2F2F2F] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl ">
           <h4 className=" text-p">Mess Secretary </h4>
-          <h3 className="lg:text-2xl text-xl font-semibold ">
-          Rishitha Surisetty
-          </h3>
+          <h3 className="lg:text-2xl text-xl font-semibold ">KAUSHAL SINGH</h3>
           <address className="pt-3">
-            <h4 className="lg:text-xl text-lg font-semibold">+91 8074801959</h4>
+            <h4 className="lg:text-xl text-lg font-semibold">+91 8273216845</h4>
             <a
               href="mailto:mess_secya@gymkhana.iith.ac.in"
               className=" lg:text-xl text-[1rem]"

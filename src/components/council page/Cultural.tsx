@@ -317,12 +317,10 @@ function Cultural() {
         <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start">
           <div className="bg-[#2F2F2F] px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
             <h4 className="italic ">Cultural & Literary Secretary</h4>
-            <h3 className="lg:text-2xl text-xl font-semibold ">
-              Aditya Kapilesh
-            </h3>
+            <h3 className="lg:text-2xl text-xl font-semibold ">SREEVAS TM</h3>
             <address className="pt-3">
               <h4 className="lg:text-xl text-lg font-semibold">
-                +91 7021778242
+                +91 8610808854
               </h4>
             </address>
           </div>
@@ -336,7 +334,9 @@ function Cultural() {
           className={`lg:col-span-1 hidden text-2xl lg:flex lg:flex-col gap-3 [&>li]:cursor-pointer bg-[#2F2F2F] p-8 flex-col justify-center items-start rounded-xl`}
         >
           <li
-            className={`px-4 py-2 rounded-md ${club === "infocus" ? "bg-[#B74224]" : "text-opacity-40"}`}
+            className={`px-4 py-2 rounded-md ${
+              club === "infocus" ? "bg-[#B74224]" : "text-opacity-40"
+            }`}
             onClick={() => {
               setClub("infocus");
             }}
@@ -344,7 +344,9 @@ function Cultural() {
             Infocus
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${club === "litsoc" ? "bg-[#B74224]" : "text-opacity-40"}`}
+            className={`px-4 py-2 rounded-md ${
+              club === "litsoc" ? "bg-[#B74224]" : "text-opacity-40"
+            }`}
             onClick={() => {
               setClub("litsoc");
             }}
@@ -352,7 +354,9 @@ function Cultural() {
             Litsoc
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${club === "vibes" ? "bg-[#B74224]" : "text-opacity-40"}`}
+            className={`px-4 py-2 rounded-md ${
+              club === "vibes" ? "bg-[#B74224]" : "text-opacity-40"
+            }`}
             onClick={() => {
               setClub("vibes");
             }}
@@ -360,7 +364,9 @@ function Cultural() {
             Vibes
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${club === "rang" ? "bg-[#B74224]" : "text-opacity-40"}`}
+            className={`px-4 py-2 rounded-md ${
+              club === "rang" ? "bg-[#B74224]" : "text-opacity-40"
+            }`}
             onClick={() => {
               setClub("rang");
             }}
@@ -368,7 +374,9 @@ function Cultural() {
             Rang De Manch
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${club === "btl" ? "bg-[#B74224]" : "text-opacity-40"}`}
+            className={`px-4 py-2 rounded-md ${
+              club === "btl" ? "bg-[#B74224]" : "text-opacity-40"
+            }`}
             onClick={() => {
               setClub("btl");
             }}
@@ -376,7 +384,9 @@ function Cultural() {
             Behind The Lens
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${club === "shuffle" ? "bg-[#B74224]" : "text-opacity-40"}`}
+            className={`px-4 py-2 rounded-md ${
+              club === "shuffle" ? "bg-[#B74224]" : "text-opacity-40"
+            }`}
             onClick={() => {
               setClub("shuffle");
             }}
@@ -384,7 +394,9 @@ function Cultural() {
             Shuffle
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${club === "gesture" ? "bg-[#B74224]" : "text-opacity-40"}`}
+            className={`px-4 py-2 rounded-md ${
+              club === "gesture" ? "bg-[#B74224]" : "text-opacity-40"
+            }`}
             onClick={() => {
               setClub("gesture");
             }}
