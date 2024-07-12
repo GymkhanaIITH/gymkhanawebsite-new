@@ -17,11 +17,11 @@ function Elan() {
       </div>
       <div className="py-5 lg:col-span-3 self-center">
         <p className="lg:text-[1.25rem]">
-        Elan & ηVision is the annual techno-cultural fest of IIT Hyderabad, entirely organized by the student community of IIT Hyderabad. Elan represents the cultural wing of the fest while ηVision cites the technical part. Several pre-events and workshops throughout the tenure lead on to our college fest; a grand showcase of live performances, crowd-pulling cultural and technical competitions, workshops, games - all of it with a simple message to celebrate the friendship and harmony in the student community. The members of this cell are responsible for ideating and executing plans to provide a memorable college fest to all the students.
+        Elan & ηVision is the annual techno-cultural fest of IIT Hyderabad, entirely organized by the student community of IIT Hyderabad. Elan represents the cultural wing of the fest while ηVision cites the technical part. Several pre-events and workshops throughout the tenure lead on to our college fest; a grand showcase of live performances, crowd-pulling cultural and technical competitions, workshops, games - all of it with a simple message to celebrate the friendship and harmony in the student community. The members of this cell are responsible for ideating and executing plans to provide a memorable college fest to all the students. 
 
         </p>
         <div className="my-8 justify-end lg:flex">
-        <a href='https://elan.org.in/' target='_blank' rel='noopener noreferrer'> <button className=" scale-90 disabled text-xl bg-blue-700 text-white px-4 py-3 rounded-lg">
+        <a href='https://elan.org.in/' target='_blank' rel='noopener noreferrer'> <button className=" scale-90 text-xl bg-blue-700 text-white px-4 py-3 rounded-lg">
           Navigate to Website
         </button></a>
         </div>
