@@ -3,6 +3,20 @@ import Layout from '../../layouts/Layout.astro';
 import MobileView, { ecell } from '../../components/special clubs/MobileView';
 const buttonClass = 'club-button text-w px-4 py-2 rounded-lg lg:text-2xl';
 import View from '../../components/special clubs/View.astro';
+import ecellwhitelogo from '../../images/ecell-white-logo.png'
+import ebsbblack from '../../images/ebsb-black.jpg'
+import ebsbwhite from '../../images/ebsbwhitebg.png'
+import emlblack from '../../images/emlblack.jpeg'
+import fcclogo from '../../images/fcclogo.png'
+import milanblack from '../../images/milan-black.png'
+import milanlowres from '../../images/milanlowres.png'
+import tedexbg from '../../images/tedexwithbg.png'
+import tedexblack from '../../images/tedxblack.png'
+
+
+
+
+
 import {
   elan,
   milan,
@@ -16,18 +30,18 @@ import {
 
 const elanLogo =
   'https://res.cloudinary.com/dwsverefw/image/upload/v1672775739/media%20council/orgs/el-org_gl5t0b.jpg';
-const ecellLogo =
-  'https://res.cloudinary.com/dwsverefw/image/upload/v1672775121/media%20council/orgs/e-org_b0tgvj.jpg';
-const tedxLogo =
-  'https://res.cloudinary.com/dwsverefw/image/upload/v1672775489/media%20council/orgs/t-org_g1scrw.jpg';
-const milanLogo =
-  'https://res.cloudinary.com/dwsverefw/image/upload/v1672774996/media%20council/orgs/m-org_wwyhcs.jpg';
-// const fccLogo =
-//   "https://res.cloudinary.com/dwsverefw/image/upload/v1672775388/media%20council/orgs/f-org_q2z8vx.jpg";
+// // const ecellLogo =
+// //   'https://res.cloudinary.com/dwsverefw/image/upload/v1672775121/media%20council/orgs/e-org_b0tgvj.jpg';
+// // const tedxLogo =
+// //   'https://res.cloudinary.com/dwsverefw/image/upload/v1672775489/media%20council/orgs/t-org_g1scrw.jpg';
+// const milanLogo =
+//   'https://res.cloudinary.com/dwsverefw/image/upload/v1672774996/media%20council/orgs/m-org_wwyhcs.jpg';
+// // const fccLogo =
+// //   "https://res.cloudinary.com/dwsverefw/image/upload/v1672775388/media%20council/orgs/f-org_q2z8vx.jpg";
 const sunshineLogo =
   'https://res.cloudinary.com/dwsverefw/image/upload/v1672775270/media%20council/orgs/s-ord_d7n8eb.jpg';
-const ebsbLogo =
-  'https://res.cloudinary.com/dwsverefw/image/upload/v1672987624/ecell/ebsb_cqwr9e.jpg';
+// const ebsbLogo =
+//   'https://res.cloudinary.com/dwsverefw/image/upload/v1672987624/ecell/ebsb_cqwr9e.jpg';
 const tinkererlogo = '#';
 ---
 
@@ -70,7 +84,7 @@ const tinkererlogo = '#';
   <div data-clubinfo="tedx" class="hidden views">
     <View
       title="Tedx"
-      imgUrl={tedxLogo}
+      imgUrl={tedexblack}
       desc={tedx}
       link={'https://tedxiithyderabad.iith.ac.in'}
     />
@@ -78,7 +92,7 @@ const tinkererlogo = '#';
   <div data-clubinfo="ecell" class="hidden views">
     <View
       title="Entrepreneurship Cell"
-      imgUrl={ecellLogo}
+      imgUrl={ecellwhitelogo}
       desc={ecell}
       link={'https://ecell.iith.ac.in'}
     />
@@ -86,7 +100,7 @@ const tinkererlogo = '#';
   <div data-clubinfo="milan" class="hidden views">
     <View
       title="Milan"
-      imgUrl={milanLogo}
+      imgUrl={milanblack}
       desc={milan}
       link={'https://gymkhana.iith.ac.in/milan'}
     />
@@ -102,7 +116,7 @@ const tinkererlogo = '#';
   <div data-clubinfo="ebsb" class="hidden views">
     <View
       title="Ek Bharat Shresht Bharat"
-      imgUrl={ebsbLogo}
+      imgUrl={ebsbwhite}
       desc={ebsb}
       link={'https://ebsb.iith.ac.in/'}
     />
@@ -126,7 +140,7 @@ const tinkererlogo = '#';
   <div data-clubinfo="fcc" class="hidden views">
     <View
       title="FCC"
-      imgUrl={'/fcc.png'}
+      imgUrl={fcclogo}
       desc={fcc}
       link={'https://www.linkedin.com/company/finance-and-consulting-club-iit-hyderabad/?originalSubdomain=in'}
     />

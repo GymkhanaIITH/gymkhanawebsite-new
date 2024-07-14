@@ -30,7 +30,7 @@ function Milan() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {" "}
+            
               <button className="text-black scale-90 disabled text-xl bg-[#fec93d] px-4 py-3 rounded-lg">
                 Navigate to Website
               </button>
