@@ -123,23 +123,23 @@ const coords = {
   ],
   lambda: [
     {
-      name: "Kushagra Gupta",
-      roll: "CS21BTECH11033",
+      name: "Adhith T",
+      roll: "MA22BTECH11033",
       position: "Overall Head",
     },
     {
-      name: "Kartheek Sriram Tammana",
-      roll: "CS21BTECH11028",
+      name: "Dikshant Khandelwal",
+      roll: "CS22BTECH11017",
       position: "Overall Head",
     },
     {
-      name: "Jaswanth Beere",
-      roll: "BM21BTECH11007",
+      name: "Jash Jhatakia",
+      roll: "CS22BTECH11028",
       position: "Overall Head",
     },
     {
-      name: "Varun Gupta",
-      roll: "CS21BTECH11060",
+      name: "Bhaskar Mandal",
+      roll: "MA22BTECH11010",
       position: "App Development Head",
     },
   ],
