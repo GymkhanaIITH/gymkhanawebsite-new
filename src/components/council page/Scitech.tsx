@@ -139,7 +139,7 @@ const coords = {
     },
     {
       name: "Bhaskar Mandal",
-      roll: "MA22BTECH11010",
+      roll: "MS22BTECH11010",
       position: "App Development Head",
     },
   ],
