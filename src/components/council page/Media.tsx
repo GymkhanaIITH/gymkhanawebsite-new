@@ -1,224 +1,378 @@
 import React from "react";
 import TCard from "./teamCard";
-const PR = [
-  {
-    position: "head",
-    name: "Kuntal Suman",
-    mobile: " +91-8578001808",
-    mail: "ce21btech11022@iith.ac.in",
-  },
-  {
-    position: "coordinator",
-    name: "Nakul Garg",
-    mobile: " +91-9354662767",
-    mail: " me21btech11035@iith.ac.in",
-  },
-  {
-    position: "coordinator",
-    name: "Laxmi Sreya",
-    mobile: "  +91-9391322582",
-    mail: " ce21btech11038@iith.ac.in",
-  },
-  {
-    position: "coordinator",
-    name: "Hadi Afnan",
-    mobile: " +91-7994344759",
-    mail: "ms20btech11009@iith.ac.in",
-  },
-  {
-    position: "coordinator",
-    name: "Kartik Katekar",
-    mobile: " +91-7083797250",
-    mail: "me21btech11024@iith.ac.in",
-  },
-];
-const Des = [];
-const Content = [];
-const Web = [];
-const Int = [];
-const Events = [];
-const Multimedia=[];
+// const PR = [
+//   {
+//     position: "head",
+//     name: "Kuntal Suman",
+//     mobile: " +91-8578001808",
+//     mail: "ce21btech11022@iith.ac.in",
+//   },
+//   {
+//     position: "coordinator",
+//     name: "Krishna chaitanya",
+//     mobile: "",
+//     mail: " es24btech11023@iith.ac.in",
+//   },
+//   {
+//     position: "coordinator",
+//     name: "Namitha Mannepalli",
+//     mobile: "",
+//     mail: " ma24btech11015@iith.ac.in",
+//   },
+//   {
+//     position: "coordinator",
+//     name: "Jagan Bevara",
+//     mobile: "",
+//     mail: "es24btech11010@iith.ac.in",
+//   },
+//   {
+//     position: "coordinator",
+//     name: "Atharv Bung",
+//     mobile: "",
+//     mail: "bt24btech11005@iith.ac.in",
+//   },
+//   {
+//     position: "coordinator",
+//     name: "Kripalu Sonar",
+//     mobile: "",
+//     mail: "es24btech11021@iith.ac.in",
+//   },
+//   {
+//     position: "coordinator",
+//     name: "Susheel Chandra",
+//     mobile: "",
+//     mail: "es24btech11013@iith.ac.in",
+//   }
+  
+  
+// ];
+// const Des = [];
+// const Content = [];
+// const Web = [];
+// const Int = [];
+// const Events = [];
+// const Multimedia=[];
 
 const teams = {
   PR: [
-    ["Diva Jaiwar", "+91-8319556225", "me21btech11014@iith.ac.in", "head"],
     [
-      "Tanmay Bhandari",
-      "+91-9356488010",
-      "me21btech11009@iith.ac.in",
+      "Neel", 
+      "7075310192", 
+      "ms23btech11014@iith.ac.in", 
+      "head"
+    ],
+    [
+      "Disha",
+      "7981565134",
+      "ch23btech11015@iith.ac.in",
+      "head"
+    ],
+    [
+      "Krishna Chaitanya",
+      "",
+      "es24btech11023@iith.ac.in",
       "coordinator",
     ],
     [
-      "JP Kanishka Prasad",
-      "+91-8121894659",
-      "ch22btech11015@iith.ac.in",
+      "Namitha Mannepalli",
+      "",
+      "ma24btech11015@iith.ac.in",
       "coordinator",
     ],
     [
-      "Dhruv Parashar",
-      "+91-9958461340",
-      "ee22btech11019@iith.ac.in",
+      "Jagan Bevara",
+      "",
+      "es24btech11010@iith.ac.in",
       "coordinator",
     ],
     [
-      "Devansh Agrawal",
-      "+91-9667236662",
-      "es22btech11010@iith.ac.in",
+      "Atharv Bung",
+      "",
+      "bt24btech11005@iith.ac.in",
       "coordinator",
+    ],
+    [
+      "Kripalu Sonar",
+      "",
+      "es24btech11021@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Susheel Chandra",
+      "",
+      "es24btech11013@iith.ac.in",
+      "coordinator"
     ],
   ],
   Design: [
     [
-      "Gatikrushna Mohapatra",
-      "+91-7205869973",
-      "bd21bdes11008@iith.ac.in",
+      "Nidhi",
+      "+91-9370999343",
+      "",
       "head",
     ],
     [
-      "Aadya Marathe",
-      "+91-7045314538",
-      "bd21bdes11001@iith.ac.in",
+      "Rajdeep",
+      "+91-9108512020",
+      "bd24bdes11023@iith.ac.in",
+      "head"
+    ],
+    [
+      "Aastha B",
+      "",
+      "bd22bdes11001@iith.ac.in",
       "coordinator",
     ],
     [
-      "Jalaj karn",
-      "+91-8757736693",
-      "ce22btech11024@iith.ac.in",
+      "Durva Chaudhary",
+      "",
+      "bd24bdes11026@iith.ac.in",
       "coordinator",
     ],
     [
-      "Radhika Bondre",
-      "+91-9359974673",
-      "bd22bdes11013@iith.ac.in",
+      "David P Sajan",
+      "",
+      "bd24bdes11024@iith.ac.in",
       "coordinator",
     ],
     [
-      "N Tamaswi Tania",
-      "+91-7780450062",
-      "me20btech11032@iith.ac.in",
+      "Ruchita Lunkad",
+      "",
+      "bd24bdes11007@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Sujeet Yadav",
+      "",
+      "bd24bdes11016@iith.ac.in",
       "coordinator",
     ],
   ],
-  Content: [
-    ["Mohnish Deshmukh", "+91-9619256058", "me21btech11034@iith.ac.in", "head"],
+  Edit: [
+    ["Aryan", "+91-9108548555", "bt23btech11004@iith.ac.in", "head"],
+    ["Harini","+91-7416447993","me23btech11054@iith.ac.in","head"],
     [
-      "Rayani Venkat Sai Rithvik",
-      "+91-9440518336",
-      "ee21btech11043@iith.ac.in",
+      "Vishnu Anand",
+      "",
+      "me23btech11064@iith.ac.in",
       "coordinator",
     ],
     [
-      "Devansh Jain",
-      "+91-7339956844",
-      "ee22btech11018@iith.ac.in",
+      "Homa Harshita",
+      "",
+      "ee24btech11062@iith.ac.in",
       "coordinator",
     ],
-    ["Haritha.R", "+91-9360281632", "ai20btech11010@iith.ac.in", "coordinator"],
+    [
+      "Shanyu Bihani",
+      "", 
+      "bd24bdes11019@iith.ac.in", 
+      "coordinator"
+    ],
+    [
+      "Arnav Govind",
+      "",
+      "me23btech11009@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Hemika Dipa",
+      "",
+      "co24btech11005@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Sunny",
+      "",
+      "bt23btech11024@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Sharanmegha",
+      "",
+      "co24btech11002@iith.ac.in",
+      "coordinator"
+    ]
+
   ],
   Web: [
     [
-      "Sandhi Sai Sujith Reddy ",
-      "+91-9391190679",
-      "ee21btech11048@iith.ac.in",
+      "Praneeth",
+      "+91-9390223741",
+      "cs23btech11048@iith.ac.in",
       "head",
     ],
     [
-      "Kilaru Sai Manasa Veena",
-      "+91-9346630094",
-      "ee21btech11031@iith.ac.in",
+      "Sanjana Gona",
+      "",
+      "cs23btech11019@iith.ac.in",
       "coordinator",
     ],
     [
-      "Mohamed Kaif D",
-      "+91-8148420484",
-      "ic22btech11005@iith.ac.in",
+      "Sathwik Reddy",
+      "",
+      "es23btech11020@iith.ac.in",
       "coordinator",
     ],
     [
-      "Sadineni Abhinay",
-      "+91-9441370274",
-      "cs21btech11055@iith.ac.in",
+      "Jagadeesh M",
+      "+91-9059426878",
+      "cs24btech11042@iith.ac.in",
       "coordinator",
     ],
     [
-      "Shambu Kavir",
-      "+91-7569581011",
-      "cs20btech11045@iith.ac.in",
+      "Rithvik Jami",
+      "+91-9063230680",
+      "cs23btech11022@iith.ac.in",
       "coordinator",
     ],
   ],
   ICT: [
-    ["Sneha Bhalerao", "+91-9820276906", "bm22mtech11001@iith.ac.in", "head"],
+    ["Bhargavi", "+91-9949025448", "ms23mtech11021@iith.ac.in", "head"],
     [
-      "Madhurima ch",
-      "+91-8297260216",
-      "ch22btech11010@iith.ac.in",
+      "Aaron A Anish",
+      "",
+      "cs24btech11002@iith.ac.in",
       "coordinator",
     ],
     [
-      "Arin Aggarwal",
-      "+91-7087850215",
-      "ma22btech11006@iith.ac.in",
+      "Sreekari",
+      "",
+      "es24btech11025@iith.ac.in",
       "coordinator",
     ],
     [
-      "Bogireddy Vishnu Vardhan Reddy ",
-      "+91-9550860063",
-      "me22btech11017@iith.ac.in",
+      "Pranathi",
+      "",
+      "",
       "coordinator",
     ],
     [
-      "Mohammed Ayan",
-      "+91-6260687477",
-      "ch22btech11022@iith.ac.in",
+      "Samarth",
+      "",
+      "",
       "coordinator",
     ],
   ],
   Events: [
-    ["Garv Sachdeva", "+91-9571678719", "ep21btech11012@iith.ac.in", "head"],
-    ["Pundi Bindusree", "+91-9908728937", "cs21btech11048@iith.ac.in", "head"],
+    ["Karthik", "+91-8861183682", "co23btech11014@iith.ac.in", "head"],
+    ["Sateeshwar", "+91-9391270503", "ce23btech11031@iith.ac.in", "head"],
 
     [
-      "Vadthya Ram Charan",
-      "+91-9666997468",
-      "ch22btech11036@iith.ac.in",
+      "Abhinaba Das",
+      "",
+      "ic24btech11001@iith.ac.in",
       "coordinator",
     ],
     [
-      "Y Adarsh Reddy ",
-      "+91-6361325605",
-      "ch22btech11040@iith.ac.in",
+      "Dhiraj Baid",
+      "",
+      "ic24btech11006@iith.ac.in",
       "coordinator",
     ],
     [
-      "M Prince Akshay S ",
-      "+91-9392864275",
-      "ma22btech11012@iith.ac.in",
+      "Jayanth Ram",
+      "",
+      "me24btech11049@iith.ac.in",
       "coordinator",
     ],
-    ["Arjun", "+91-9398666340", "ic22btech11007@iith.ac.in", "coordinator"],
+    ["Soham Dandekar", "", "es24btech11032@iith.ac.in", "coordinator"],
     [
-      "Ashok Chaudhari",
-      "+91-7720032507",
-      "ch22btech11009@iith.ac.in",
-      "coordinator",
-    ],
-    [
-      "E Saikumar",
-      "+91-7382678737",
-      "ms22btech11012@iith.ac.in",
+      "Surya Teja",
+      "",
+      "es24btech11038@iith.ac.in",
       "coordinator",
     ],
     [
-      "Pritam",
-      "91 76027 90672",
-      "la23mh11006@iith.ac.in",
+      "Viraj Rajpure",
+      "",
+      "ic24btech11020@iith.ac.in",
+      "coordinator",
+    ],
+    [
+      "Yash",
+      "",
+      "ic24btech11025@iith.ac.in",
       "coordinator"
     ],
     [
-      "Rohan Seth",
-      "+91 88975 64757",
-      "op23mtech11002@iith.ac.in",
+      "Neel Patel",
+      "",
+      "ms24btech11024@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Shresth Kumar",
+      "",
+      "me24btech11056@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Subhasis Basa",
+      "",
+      "ic24btech11022@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Abhiram R",
+      "",
+      "ch24btech11002@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Sri Sai Sidhu",
+      "",
+      "cebtech11024@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Arun",
+      "",
+      "",
+      "coordinator"
+    ]
+  ],
+  Logistics:[
+    [
+      "Hanokk",
+      "8885211202",
+      "co23btech11025@iith.ac.in",
+      "Head"
+    ],
+    [
+      "K Prashanth",
+      "",
+      "",
+      "coordinator"
+    ],
+    [
+      "P Pranavi",
+      "",
+      "co24btech11018@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Kalki Survan",
+      "",
+      "es24btech11011@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Sai Teja",
+      "",
+      "es23btech11021@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Manoj Kumar",
+      "",
+      "ms23btech1107@iith.ac.in",
+      "coordinator"
+    ],
+    [
+      "Aryan Dake",
+      "",
+      "ce24btech11009@iith.ac.in",
       "coordinator"
     ]
   ],
@@ -229,8 +383,9 @@ const teamTitles = {
   Design: "Design Team",
   Web: "Web Development Team",
   ICT: "Interview & Hosting Team",
-  Content: "Content Team",
+  Edit: "Editorial Team",
   Events: "Multimedia and Events Team",
+  Logistics: "Logistics Team",
 };
 
 function Media() {
@@ -242,9 +397,9 @@ function Media() {
       <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start">
         <div className="bg-[#2F2F2F] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
           <h4 className=" text-p">Media & Public Relations Secretary</h4>
-          <h3 className="lg:text-2xl text-xl font-semibold ">NENAVATH ARJUN</h3>
+          <h3 className="lg:text-2xl text-xl font-semibold ">Ajith Reddy</h3>
           <address className="pt-3">
-            <h4 className="lg:text-xl text-lg font-semibold">+91 9398666340</h4>
+            <h4 className="lg:text-xl text-lg font-semibold">+91-6303099673</h4>
             <a
               href="mailto:general_secy_1@gymkhana.iith.ac.in"
               className=" lg:text-xl text-[1rem]"
