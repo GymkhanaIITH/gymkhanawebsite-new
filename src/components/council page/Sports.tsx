@@ -11,11 +11,11 @@ function Sports() {
           <div className="bg-[#2f2f2f] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
             <h4 className=" text-p">Sports Secretary </h4>
             <h3 className="lg:text-2xl text-xl font-semibold ">
-              SAMEER KENDAL
+              Kowsith Gurubilli 
             </h3>
             <address className="pt-3">
               <h4 className="lg:text-xl text-lg font-semibold">
-                +91 8802323383
+                +91 8121181256
               </h4>
               <a
                 href="mailto:scitech_secy@gymkhana.iith.ac.in"

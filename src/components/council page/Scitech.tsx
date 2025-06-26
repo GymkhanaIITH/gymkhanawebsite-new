@@ -319,10 +319,10 @@ function Scitech() {
         <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start">
           <div className="bg-[#2F2F2F] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
             <h4 className=" text-p">Science and Technology Secretary </h4>
-            <h3 className="lg:text-2xl text-xl font-semibold">ARMAAN</h3>
+            <h3 className="lg:text-2xl text-xl font-semibold">Donavalli Sai Durga Rishi</h3>
             <address className="pt-3">
               <h4 className="lg:text-xl text-lg font-semibold">
-                +91 6309818915
+                +91 8979797828
               </h4>
               <a
                 href="mailto:scitech_secy@gymkhana.iith.ac.in"
