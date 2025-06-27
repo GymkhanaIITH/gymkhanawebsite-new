@@ -1,0 +1,55 @@
+---
+export default interface Props{
+    name: string,
+    positions: string,
+    email?: string,
+    linkedin?: string,
+    mobile ?: string,
+    imgUrl ?: string,
+    initial ?: boolean
+}
+const {name,position, email, linkedin,mobile, imgUrl, initial=false} = Astro.props;
+// import linkedinIcon from '../images/linkedinIcon.png';
+import emailIcon from '../images/email-icon.png';
+---
+
+<div class="card h-[31.625rem] w-[18.75rem] bg-white flex flex-col rounded-[20px] items-center py-10 px-6 lg:mt-7 relative">
+    
+    <div class="flex">   
+        <div class="h-[12.125rem] w-[12.125rem] bg-[#eeeeee] text-[#eeeeee] rounded-full overflow-hidden">
+            <img class="lazy" src={initial===true ? imgUrl : ''} data-src={imgUrl} alt={position} width={194} height={220}/>
+        </div>
+    </div>
+    <div class="text-center text-2xl mt-5 flex flex-col">
+        <div class="relative font-semibold">{name}</div> 
+        <div class="font-medium top-1 relative text-[1.2rem] leading-5">{position}</div>
+        {mobile !=='' && <div class="font-semibold my-6 text-[1.2rem] leading-5 text-r">(+91) {mobile}</div>}
+    </div>
+    <div class="absolute bottom-8">
+        <!-- <span class="inline-block h-[4rem] w-[4rem] top-4 relative">
+            <a href={linkedin} class="cursor-pointer"><img src={linkedinIcon} alt="linkedin" class="object-fill"></a>
+        </span> -->
+        <span class="inline-block h-[3rem] w-[3.9rem] ml-5">
+           <a href={email} class="cursor-pointer"> <img src={emailIcon} alt="email" class="h-[4.5rem]"></a>
+        </span>
+    </div>
+
+</div>
+
+<style>
+
+    @keyframes appear{
+        from {
+            transform: translateX(-30px);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .card{
+        animation: appear 0.5s ease-out;
+    }
+
+</style>

@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OfficeBearerCard from '../components/FacultyCard.astro';
+
+const dean = {
+  name: "Prashanth Kumar",
+  title: "Dean students",
+  email: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=dean.students@iith.ac.in",
+  mobile: "",
+  linkedin: "",
+  imgUrl: "/images/default_pfp.jpg",
+};
+
+const fic = {
+  name: "Prakhar Guptha",
+  title: "FIC Students Activity",
+  email: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=fic.sa@iith.ac.in",
+  mobile: "",
+  linkedin: "",
+  imgUrl: "/images/default_pfp.jpg",
+};
+---
+
+<Layout title="Faculties" blackOn={true}>
+  <div class="bg-p text-white p-6 pt-10 lg:px-[4rem]">
+    <h2 class="text-4xl font-bold mb-6">Current Faculties</h2>
+    <div class="faculty-page grid grid-cols-1 md:grid-cols-2 gap-2 text-black">
+      <OfficeBearerCard
+        name={dean.name}
+        position={dean.title}
+        email={dean.email}
+        linkedin={dean.linkedin}
+        mobile={dean.mobile}
+        imgUrl={dean.imgUrl}
+        initial={true}
+      />
+      <OfficeBearerCard
+        name={fic.name}
+        position={fic.title}
+        email={fic.email}
+        linkedin={fic.linkedin}
+        mobile={fic.mobile}
+        imgUrl={fic.imgUrl}
+        initial={true}
+      />
+    </div>
+  </div>
+</Layout>
+
+<!-- <style is:global>
+  /* Hide empty LinkedIn icon */
+  .faculty-page a[href=""] {
+    display: none !important;
+  }
+  
+</style> -->
+
+

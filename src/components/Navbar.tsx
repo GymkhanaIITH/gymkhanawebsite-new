@@ -88,7 +88,8 @@ const updatedLinks: Link[] = [
   },
   { parent: "Clubs", menuIndex: 5, href: "/special-clubs" },
   { parent: "Student's Guide", menuIndex: 6, href: "/freshers-guide" },
-  { parent: "More", children: moreChildren, menuIndex: 7, href: "/more" },
+  {parent: "Faculties",menuIndex:7,href:"/faculties"},
+  { parent: "More", children: moreChildren, menuIndex: 8, href: "/more" },
 ];
 
 export function Button(props: { children: string }) {
