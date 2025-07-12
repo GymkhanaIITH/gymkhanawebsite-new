@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import * as React from 'react';
 import Logo from "../images/logo.png";
 import WhiteLogo from "../images/logowhite.png";
 import Menu from "../images/menu.svg";
@@ -89,7 +89,8 @@ const updatedLinks: Link[] = [
   { parent: "Clubs", menuIndex: 5, href: "/special-clubs" },
   { parent: "Student's Guide", menuIndex: 6, href: "/freshers-guide" },
   {parent: "Faculties",menuIndex:7,href:"/faculties"},
-  { parent: "More", children: moreChildren, menuIndex: 8, href: "/more" },
+  {parent: "Feedback",menuIndex:8,href:"/feedback"},
+  { parent: "More", children: moreChildren, menuIndex: 9, href: "/more" },
 ];
 
 export function Button(props: { children: string }) {

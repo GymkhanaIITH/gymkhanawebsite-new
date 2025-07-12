@@ -1,0 +1,110 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Feedback" blackOn={true}>
+  <div class="bg-p text-white p-6 pt-10 lg:px-[4rem]">
+    <h2 class="text-4xl font-bold mb-6">Feedback and Complaints</h2>
+    <h3 class="text-xl mb-6">
+      Here you can submit your feedback or complaints regarding anything to our
+      college whether it maybe a position or a service.
+    </h3>
+
+    <!-- Dropdown -->
+    <label for="position" class="block text-sm font-medium mb-2">
+      Choose the Gymkhana Position:
+    </label>
+    <select
+      id="position"
+      name="position"
+      class="w-1/3 bg-gray-800 text-white p-3 rounded mb-6"
+    >
+      <option value=""></option>
+      <option value="president">President</option>
+      <option value="gen1">General Secretary 1</option>
+      <option value="gen2">General Secretary 2</option>
+      <option value="ug1">UG Representative 1</option>
+      <option value="ug2">UG Representative 2</option>
+      <option value="pg1">PG Representative 1</option>
+      <option value="pg2">PG Representative 2</option>
+      <option value="phd">PHD Representative</option>
+      <option value="acad">Academic Secretary</option>
+      <option value="sports">Sports Secretary</option>
+      <option value="sci">Scitech Secretary</option>
+      <option value="alumni">Alumni Secretary</option>
+      <option value="cultural">Cultural Secretary</option>
+      <option value="media">Media Secretary</option>
+      <option value="mess">Mess Secretary</option>
+      <option value="transport">Transport Secretary</option>
+      <option value="welfare">Welfare Secretary</option>
+    </select>
+
+    <!-- Textarea -->
+    <label for="feedback" class="block text-sm font-medium mb-2">
+      Your Feedback:
+    </label>
+    <textarea
+      id="feedback"
+      name="feedback"
+      placeholder="Please give your feedback here..."
+      class="w-full bg-gray-800 text-white p-3 h-48 rounded mb-6"
+    ></textarea>
+
+    <!-- Submit Button -->
+    <button
+      type="button"
+      onclick="tosheet()"
+      class="bg-[#c2462a] hover:bg-[#a93c25] text-white font-semibold px-4 py-3 rounded"
+    >
+      Submit
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- Axios logic in browser -->
+  <script is:inline>
+    async function tosheet() {
+      const designation = document.getElementById("position").value.trim();
+      const feedback = document.getElementById("feedback").value.trim();
+      const URL = "https://script.google.com/macros/s/AKfycbyEOMUCLRCYNuh14q85wjCIks0iVZkn4VfKQnLPUHDVg7bVksOwlRZnO5XJLabw3jc7Zg/exec";
+
+      if (!designation) {
+        alert("Please choose a designation");
+        return;
+      }
+
+      if (!feedback) {
+        alert("Feedback cannot be blank");
+        return;
+      }
+
+      try {
+        const response = await axios.post(URL, {
+          designation,
+          feedback
+        });
+        console.log(response.status);
+        if (response.status === 200) {
+          alert("Submitted successfully!");
+          document.getElementById("position").value = "";
+          document.getElementById("feedback").value = "";
+        } else {
+          console.error("Submission failed. Status code:", response.status);
+          alert("Submission failed.");
+        }
+      } catch (err) {
+        console.error("Axios error:", err);
+        if (err.response) {
+          console.error("Response data:", err.response.data);
+          console.error("Status code:", err.response.status);
+        } else if (err.request) {
+          console.error("No response received:", err.request);
+        } else {
+          console.error("Request setup error:", err.message);
+        }
+        alert("Something went wrong. See console.");
+      }
+    }
+  </script>
+</Layout>
