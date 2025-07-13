@@ -79,32 +79,47 @@ import Layout from "../layouts/Layout.astro";
         return;
       }
 
-      try {
-        const response = await axios.post(URL, {
-          designation,
-          feedback
-        });
-        console.log(response.status);
-        if (response.status === 200) {
-          alert("Submitted successfully!");
-          document.getElementById("position").value = "";
-          document.getElementById("feedback").value = "";
-        } else {
-          console.error("Submission failed. Status code:", response.status);
-          alert("Submission failed.");
-        }
-      } catch (err) {
-        console.error("Axios error:", err);
-        if (err.response) {
-          console.error("Response data:", err.response.data);
-          console.error("Status code:", err.response.status);
-        } else if (err.request) {
-          console.error("No response received:", err.request);
-        } else {
-          console.error("Request setup error:", err.message);
-        }
-        alert("Something went wrong. See console.");
+      // Create form data
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = URL;
+      form.target = 'hidden_iframe';
+
+      // Add designation input
+      const designationInput = document.createElement('input');
+      designationInput.type = 'hidden';
+      designationInput.name = 'designation';
+      designationInput.value = designation;
+      form.appendChild(designationInput);
+
+      // Add feedback input
+      const feedbackInput = document.createElement('input');
+      feedbackInput.type = 'hidden';
+      feedbackInput.name = 'feedback';
+      feedbackInput.value = feedback;
+      form.appendChild(feedbackInput);
+
+      // Create hidden iframe
+      let iframe = document.querySelector('#hidden_iframe');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.name = 'hidden_iframe';
+        iframe.id = 'hidden_iframe';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
       }
+
+      // Handle response
+      iframe.onload = function() {
+        alert("Feedback submitted successfully!");
+        document.getElementById("position").value = "";
+        document.getElementById("feedback").value = "";
+      };
+
+      // Submit the form
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
     }
   </script>
 </Layout>
