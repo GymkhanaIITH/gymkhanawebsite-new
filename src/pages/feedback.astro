@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const SCRIPT_URL = import.meta.env.FEEDBACK_SCRIPT_URL;
 ---
+
 
 <Layout title="Feedback" blackOn={true}>
   <div class="bg-p text-white p-6 pt-10 lg:px-[4rem]">
@@ -67,15 +67,15 @@ const SCRIPT_URL = import.meta.env.FEEDBACK_SCRIPT_URL;
 
   <!-- Axios logic in browser -->
   <script is:inline>
+    let isSubmitting = false;
 
-    let issubmitting=false;
-    async function tosheet() {
-      if(issubmitting) return;
-      const designation = document.getElementById("position").value.trim();
-      const feedback = document.getElementById("feedback").value.trim();
-      const URL = "{SCRIPT_URL}";
+async function tosheet() {
+  if (isSubmitting) return; // Stop if it's already submitting
 
-      if (!designation) {
+  const designation = document.getElementById("position").value.trim();
+  const feedback = document.getElementById("feedback").value.trim();
+
+  if (!designation) {
   document.getElementById("feedback-status").textContent =
     "⚠️ Please choose a designation";
   return;
@@ -88,40 +88,37 @@ if (!feedback) {
 }
 
 
-      issubmitting=true;
+  isSubmitting = true; // Lock further clicks
 
-      // Create form data
-      const form = document.createElement('form');
-      form.method = 'POST';
-      form.action = URL;
-      form.target = 'hidden_iframe';
+  const URL = "https://script.google.com/macros/s/AKfycbyEOMUCLRCYNuh14q85wjCIks0iVZkn4VfKQnLPUHDVg7bVksOwlRZnO5XJLabw3jc7Zg/exec";
+  console.log(URL);
+  const form = document.createElement('form');
+  form.method = 'POST';
+  form.action = URL;
+  form.target = 'hidden_iframe';
 
-      // Add designation input
-      const designationInput = document.createElement('input');
-      designationInput.type = 'hidden';
-      designationInput.name = 'designation';
-      designationInput.value = designation;
-      form.appendChild(designationInput);
+  const designationInput = document.createElement('input');
+  designationInput.type = 'hidden';
+  designationInput.name = 'designation';
+  designationInput.value = designation;
+  form.appendChild(designationInput);
 
-      // Add feedback input
-      const feedbackInput = document.createElement('input');
-      feedbackInput.type = 'hidden';
-      feedbackInput.name = 'feedback';
-      feedbackInput.value = feedback;
-      form.appendChild(feedbackInput);
+  const feedbackInput = document.createElement('input');
+  feedbackInput.type = 'hidden';
+  feedbackInput.name = 'feedback';
+  feedbackInput.value = feedback;
+  form.appendChild(feedbackInput);
 
-      // Create hidden iframe
-      let iframe = document.querySelector('#hidden_iframe');
-      if (!iframe) {
-        iframe = document.createElement('iframe');
-        iframe.name = 'hidden_iframe';
-        iframe.id = 'hidden_iframe';
-        iframe.style.display = 'none';
-        document.body.appendChild(iframe);
-      }
+  let iframe = document.querySelector('#hidden_iframe');
+  if (!iframe) {
+    iframe = document.createElement('iframe');
+    iframe.name = 'hidden_iframe';
+    iframe.id = 'hidden_iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+  }
 
-      // Handle response
-      iframe.onload = function () {
+  iframe.onload = function () {
   document.getElementById("feedback-status").textContent =
     "✅ Feedback submitted successfully!";
   document.getElementById("position").value = "";
@@ -133,12 +130,15 @@ setTimeout(() => {
 }, 3000);
 
 
-      // Submit the form
-      document.body.appendChild(form);
-      form.submit();
-      document.body.removeChild(form);
+  document.body.appendChild(form);
+  form.submit();
+  document.body.removeChild(form);
 
-      setTimeout(() => {issubmitting = false;}, 3000);
-    }
+  // Wait 3 seconds before allowing another submit
+  setTimeout(() => {
+    isSubmitting = false;
+  }, 3000);
+}
+
   </script>
 </Layout>
