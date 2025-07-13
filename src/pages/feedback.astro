@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+const SCRIPT_URL = import.meta.env.FEEDBACK_SCRIPT_URL;
 ---
 
 <Layout title="Feedback" blackOn={true}>
@@ -58,26 +59,36 @@ import Layout from "../layouts/Layout.astro";
     >
       Submit
     </button>
+
+    <p id="feedback-status" class="mt-4 text-green-400 font-semibold"></p>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <!-- Axios logic in browser -->
   <script is:inline>
+
+    let issubmitting=false;
     async function tosheet() {
+      if(issubmitting) return;
       const designation = document.getElementById("position").value.trim();
       const feedback = document.getElementById("feedback").value.trim();
-      const URL = "https://script.google.com/macros/s/AKfycbyEOMUCLRCYNuh14q85wjCIks0iVZkn4VfKQnLPUHDVg7bVksOwlRZnO5XJLabw3jc7Zg/exec";
+      const URL = "{SCRIPT_URL}";
 
       if (!designation) {
-        alert("Please choose a designation");
-        return;
-      }
+  document.getElementById("feedback-status").textContent =
+    "⚠️ Please choose a designation";
+  return;
+}
 
-      if (!feedback) {
-        alert("Feedback cannot be blank");
-        return;
-      }
+if (!feedback) {
+  document.getElementById("feedback-status").textContent =
+    "⚠️ Feedback cannot be blank";
+  return;
+}
+
+
+      issubmitting=true;
 
       // Create form data
       const form = document.createElement('form');
@@ -110,16 +121,24 @@ import Layout from "../layouts/Layout.astro";
       }
 
       // Handle response
-      iframe.onload = function() {
-        alert("Feedback submitted successfully!");
-        document.getElementById("position").value = "";
-        document.getElementById("feedback").value = "";
-      };
+      iframe.onload = function () {
+  document.getElementById("feedback-status").textContent =
+    "✅ Feedback submitted successfully!";
+  document.getElementById("position").value = "";
+  document.getElementById("feedback").value = "";
+};
+
+setTimeout(() => {
+  document.getElementById("feedback-status").textContent = "";
+}, 3000);
+
 
       // Submit the form
       document.body.appendChild(form);
       form.submit();
       document.body.removeChild(form);
+
+      setTimeout(() => {issubmitting = false;}, 3000);
     }
   </script>
 </Layout>
