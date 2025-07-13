@@ -68,6 +68,7 @@ import Layout from "../layouts/Layout.astro";
   <!-- Axios logic in browser -->
   <script is:inline>
     let isSubmitting = false;
+    const button = document.querySelector("button[onclick='tosheet()']");
 
 async function tosheet() {
   if (isSubmitting) return; // Stop if it's already submitting
@@ -89,7 +90,7 @@ if (!feedback) {
 
 
   isSubmitting = true; // Lock further clicks
-
+  button.textContent="Submitting..."
   const URL = "https://script.google.com/macros/s/AKfycbyEOMUCLRCYNuh14q85wjCIks0iVZkn4VfKQnLPUHDVg7bVksOwlRZnO5XJLabw3jc7Zg/exec";
   console.log(URL);
   const form = document.createElement('form');
@@ -137,6 +138,7 @@ setTimeout(() => {
   // Wait 3 seconds before allowing another submit
   setTimeout(() => {
     isSubmitting = false;
+    button.textContent="Submit";
   }, 3000);
 }
 
