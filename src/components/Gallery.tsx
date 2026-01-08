@@ -16,14 +16,14 @@ import "./Gallery.css";
 export default function Gallery() {
   const image1 = "images/gallery/5.jpg";
   const image2 = "images/gallery/1.jpg";
-  const image3 = "images/gallery/21.jpg";
-  const image4 = "images/gallery/22.jpg";
-  const image5 = "images/gallery/31.jpg";
-  const image6 = "images/gallery/50.jpg";
-  const image7 = "images/gallery/42.jpg";
-  const image8 = "images/gallery/48.jpg";
-  const image9 = "images/gallery/56.jpg";
-  const image10 = "images/gallery/32.jpg";
+  const image3 = "images/gallery/64.jpg";
+  const image4 = "images/gallery/63.webp";
+  const image5 = "images/gallery/62.jpg";
+  const image6 = "images/gallery/62.webp";
+  const image7 = "images/gallery/61.webp";
+  const image8 = "images/gallery/60.jpg";
+  const image9 = "images/gallery/59.webp";
+  const image10 = "images/gallery/58.webp";
 
   const images = [
     image5,
