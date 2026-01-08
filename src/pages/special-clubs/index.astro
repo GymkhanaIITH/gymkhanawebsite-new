@@ -148,16 +148,37 @@ const tinkererlogo = '#';
 </Layout>
 
 <script is:inline>
-  let currentView = 'elan';
-  let activeButton = 'elan';
+  const urlParams = new URLSearchParams(window.location.search);
+  const clubParam = urlParams.get('club');
+
+  let currentView = clubParam || 'elan';
+  let activeButton = clubParam || 'elan';
+  
   const views = document.querySelectorAll('.views');
   const buttons = document.querySelectorAll('.club-button');
 
+  // Verify if the club param is valid (link exists), else default to elan
+  let isValidClub = false;
+  for (let button of buttons) {
+    if (button.dataset.club === clubParam) {
+      isValidClub = true;
+      break;
+    }
+  }
+  
+  if (!isValidClub && clubParam) {
+     currentView = 'elan';
+     activeButton = 'elan';
+  }
+
   function showViewForCurrentClub() {
-    console.log(currentView);
     for (let view of views) {
       if (view.dataset.clubinfo === currentView) {
         view.style.display = 'block';
+         // Ensure we override the default classes if needed, though mostly handled by display property
+         if (view.classList.contains('sm:block')) {
+             // It's the default one, nothing special needed as we set display block/none
+         }
       } else {
         view.style.display = 'none';
       }
@@ -173,6 +194,10 @@ const tinkererlogo = '#';
       }
     }
   }
+
+  // Initial render based on URL param
+  showViewForCurrentClub();
+  activateButton();
 
   for (let button of buttons) {
     button.addEventListener('click', (e) => {
