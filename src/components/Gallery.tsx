@@ -5,7 +5,7 @@ import { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/effect-coverflow";
 
@@ -41,41 +41,32 @@ export default function Gallery() {
   return (
     <>
       <Swiper
-        navigation={true}
-        loop={true}
-        autoplay={{ delay: 5000 }}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={1}
-        breakpoints={{
-          "@1.00": {
-            slidesPerView: 2,
-            spaceBetween: 40,
-          },
-          "@1.5": {
-            slidesPerView: 3,
-            spaceBetween: 0,
-          },
-        }}
+        slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 0,
+          rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
           slideShadows: true,
         }}
-        autoHeight={true}
-        modules={[Pagination, Navigation, Autoplay, EffectCoverflow]}
-        className="mySwiper text-black w-full h-auto items-center justify-center"
+        pagination={true}
+        navigation={true}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+        className="mySwiper w-full py-[50px]"
       >
-        {images.map((src, index) => {
-          return (
-            <SwiperSlide className="bg-white items-center !self-center">
-              <img src={src} alt="" />
-            </SwiperSlide>
-          );
-        })}
+        {images.map((src, index) => (
+          <SwiperSlide key={index} className="!w-[300px] !h-[300px] sm:!w-[400px] sm:!h-[400px]">
+            <img src={src} alt="" className="block w-full h-full object-cover rounded-lg shadow-lg" />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

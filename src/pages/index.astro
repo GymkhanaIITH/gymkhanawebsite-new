@@ -40,7 +40,7 @@ import esummitnew from "../images/esummitnewlogo.png";
   blackOn={false}
   disableAnimation={false}
 >
-  <Loader client:load />
+  <Loader />
   <section
     class="h-[100vh] w-full relative landing overflow-hidden hostel-container"
   >
@@ -121,9 +121,23 @@ import esummitnew from "../images/esummitnewlogo.png";
 />
   <div class="py-8 text-white flex flex-col items-start lg:mx-40 md:mx-20">
     <!-- Adjusted margin-left (ml-5) -->
-    <h2 class="text-4xl p-5 font-bold md:text-5xl md:p-7">TIMELINE</h2>
+    <h2 class="text-4xl p-5 font-bold md:text-5xl md:p-7">Upcoming Events</h2>
     <Timeline />
   </div>
+
+  <hr
+    class="lg:mx-40 mx-20 my-5"
+    style="height:4px;border-width:0;color:#B74224;background-color:#B74224"
+  />
+
+  <section class="text-white lg:mx-40 md:mx-20 flex flex-col justify-center">
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0">
+      Gallery
+    </h2>
+    <div class="py-8">
+      <Gallery client:load />
+    </div>
+  </section>
 
   <hr
     class="lg:mx-40 mx-20 my-5"
@@ -147,7 +161,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/councils/scitech">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={scitechlogo} class="w-16 h-16" />
           <span class="text-sm">Sci-Tech Council</span>
@@ -155,7 +169,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/councils/cultural">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={cultilogo} class="w-16 h-16" />
           <span class="text-sm">Cultural Council</span>
@@ -163,7 +177,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/councils/media">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={medialogo} class="w-16 h-16" />
           <span class="text-sm">Media Council</span>
@@ -171,7 +185,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/councils/sports">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={sportslogo} class="w-16 h-16" />
           <span class="text-sm">Sports Council</span>
@@ -179,7 +193,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/councils/mess">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={messlogo} class="w-16 h-16" />
           <span class="text-sm">Mess Council</span>
@@ -194,7 +208,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       >
       <a href="/special-clubs">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={fcclogo} class="w-16 h-16" />
           <span class="text-sm">FCC</span>
@@ -202,7 +216,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
         <a href="/special-clubs">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={esummitnew} class="w-16 h-16" />
           <span class="text-sm">E-Cell</span>
@@ -210,7 +224,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/special-clubs">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={tinkererlogo} class="w-16 h-16" />
           <span class="text-sm">Tinkerers Lab</span>
@@ -218,15 +232,15 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/special-clubs">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={tedexwhite} class="w-16 h-16" />
           <span class="text-sm">Tedx IITH</span>
         </div>
-        <a/>
+
         <a href="/special-clubs">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
           <span class="text-sm">Echo IITH</span>
@@ -234,7 +248,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/special-clubs">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={emllogo} class="w-16 h-16" />
           <span class="text-sm">EML</span>
@@ -242,20 +256,20 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
      
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
           <span class="text-sm">Cultural Clubs</span>
         </div>
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
           <span class="text-sm">Sci-Tech Clubs</span>
         </div>
         <a href="/special-clubs">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={sunshinelogo} class="w-16 h-16" />
           <span class="text-sm">Sunshine</span>
@@ -263,7 +277,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/special-clubs">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={ebsblogo} class="w-16 h-16" />
           <span class="text-sm">EBSB</span>
@@ -280,7 +294,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       >
       <a href="/events/elan">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={elanlogo} class="w-16 h-16" />
           <span class="text-sm">Elan and nVision</span>
@@ -288,7 +302,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/events/tedtalks">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={tedexwhite} class="w-16 h-16" />
           <span class="text-sm">Tedx</span>
@@ -296,7 +310,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/events/eSummit">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={esummitnew} class="w-16 h-16" />
           <span class="text-sm">E-summit</span>
@@ -304,7 +318,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/events/horizon">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
           <span class="text-sm">Horizon</span>
@@ -312,7 +326,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/events/milan">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={milanlogo} class="w-16 h-16" />
           <span class="text-sm">milan</span>
@@ -320,7 +334,7 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/events/diesta">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={diestalogo} class="w-16 h-16" />
           <span class="text-sm">Diesta</span>
@@ -328,21 +342,21 @@ import esummitnew from "../images/esummitnewlogo.png";
       </a>
       <a href="/events/alumniday">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={adaylogo} class="w-16 h-16" />
           <span class="text-sm">Alumni day</span>
         </div>
       </a>
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={generalCouncilIcon} class="w-16 h-16" />
           <span class="text-sm">RSD</span>
         </div>
         <a href="/events/zozimus">
         <div
-          class="p-2 bg-[#040404] flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
+          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
         >
           <img src={Zozimuslogo} class="w-16 h-16" />
           <span class="text-sm">Zozimus</span>
