@@ -1,31 +1,16 @@
 import * as React from 'react';
+import { useState, useRef, useEffect } from "react";
 import Logo from "../images/logo.png";
 import WhiteLogo from "../images/logowhite.png";
 import Menu from "../images/menu.svg";
-import { useState, useRef, useLayoutEffect, useCallback } from "react";
 import useOutsiderAlert from "../hooks/useOutsideAlert";
 import { gsap } from "gsap";
 import useScrollPosition from "../hooks/useScrollPosition";
 import {
   councilChildren,
   eventsChildren,
-  specialClubsChildren,
   moreChildren,
 } from "../constants/menuChildrenData";
-
-// const links = [
-//   'Home',
-//   'Office Bearers',
-//   'Councils',
-//   'Events',
-//   'Special Clubs',
-//   "Student's Guide",
-//   'IITH Map',
-//   'Gallery',
-//   'More',
-//   'Election',
-//   'Transparency',
-// ];
 
 interface LinkButton {
   type: string;
@@ -37,6 +22,7 @@ interface LinkButton {
     e: React.MouseEvent<HTMLElement | MouseEvent>,
     menuIndex: number
   ) => void;
+  deactivateSubMenu: () => void;
 }
 interface Children {
   name: string;
@@ -55,12 +41,12 @@ function LinkButton(props: LinkButton) {
   if (type === "BUTTON") {
     return (
       <>
-
         <a
           href={href}
           onMouseEnter={(e) => {
             activateSubMenu(e, menuIndex);
           }}
+          onMouseLeave={props.deactivateSubMenu}
         >
           {children}
         </a>
@@ -88,8 +74,8 @@ const updatedLinks: Link[] = [
   },
   { parent: "Clubs", menuIndex: 5, href: "/special-clubs" },
   { parent: "Student's Guide", menuIndex: 6, href: "/freshers-guide" },
-  {parent: "Faculties",menuIndex:7,href:"/faculties"},
-  {parent: "Feedback",menuIndex:8,href:"/feedback"},
+  { parent: "Faculties", menuIndex: 7, href: "/faculties" },
+  { parent: "Feedback", menuIndex: 8, href: "/feedback" },
   { parent: "More", children: moreChildren, menuIndex: 9, href: "/more" },
 ];
 
@@ -101,12 +87,13 @@ export function Button(props: { children: string }) {
   );
 }
 
-function MobileNavbar() {
+function MobileNavbar({ blackOn, disableAnimation }) {
   const [active, setActive] = useState<boolean>(false);
   const scrollRef = useRef(0);
   const prevScroll = useRef(0);
   const mobileMenuRef = useRef();
   const mobileNavbar = useRef<any>(null);
+  const scrollPosition = useScrollPosition();
 
   const activateMobileMenu = () => {
     setActive(true);
@@ -122,7 +109,7 @@ function MobileNavbar() {
     });
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (active) {
       document.body.style.overflowY = "hidden";
       gsap.from(mobileMenuRef.current, { autoAlpha: 0, stagger: 0.1 });
@@ -135,7 +122,7 @@ function MobileNavbar() {
     return window.scrollY;
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     function handleScroll() {
       scrollRef.current = getPosition();
       if (scrollRef.current <= prevScroll.current) {
@@ -151,19 +138,24 @@ function MobileNavbar() {
       prevScroll.current = scrollRef.current;
     }
     window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const isScrolled = scrollPosition > 50;
+  const showSolid = blackOn || disableAnimation || isScrolled;
 
   return (
     <>
       <nav
         ref={mobileNavbar}
-        className="bg-white flex justify-between px-4 py-2 w-full z-40 lg:hidden fixed"
+        className={`flex justify-between px-4 py-2 w-full z-40 lg:hidden fixed transition-colors duration-300 ease-in-out ${showSolid ? "bg-black text-white" : "bg-transparent text-white"
+          }`}
       >
         <div>
           <a href="/">
             <div className="h-[5rem] w-[5rem] relative">
               <img
-                src={Logo}
+                src={WhiteLogo}
                 alt="gymkhana logo"
                 className="h-[5rem] w-[5rem]"
               />
@@ -206,61 +198,54 @@ function MainNavbar({ blackOn, disableAnimation }) {
   const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null);
   const [left, setLeft] = useState(0);
   const [top, setTop] = useState(0);
-  const [logo, setLogo] = useState(Logo);
   const buttonRef = useRef<any>();
   const subMenuRef = useRef<any>();
   const navRef = useRef<any>();
+  const timeoutRef = useRef<any>(null);
 
   const activateSubMenu = (
     e: React.MouseEvent<HTMLElement | MouseEvent>,
     menuIndex: number
   ) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     setActiveSubMenu((prevMenuIndex) => {
-      //  return prevMenuIndex===menuIndex ? null : menuIndex
       return prevMenuIndex === menuIndex ? null : menuIndex;
     });
     buttonRef.current = e;
     setTop(buttonRef.current.target.offsetTop);
     setLeft(buttonRef.current.target.offsetLeft);
   };
+
+  const deactivateSubMenu = () => {
+    timeoutRef.current = setTimeout(() => {
+      setActiveSubMenu(null);
+    }, 100);
+  };
+
   useOutsiderAlert(subMenuRef, () => {
     setActiveSubMenu(null);
   });
 
   const scrollPosition = useScrollPosition();
-
-  if (!disableAnimation) {
-    if (scrollPosition > 0) {
-      gsap.to(navRef.current, { background: "white", color: "black" });
-    } else {
-      gsap.to(navRef.current, {
-        backgroundColor: "transparent",
-        color: "white",
-      });
-    }
-  } else {
-    gsap.set(navRef.current, { background: "white" });
-  }
+  const isScrolled = scrollPosition > 50;
+  const showSolid = blackOn || disableAnimation || isScrolled;
 
   return (
     <>
       <nav
         ref={navRef}
-        className={`fixed justify-between ${blackOn ? "text-black bg-white" : "text-white bg-transparent"
-          } px-4 py-2 w-full z-40 hidden lg:flex lg:items-center lg:flex-row`}
+        className={`fixed justify-between px-4 py-2 w-full z-40 hidden lg:flex lg:items-center lg:flex-row transition-colors duration-300 ease-in-out ${showSolid ? "bg-black text-white" : "bg-transparent text-white"
+          }`}
       >
         <div className="inline-block">
           <a href="/">
             <div className="h-[4rem] w-[4rem] relative ">
               <img
-                src={
-                  disableAnimation
-                    ? Logo
-                    : scrollPosition !== 0
-                      ? Logo
-                      : WhiteLogo
-                }
+                src={WhiteLogo}
                 alt="gymkhana logo"
+                className="object-contain h-full w-full"
               />
             </div>
           </a>
@@ -273,6 +258,7 @@ function MainNavbar({ blackOn, disableAnimation }) {
                   subLinks={el?.children}
                   menuIndex={el.menuIndex}
                   activateSubMenu={activateSubMenu}
+                  deactivateSubMenu={deactivateSubMenu}
                   type={el.children ? "BUTTON" : "ANCHOR"}
                   href={el?.href}
                 >
@@ -287,6 +273,10 @@ function MainNavbar({ blackOn, disableAnimation }) {
         <div
           ref={subMenuRef}
           className="bg-white text-black inline-block fixed z-40 rounded-lg"
+          onMouseEnter={() => {
+            if (timeoutRef.current) clearTimeout(timeoutRef.current);
+          }}
+          onMouseLeave={deactivateSubMenu}
           style={{
             left: activeSubMenu !== 7 ? left : left - 165,
             top: top + 60,
@@ -310,7 +300,7 @@ function MainNavbar({ blackOn, disableAnimation }) {
 function Navbar({ blackOn = true, disableAnimation = true }) {
   return (
     <>
-      <MobileNavbar />
+      <MobileNavbar blackOn={blackOn} disableAnimation={disableAnimation} />
       <MainNavbar blackOn={blackOn} disableAnimation={disableAnimation} />
     </>
   );
