@@ -58,25 +58,24 @@ function LinkButton(props: LinkButton) {
 
 const updatedLinks: Link[] = [
   { parent: "Home", menuIndex: 0, href: "/" },
-  { parent: "Blogs", menuIndex: 1, href: "/blogs/" },
-  { parent: "Office Bearers", menuIndex: 2, href: "/office-bearers/" },
+  { parent: "Office Bearers", menuIndex: 1, href: "/office-bearers/" },
   {
     parent: "Councils",
     children: councilChildren,
-    menuIndex: 3,
+    menuIndex: 2,
     href: "/councils/general",
   },
   {
     parent: "Events",
     children: eventsChildren,
-    menuIndex: 4,
+    menuIndex: 3,
     href: "/events/elan",
   },
-  { parent: "Clubs", menuIndex: 5, href: "/special-clubs" },
-  { parent: "Student's Guide", menuIndex: 6, href: "/freshers-guide" },
-  { parent: "Faculties", menuIndex: 7, href: "/faculties" },
-  { parent: "Feedback", menuIndex: 8, href: "/feedback" },
-  { parent: "More", children: moreChildren, menuIndex: 9, href: "/more" },
+  { parent: "Clubs", menuIndex: 4, href: "/special-clubs" },
+  { parent: "Student's Guide", menuIndex: 5, href: "/freshers-guide" },
+  { parent: "Faculties", menuIndex: 6, href: "/faculties" },
+  { parent: "Feedback", menuIndex: 7, href: "/feedback" },
+  { parent: "More", children: moreChildren, menuIndex: 8, href: "/more" },
 ];
 
 export function Button(props: { children: string }) {
@@ -278,7 +277,7 @@ function MainNavbar({ blackOn, disableAnimation }) {
           }}
           onMouseLeave={deactivateSubMenu}
           style={{
-            left: activeSubMenu !== 7 ? left : left - 165,
+            left: activeSubMenu !== 6 ? left : left - 165,
             top: top + 60,
           }}
         >
