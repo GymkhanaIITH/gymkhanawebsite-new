@@ -8,8 +8,6 @@ import { gsap } from "gsap";
 import useScrollPosition from "../hooks/useScrollPosition";
 import {
   councilChildren,
-  eventsChildren,
-  moreChildren,
 } from "../constants/menuChildrenData";
 
 interface LinkButton {
@@ -65,17 +63,15 @@ const updatedLinks: Link[] = [
     menuIndex: 2,
     href: "/councils/general",
   },
+  { parent: "Forms", menuIndex: 3, href: "/forms" },
   {
-    parent: "Events",
-    children: eventsChildren,
-    menuIndex: 3,
-    href: "/events/elan",
+    parent: "Research Scholars",
+    menuIndex: 4,
+    href: "https://researchers-iith.netlify.app/",
   },
-  { parent: "Clubs", menuIndex: 4, href: "/special-clubs" },
   { parent: "Student's Guide", menuIndex: 5, href: "/freshers-guide" },
   { parent: "Faculties", menuIndex: 6, href: "/faculties" },
   { parent: "Feedback", menuIndex: 7, href: "/feedback" },
-  { parent: "More", children: moreChildren, menuIndex: 8, href: "/more" },
 ];
 
 export function Button(props: { children: string }) {
