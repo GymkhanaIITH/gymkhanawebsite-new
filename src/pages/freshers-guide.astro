@@ -16,51 +16,74 @@ import generalCouncilIcon from "../images/icons/general_council.png";
     <h2 class="lg:text-2xl text-4xl font-bold text-center lg:text-left">
       Important Links
     </h2>
-    <ul class="m-8 text-lg">
-      <li class="m-2">
-        <a href="https://erp.iith.ac.in/Default/Authenticate.html"
-          >ERP Portal</a>
-      </li>
-      <li class="m-2"><a href="https://epay.iith.ac.in/">E-Pay Portal</a></li>
-      <li class="m-2">
-        <a href="https://support.comp.iith.ac.in/kb/faq.php?id=21"
-          >IITH VPN Guide</a>
-      </li>
-      <li class="m-2">
-        <a href="https://sva.iith.ac.in/">SVA Portal (Mess Registration)</a>
-      </li>
-      <li class="m-2">
-        <a href="https://iithbus.vercel.app/">Bus Schedule</a>
-      </li>
-      <li class="m-2">
-        <a href="https://cabsharing.iith.dev/">Cab Sharing Portal</a>
-      </li>
-      <li class="m-2">
-        <a href="https://cins.iith.ac.in/">Campus Navigation</a>
-      </li>
-    </ul>
+    <div class="flex justify-center">
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:m-16 m-2 gap-8">
+        <a href="https://aims.iith.ac.in/aims/" target="_blank">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+             <!-- Replace src with your custom icon -->
+            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
+            <span class="text-lg text-center">AIMS Portal</span>
+          </div>
+        </a>
+        <a href="https://support.comp.iith.ac.in/kb/faq.php?id=21" target="_blank">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+             <!-- Replace src with your custom icon -->
+            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
+            <span class="text-lg text-center">IITH VPN Guide</span>
+          </div>
+        </a>
+        <a href="https://sva.iith.ac.in/" target="_blank">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+            <!-- Replace src with your custom icon -->
+            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
+            <span class="text-lg text-center">SVA Portal (Mess)</span>
+          </div>
+        </a>
+        <a href="https://iithbus.vercel.app/" target="_blank">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+             <!-- Replace src with your custom icon -->
+            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
+            <span class="text-lg text-center">Bus Schedule</span>
+          </div>
+        </a>
+        <a href="https://cabsharing.iith.dev/" target="_blank">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+             <!-- Replace src with your custom icon -->
+            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
+            <span class="text-lg text-center">Cab Sharing</span>
+          </div>
+        </a>
+         <a href="https://cins.iith.ac.in/" target="_blank">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+             <!-- Replace src with your custom icon -->
+            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
+            <span class="text-lg text-center">Campus Navigation</span>
+          </div>
+        </a>
+      </div>
+    </div>
     <h2 class="lg:text-2xl text-4xl font-bold text-center lg:text-left">
       Constitutions & Documents
     </h2>
     <div class="flex justify-center">
       <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:m-16 m-2 gap-8">
         <a href="https://gymkhana.iith.ac.in/documents/gymkhana%20constitution.pdf" target="_blank">
-          <div class="p-4 bg-[#040404] flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
             <span class="text-lg">Constitution</span>
           </div>
         </a>
         <a href="https://gymkhana.iith.ac.in/documents/Elan%20&%20%CE%B7Vision%202023%20Documentation.pdf" target="_blank">
-          <div class="p-4 bg-[#040404] flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
             <span class="text-lg">Elan and Nvision </span>
           </div>
         </a>
         <a href="https://gymkhana.iith.ac.in/documents/E-Cell%20IITH%20Prospectus.pdf" target="_blank">
-          <div class="p-4 bg-[#040404] flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
             <span class="text-lg">E-Cell Prospectus</span>
           </div>
         </a>
         <a href="https://gymkhana.iith.ac.in/documents/Academic%20Handbook%202022%20(50th%20senate).pdf" target="_blank">
-          <div class="p-4 bg-[#040404] flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
+          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
             <span class="text-lg">Students handbook</span>
           </div>
         </a>
