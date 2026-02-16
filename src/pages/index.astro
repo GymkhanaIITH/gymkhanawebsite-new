@@ -28,10 +28,13 @@ import ecell from "../images/icons/ecell.png"
 import tinkererlogo from "../images/icons/tinkerers.jpeg"
 import sunshinelogo from "../images/icons/sunshine.png"
 import ebsblogo from "../images/icons/ebsb.png"
+import inventureLogo from "../images/inventure.png";
 import Timeline from "../components/Timeline.astro";
 import Slider from "../components/slider.astro";
+import ClubCard from "../components/ClubCard.astro";
 import tedexwhite from "../images/tedexwhite.png";
 import esummitnew from "../images/esummitnewlogo.png";
+import BirdCursor from "../components/BirdCursor";
 ---
 
 <Layout
@@ -40,6 +43,8 @@ import esummitnew from "../images/esummitnewlogo.png";
   blackOn={false}
   disableAnimation={false}
 >
+  <BirdCursor client:only="react" />
+  <Loader />
   <Loader />
   <section
     class="h-[100vh] w-full relative landing overflow-hidden hostel-container"
@@ -121,6 +126,7 @@ import esummitnew from "../images/esummitnewlogo.png";
 />
   <div class="py-8 text-white flex flex-col items-start lg:mx-40 md:mx-20">
     <!-- Adjusted margin-left (ml-5) -->
+    <!-- <h2 class="text-4xl p-5 font-bold md:text-5xl md:p-7 section-animate-header">Upcoming Events</h2> -->
     <h2 class="text-4xl p-5 font-bold md:text-5xl md:p-7 section-animate-header">Upcoming Events</h2>
     <Timeline />
   </div>
@@ -129,6 +135,20 @@ import esummitnew from "../images/esummitnewlogo.png";
     class="lg:mx-40 mx-20 my-5"
     style="height:4px;border-width:0;color:#B74224;background-color:#B74224"
   />
+
+  <!-- <section class="text-white lg:mx-40 md:mx-20 flex flex-col justify-center">
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0 section-animate-header">
+      Gallery
+    </h2>
+    <div class="py-8">
+      <Gallery client:load />
+    </div>
+  </section>
+
+  <hr
+    class="lg:mx-40 mx-20 my-5"
+    style="height:4px;border-width:0;color:#B74224;background-color:#B74224"
+  /> -->
 
   <section class="text-white lg:mx-40 md:mx-20 flex flex-col justify-center">
     <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0 section-animate-header">
@@ -145,137 +165,122 @@ import esummitnew from "../images/esummitnewlogo.png";
   />
   <section class="text-white lg:mx-40 md:mx-20 flex flex-col justify-center">
     <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0 section-animate-header">
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0 section-animate-header">
       Councils
     </h2>
     <div class="flex justify-center">
       <div
         class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-4 place-items-center section-animate-grid"
       >
-      <a href="/councils/general">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">General Council</span>
-        </div>
-      </a>
-      <a href="/councils/scitech">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={scitechlogo} class="w-16 h-16" />
-          <span class="text-sm">Sci-Tech Council</span>
-        </div>
-      </a>
-      <a href="/councils/cultural">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={cultilogo} class="w-16 h-16" />
-          <span class="text-sm">Cultural Council</span>
-        </div>
-      </a>
-      <a href="/councils/media">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={medialogo} class="w-16 h-16" />
-          <span class="text-sm">Media Council</span>
-        </div>
-      </a>
-      <a href="/councils/sports">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={sportslogo} class="w-16 h-16" />
-          <span class="text-sm">Sports Council</span>
-        </div>
-      </a>
-      <a href="/councils/mess">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={messlogo} class="w-16 h-16" />
-          <span class="text-sm">Mess Council</span>
-        </div>
-      </a>
+        <ClubCard
+          title="General Council"
+          imgUrl={generalCouncilIcon}
+          link="/councils/general"
+          headName=""
+        />
+        <ClubCard
+          title="Sci-Tech Council"
+          imgUrl={scitechlogo}
+          link="/councils/scitech"
+          headName=""
+        />
+        <ClubCard
+          title="Cultural Council"
+          imgUrl={cultilogo}
+          link="/councils/cultural"
+          headName=""
+        />
+        <ClubCard
+          title="Media Council"
+          imgUrl={medialogo}
+          link="/councils/media"
+          headName=""
+        />
+        <ClubCard
+          title="Sports Council"
+          imgUrl={sportslogo}
+          link="/councils/sports"
+          headName=""
+        />
+        <ClubCard
+          title="Mess Council"
+          imgUrl={messlogo}
+          link="/councils/mess"
+          headName=""
+        />
       </div>
     </div>
-    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0 section-animate-header">Clubs</h2>
+    <!-- <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0 section-animate-header">Clubs</h2> -->
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0 section-animate-header">Clubs under Gymkhana</h2>
     <div class="flex justify-center">
       <div
         class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-4 place-items-center section-animate-grid"
       >
-      <a href="https://fcc.gymkhana.iith.ac.in/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={fcclogo} class="w-16 h-16" />
-          <span class="text-sm">FCC</span>
-        </div>
-      </a>
-        <a href="https://ecell.iith.ac.in/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={esummitnew} class="w-16 h-16" />
-          <span class="text-sm">E-Cell</span>
-        </div>
-      </a>
-      <a href="https://tinkererslab.iith.ac.in/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={tinkererlogo} class="w-16 h-16" />
-          <span class="text-sm">Tinkerers Lab</span>
-        </div>
-      </a>
-      <a href="https://tedxiithyderabad.iith.ac.in/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={tedexwhite} class="w-16 h-16" />
-          <span class="text-sm">Tedx IITH</span>
-        </div>
-      </a>
-      <a href="#echo-iith">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">Echo IITH</span>
-        </div>
-      </a>
-
-        <a href="https://eml.iith.ac.in/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={emllogo} class="w-16 h-16" />
-          <span class="text-sm">EML</span>
-        </div>
-      </a>
-     
-
-
-        <a href="https://sunshine.iith.ac.in/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={sunshinelogo} class="w-16 h-16" />
-          <span class="text-sm">Sunshine</span>
-        </div>
-      </a>
-      <a href="https://ebsb.iith.ac.in/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={ebsblogo} class="w-16 h-16" />
-          <span class="text-sm">EBSB</span>
-        </div>
-      </a>
+        <ClubCard
+          title="FCC"
+          imgUrl={fcclogo}
+          link="https://fcc.gymkhana.iith.ac.in/"
+          target="_blank"
+          headName="Sidhartha Shatapathy, Shubham Nare"
+        />
+        <ClubCard
+          title="E-Cell"
+          imgUrl={esummitnew}
+          link="https://ecell.iith.ac.in/"
+          target="_blank"
+          headName="Amog Bindal"
+        />
+        <ClubCard
+          title="Tinkerers Lab"
+          imgUrl={tinkererlogo}
+          link="https://tinkererslab.iith.ac.in/"
+          target="_blank"
+          headName="Sarvesh Goyal "
+        />
+        <ClubCard
+          title="Tedx IITH"
+          imgUrl={tedexwhite}
+          link="https://tedxiithyderabad.iith.ac.in/"
+          target="_blank"
+          headName="Sharvil"
+        />
+        <ClubCard
+          title="Echo IITH"
+          imgUrl={generalCouncilIcon}
+          link="#echo-iith"
+          headName=""
+        />
+        <ClubCard
+          title="EML"
+          imgUrl={emllogo}
+          link="https://eml.iith.ac.in/"
+          target="_blank"
+          headName="Kharatmol Harshitha"
+        />
+        <ClubCard
+          title="Sunshine"
+          imgUrl={sunshinelogo}
+          link="https://sunshine.iith.ac.in/"
+          target="_blank"
+          headName="Vikas Angala"
+        />
+        <ClubCard
+          title="EBSB"
+          imgUrl={ebsblogo}
+          link="https://ebsb.iith.ac.in/"
+          target="_blank"
+          headName="Naman Preet Singh"
+        />
+        <ClubCard
+          title="Inventure"
+          imgUrl={inventureLogo}
+          link="https://inventure-iith.github.io/Inventure/"
+          target="_blank"
+          headName="Richa Ashok Kakkar"
+        />
       </div>
     </div>
+    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0 section-animate-header">
     <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold p-7 pb-0 section-animate-header">
       Events and fests
     </h2>
@@ -283,71 +288,61 @@ import esummitnew from "../images/esummitnewlogo.png";
       <div
         class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:m-16 m-2 gap-4 place-items-center section-animate-grid"
       >
-      <a href="https://elan.org.in/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={elanlogo} class="w-16 h-16" />
-          <span class="text-sm">Elan and nVision</span>
-        </div>
-      </a>
-      <a href="https://tedxiithyderabad.iith.ac.in/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={tedexwhite} class="w-16 h-16" />
-          <span class="text-sm">Tedx</span>
-        </div>
-      </a>
-      <a href="https://ecell.iith.ac.in/esummit" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={esummitnew} class="w-16 h-16" />
-          <span class="text-sm">E-summit</span>
-        </div>
-      </a>
-      <a href="/events/horizon">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={generalCouncilIcon} class="w-16 h-16" />
-          <span class="text-sm">Horizon</span>
-        </div>
-      </a>
-      <a href="https://www.milaniith.org/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={milanlogo} class="w-16 h-16" />
-          <span class="text-sm">milan</span>
-        </div>
-      </a>
-      <a href="https://diestaiith.org/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={diestalogo} class="w-16 h-16" />
-          <span class="text-sm">Diesta</span>
-        </div>
-      </a>
-      <a href="https://www.iith.ac.in/alumni_day/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={adaylogo} class="w-16 h-16" />
-          <span class="text-sm">Alumni day</span>
-        </div>
-      </a>
-
-        <a href="https://www.instagram.com/zozimus.iith/" target="_blank">
-        <div
-          class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl"
-        >
-          <img src={Zozimuslogo} class="w-16 h-16" />
-          <span class="text-sm">Zozimus</span>
-        </div>
-      </a>
+        <ClubCard
+          title="Elan and nVision"
+          imgUrl={elanlogo}
+          link="https://elan.org.in/"
+          target="_blank"
+          headName="TANMAY VISHWASRAO, Syed mishal"
+        />
+        <ClubCard
+          title="Tedx"
+          imgUrl={tedexwhite}
+          link="https://tedxiithyderabad.iith.ac.in/"
+          target="_blank"
+          headName="Sharvil"
+        />
+        <ClubCard
+          title="E-summit"
+          imgUrl={esummitnew}
+          link="https://ecell.iith.ac.in/esummit"
+          target="_blank"
+          headName=""
+        />
+        <ClubCard
+          title="Horizon"
+          imgUrl={generalCouncilIcon}
+          link="/events/horizon"
+          headName=""
+        />
+        <ClubCard
+          title="milan"
+          imgUrl={milanlogo}
+          link="https://www.milaniith.org/"
+          target="_blank"
+          headName="Vinod Kumar"
+        />
+        <ClubCard
+          title="Diesta"
+          imgUrl={diestalogo}
+          link="https://diestaiith.org/"
+          target="_blank"
+          headName="Krishna vardhan"
+        />
+        <ClubCard
+          title="Alumni day"
+          imgUrl={adaylogo}
+          link="https://www.iith.ac.in/alumni_day/"
+          target="_blank"
+          headName=""
+        />
+        <!-- <ClubCard
+          title="Zozimus"
+          imgUrl={Zozimuslogo}
+          link="https://www.instagram.com/zozimus.iith/"
+          target="_blank"
+          headName=""
+        /> -->
       </div>
     </div>
   </section>
@@ -444,7 +439,7 @@ import esummitnew from "../images/esummitnewlogo.png";
   </section> -->
 
   <script defer>
-    console.log("hey");
+    //console.log("hey");
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(".heading", {
       yPercent: 10,
@@ -490,6 +485,45 @@ import esummitnew from "../images/esummitnewlogo.png";
         },
       });
     });
+    const _k = "YWxsZm9ydXM="; 
+    let _b = "";
+    
+    document.addEventListener("keydown", (e) => {
+      if (e.key.length === 1) {
+        _b += e.key.toLowerCase();
+        if (_b.length > 50) _b = _b.slice(-50);
+      } else if (e.key === "Backspace") {
+        _b = _b.slice(0, -1);
+      }
+
+      if (_b.endsWith(atob(_k))) {
+        console.log(atob("VGFraW5nIGl0IGFsbCBmb3IgdXMsIGRvaW5nIGl0IGFsbCBmb3IgbG92ZSE="));
+        _initStatus();
+        _b = "";
+      }
+    });
+
+    function _initStatus() {
+      let el = document.getElementById("sys-status");
+      if (!el) {
+        el = document.createElement("div");
+        el.id = "sys-status";
+        el.className = "fixed bottom-10 left-10 z-[100] text-gray-400 text-sm font-mono transform translate-y-full opacity-0 transition-all duration-500 ease-out";
+        el.innerText = "hmm...";
+        document.body.appendChild(el);
+      }
+
+      // Trigger reflow
+      void el.offsetWidth;
+
+      el.classList.remove("translate-y-full", "opacity-0");
+      el.classList.add("translate-y-0", "opacity-100");
+
+      setTimeout(() => {
+        el.classList.remove("translate-y-0", "opacity-100");
+        el.classList.add("translate-y-full", "opacity-0");
+      }, 3000);
+    }
   </script>
 </Layout>
 

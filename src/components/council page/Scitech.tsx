@@ -37,10 +37,10 @@ const clubs: club[] = [
     name: "epoch",
     desc: "Epoch is a club at IITH that helps students learn and grow in AI and Data Science. Members can join hands-on sessions, hackathons, and work on projects in areas like Computer Vision, NLP, and more. It's a great place to connect with peers and gain practical experience.",
   },
-  {
-    name: "prakriti",
-    desc: "Nature club of IITH. Bringing naturalists together to enjoy, appreciate and be grateful for nature.Club to increase awareness regarding current pressing issues surrounding nature, sustainable technology and real life problem statements surrounding nature",
-  },
+  // {
+  //   name: "prakriti",
+  //   desc: "Nature club of IITH. Bringing naturalists together to enjoy, appreciate and be grateful for nature.Club to increase awareness regarding current pressing issues surrounding nature, sustainable technology and real life problem statements surrounding nature",
+  // },
   {
     name: "robotix",
     desc: "The Robotix Club at the Indian Institute of Technology Hyderabad (IITH) is a dynamic hub for enthusiasts passionate about robotics, machine learning, electronics, and mechanical modeling. Our club is dedicated to fostering innovation and technical excellence through hands-on projects and collaborative learning. At the Robotix Club, we take pride in our diverse portfolio of cutting-edge projects, ranging from the intricate design and flight of Ornithopters to the advanced engineering of Drones. Our members gain practical experience in integrating machine learning algorithms with robotics, developing sophisticated electronic circuits, and constructing robust mechanical systems.",
@@ -62,243 +62,241 @@ const clubLogos = {
   kludge: "https://scitech-iith.netlify.app/images/kludge.jpeg",
   infero: "https://scitech-iith.netlify.app/images/infero_logo.png",
   lambda: "/public/images/councils/lambda.png",
-  prakriti: "https://scitech-iith.netlify.app/images/prakriti_logo.png",
+  //prakriti: "https://scitech-iith.netlify.app/images/prakriti_logo.png",
   robotix: "https://scitech-iith.netlify.app/images/robotix_logo.png",
   torque: "https://scitech-iith.netlify.app/images/torque_logo.png",
-  glitch:"/public/images/councils/glitch.png",
+  glitch: "/public/images/councils/glitch.png",
   epoch: "/public/images/councils/epoch.png",
 };
 
 const coords = {
   cepheid: [
     {
-      name: "Kunj Panchal",
-      roll: "EP21BTECH11017",
+      name: "Vedant Mokal",
+      roll: "EP23BTECH11034",
       position: "Overall Head",
     },
     {
-      name: "Aman Bhasin",
-      roll: "ES21BTECH11006",
-      position: "Events Head",
+      name: "Sri Devaki Meduri",
+      roll: "EP23BTECH11030",
+      position: "Astro-Tech Domain Head",
     },
     {
-      name: "Abhijit Sambhaji Kasle",
-      roll: "EP21BTECH11002",
-      position: "Media & PR Head",
+      name: "Arav P",
+      roll: "EP23BTECH11003",
+      position: "Telescope-ops Domain Head",
     },
     {
-      name: "Pragya Yadav",
-      roll: "CH21BTECH11023",
-      position: "Inbound Head",
+      name: "Arpit Suryavanshi",
+      roll: "EP24BTECH11005",
+      position: "Astroimagery Domain Head",
     },
   ],
   aero: [
     {
-      name: "Chinmay Kushwaha",
-      roll: "CH21BTECH11010",
-      position: "Head",
+      name: "Ameen Aazam",
+      roll: "EE23BTECH11006",
+      position: "Overall Head",
     },
     {
-      name: "Mohammed Areeb Hussain",
-      roll: "ME21BTECH11033",
-      position: "Head",
+      name: "Pranav Anil Ingle",
+      roll: "ME23BTECH11048",
+      position: "Overall Head",
     },
     {
-      name: "Baratam Sai Krishna Girish",
-      roll: "EE21BTECH11007",
-      position: "Head",
+      name: "Naren Karthik T",
+      roll: "IC24BTECH11017",
+      position: "Overall Head",
     },
   ],
   infero: [
     {
-      name: "Aayush Kumar",
-      roll: "CO21BTECH11001",
-      position: "Head",
+      name: "Muppidi Sai Rajeshwara Siddarth Reddy",
+      roll: "MA23BTECH11017",
+      position: "Overall Head",
     },
     {
-      name: "Ankit Saha",
-      roll: "AI21BTECH11004",
-      position: "Head",
+      name: "Chaitanya Nemmani",
+      roll: "MA23BTECH11008",
+      position: "Overall Head",
     },
   ],
   lambda: [
     {
-      name: "Adhith T",
-      roll: "MA22BTECH11033",
+      name: "Ankush Singh",
+      roll: "MA23BTECH11002",
       position: "Overall Head",
     },
     {
-      name: "Dikshant Khandelwal",
-      roll: "CS22BTECH11017",
+      name: "Velvadapu Naga Venkata Ganeswar",
+      roll: "MS23BTECH11034",
       position: "Overall Head",
     },
     {
-      name: "Jash Jhatakia",
-      roll: "CS22BTECH11028",
+      name: "Pranjal Jayesh Prajapati",
+      roll: "CS23BTECH11048",
       position: "Overall Head",
     },
     {
-      name: "Bhaskar Mandal",
-      roll: "MS22BTECH11010",
-      position: "App Development Head",
+      name: "Abdul Muqeeth",
+      roll: "ES23BTECH11028",
+      position: "Tech Lead",
     },
   ],
   elektronica: [
     {
-      name: "Boora Jagadeep",
-      roll: "BM21BTECH11008",
-      position: "Head",
+      name: "Dhanush",
+      roll: "EE23BTECH11015",
+      position: "Overall Head",
     },
     {
-      name: "A P Vaideeswaran",
-      roll: "EE21BTECH11001",
-      position: "Head",
+      name: "Prajwal",
+      roll: "EE23BTECH11217",
+      position: "Overall Head",
     },
     {
-      name: "Sathwik Banala",
-      roll: "EE21BTECH11049",
-      position: "Head",
+      name: "Venkatesh",
+      roll: "EE23BTECH11010",
+      position: "Domain Head",
+    },
+    {
+      name: "Arohish",
+      roll: "EE23BTECH11009",
+      position: "Domain Head",
+    },
+    {
+      name: "Vedamsh",
+      roll: "BM23BTECH11015",
+      position: "Domain Head",
     },
   ],
   robotix: [
     {
-      name: "Rudransh Mishra",
-      roll: "AI21BTECH11025",
+      name: "Aditya Gupta",
+      roll: "ME23BTECH11004",
       position: "Overall Head",
     },
     {
-      name: "Harshal Verma",
-      roll: "AI21MTECH02003",
+      name: "Abhijit Kashyap",
+      roll: "BM23BTECH11002",
       position: "Overall Head",
     },
     {
-      name: "Pratik Nikam",
-      roll: "EE21BTECH11037",
-      position: "Embedded Systems and Electronics Head",
+      name: "Pardhu",
+      roll: "ME23BTECH11013",
+      position: "Overall Head",
     },
     {
-      name: "Rajapu Jayachandra Naidu",
-      roll: "CS21BTECH11050",
-      position: "Software Head",
+      name: "Aryan Gandhi",
+      roll: "ME23BTECH11010",
+      position: "Overall Head",
     },
     {
-      name: "Ayush Kumar Singh",
-      roll: "AI20BTECH11028",
-      position: "Machine Learning Head",
+      name: "Soumyajit Maji",
+      roll: "ME23BTECH11059",
+      position: "Overall Head",
     },
     {
-      name: "Mehul Srivastava",
-      roll: "ME21BTECH11032",
-      position: "Mechanical Modelling Head",
+      name: "Ethan Bobby Kurien",
+      roll: "CE23BTECH11019",
+      position: "Overall Head",
     },
   ],
   torque: [
     {
-      name: "Pruthvi Raj Asampalli ",
-      roll: "ES20BTECH11005",
-      position: "Head",
+      name: "Raghav",
+      roll: "EP23BTECH11020",
+      position: "Overall Head",
     },
     {
-      name: "Bevara Rohit",
-      roll: "EE21BTECH11009",
-      position: "Head",
+      name: "Avinash",
+      roll: "ME23BTECH11022",
+      position: "Technical Head",
     },
     {
-      name: "Malakala Chaitanya",
-      roll: "ME21BTECH11030",
-      position: "Head",
+      name: "Asik",
+      roll: "SM24MTECH14004",
+      position: "Technical Head",
     },
   ],
   epoch: [
     {
-      name: "Tejadhith Sankar",
-      roll: "EE21BTECH11055",
+      name: "Ashwath E",
+      roll: "AI23BTECH11001",
       position: "Overall Head",
     },
     {
-      name: "Arvind Roshaan",
-      roll: "AI21MTECH12004",
+      name: "Harsh Singh",
+      roll: "EP23BTECH11012",
       position: "Overall Head",
     },
     {
-      name: "Vaishnavi W",
-      roll: "AI20BTECH11025",
-      position: "Computer Vision Head",
+      name: "Ankita Sri S P",
+      roll: "MA23BTECH11001",
+      position: "Tech Lead- Computer Vision",
     },
     {
-      name: "Shreykumar Dineshchandra Satapara",
-      roll: "AI22MTECH02003 ",
-      position: "Natural Langauage Processing Head",
+      name: "Nitesh Gokul",
+      roll: "AI23BTECH11006",
+      position: "Tech Lead- Reinforcement Learning",
     },
-    {
-      name: "Mannem Charan",
-      roll: "AI21BTECH11019",
-      position: "Reinforcement Learning Head",
-    },
-    {
-      name: "Donal Loitam",
-      roll: "AI21BTECH11009",
-      position: "Data Science and Data Mining Head",
-    },
-    {
-      name: "Prajwaldeep Kamble",
-      roll: "MA20BTECH11013",
-      position: "Data Science and Data Mining Head",
-    },
-    
   ],
   glitch: [
     {
-      name: "Tatparya Kshatriya",
-      roll: "MS21BTECH11029",
+      name: "Suchit",
+      roll: "AI23BTECH11027",
       position: "Overall Head",
     },
     {
-      name: "Pranav Balasubramanian",
-      roll: "AI21BTECH11023",
-      position: "Esports Head",
+      name: "Sashim",
+      roll: "EP23BTECH11026",
+      position: "Overall Head",
+    },
+    {
+      name: "Krishna Teja",
+      roll: "CS23BTECH11028",
+      position: "Overall Head",
     },
   ],
   kludge: [
     {
-      name: "K Saravanan",
-      roll: "CS22MTECH12007",
-      position: "Head",
-    },
-    {
-      name: "Abhinav Yadav",
-      roll: "CS21BTECH11002",
-      position: "Head",
-    },
-    {
-      name: "Rajiv Shailesh Chitale",
-      roll: "CS21BTECH11051",
-      position: "Head",
-    },
-  ],
-
-  prakriti: [
-    {
-      name: "Yapamanu Ujwal Sai Simha",
-      roll: "ME20BTECH11056",
+      name: "Duppalapudi Kamal Koushik",
+      roll: "CH23BTECH11016",
       position: "Overall Head",
     },
     {
-      name: "Pindi Visishta",
-      roll: "CE21BTECH11032",
-      position: "Events Head",
+      name: "Harshil",
+      roll: "ES23BTECH11016",
+      position: "Overall Head",
     },
     {
-      name: "Katherapaka Nikhil",
-      roll: "EE22BTECH11028",
-      position: "Projects Head",
-    },
-    {
-      name: "Vighnesh Sreepathi",
-      roll: "IC21BTECH11009",
-      position: "Media and PR Head",
+      name: "Sathwik Kodamarthi",
+      roll: "CS23BTECH11025",
+      position: "Overall Head",
     },
   ],
+  // prakriti: [
+  //   {
+  //     name: "Yapamanu Ujwal Sai Simha",
+  //     roll: "ME20BTECH11056",
+  //     position: "Overall Head",
+  //   },
+  //   {
+  //     name: "Pindi Visishta",
+  //     roll: "CE21BTECH11032",
+  //     position: "Events Head",
+  //   },
+  //   {
+  //     name: "Katherapaka Nikhil",
+  //     roll: "EE22BTECH11028",
+  //     position: "Projects Head",
+  //   },
+  //   {
+  //     name: "Vighnesh Sreepathi",
+  //     roll: "IC21BTECH11009",
+  //     position: "Media and PR Head",
+  //   },
+  //],
 };
 
 function Scitech() {
@@ -341,9 +339,8 @@ function Scitech() {
             className={`lg:col-span-1 hidden text-2xl lg:flex lg:flex-col gap-3 [&>li]:cursor-pointer bg-[#2F2F2F] p-8 flex-col justify-center items-start rounded-xl`}
           >
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "aero" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "aero" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("aero");
               }}
@@ -351,9 +348,8 @@ function Scitech() {
               Aero Club
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "cepheid" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "cepheid" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("cepheid");
               }}
@@ -361,9 +357,8 @@ function Scitech() {
               Cepheid
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "elektronica" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "elektronica" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("elektronica");
               }}
@@ -371,9 +366,8 @@ function Scitech() {
               Elektronica
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "kludge" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "kludge" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("kludge");
               }}
@@ -382,9 +376,8 @@ function Scitech() {
             </li>
 
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "infero" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "infero" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("infero");
               }}
@@ -392,9 +385,8 @@ function Scitech() {
               Infero
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "lambda" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "lambda" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("lambda");
               }}
@@ -402,9 +394,8 @@ function Scitech() {
               Lambda
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "epoch" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "epoch" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("epoch");
               }}
@@ -412,9 +403,8 @@ function Scitech() {
               Epoch
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "prakriti" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "prakriti" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("prakriti");
               }}
@@ -422,9 +412,8 @@ function Scitech() {
               Prakriti
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "robotix" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "robotix" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("robotix");
               }}
@@ -432,9 +421,8 @@ function Scitech() {
               Robotix
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "torque" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "torque" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("torque");
               }}
@@ -442,9 +430,8 @@ function Scitech() {
               Torque
             </li>
             <li
-              className={`px-4 py-2 rounded-md ${
-                club === "glitch" ? "bg-[#B74224]" : "text-opacity-40"
-              }`}
+              className={`px-4 py-2 rounded-md ${club === "glitch" ? "bg-[#B74224]" : "text-opacity-40"
+                }`}
               onClick={() => {
                 setClub("glitch");
               }}

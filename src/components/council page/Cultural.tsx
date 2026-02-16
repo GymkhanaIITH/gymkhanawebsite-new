@@ -14,10 +14,6 @@ const clubs: club[] = [
     desc: "The photography club of IIT Hyderabad",
   },
   {
-    name: "litsoc",
-    desc: "The IITH Quiz Club is a group for people enthusiastic about testing their knowledge on a variety of subjects. The club members meet regularly to compete in quizzes about anything ranging to science to pop culture. The club give people a fun opportunity to learn new trivia, meet new people, and challenge oneself mentally.We are a bunch of people who call ourselves writers. We gather our fellow writing enthusiasts at a place and conduct events, sessions and competitions. We, in short, enjoy, promote and indulge in having fun through the art of writing.",
-  },
-  {
     name: "btl",
     desc: "The behind the lens club exists to Foster the appreciation and study of film making. The purpose of our club is to give students the opportunity to approach all aspects of film and film making in a serious, meaningful, and in-depth manner.",
   },
@@ -37,180 +33,162 @@ const clubs: club[] = [
     name: "rang",
     desc: "Rang De Manch is the official drama club of IITH which works under the cultural council of IITH. It is a platform where the students can show their extra curricular activities related with acting. It presents a bunch of amazing events round the year from stage and street performances to mimes and comedy acts that entertain the junta thoroughly. The club aims to entertain people and along with that spread messages for the betterment of the society through mimes,street plays etc. Rang De Manch is a home to all the lovers of acting. A plethora of talented individuals who join every year to take forward IITH's rich legacy in dramatics. From writing plays, to direction and performance members get to learn the skills required for each of these jobs.",
   },
+  {
+    name: "otaku",
+    desc: "Otaku is the anime and manga club of IIT Hyderabad. It brings together anime enthusiasts to discuss, watch, and celebrate Japanese animation and pop culture.",
+  },
+  {
+    name: "fashion",
+    desc: "The Fashion Club of IIT Hyderabad is dedicated to exploring and showcasing fashion trends, organizing fashion shows, and encouraging students to express their style.",
+  },
 ];
 
 const clubLogos = {
-  infocus: "/public/images/councils/infocus.png",
+  infocus: "/images/councils/infocus.png",
   vibes:
     "https://res.cloudinary.com/dwsverefw/image/upload/c_fit,h_208,q_29,w_318/v1671964501/media%20council/cultural%20clubs/vibes_nr2iou.png",
-  litsoc:
-    "https://res.cloudinary.com/dwsverefw/image/upload/c_scale,w_293/v1671968750/media%20council/cultural%20clubs/litsoc_awwkkd.png",
-  btl: "/public/images/councils/btl.png",
-  rang: "/public/images/councils/rdm.jpg",
-  shuffle: "/public/images/councils/shuffle.png",
-  gesture: "/public/images/councils/gesture.jpg",
+  btl: "/images/councils/btl.png",
+  rang: "/images/councils/rdm.jpg",
+  shuffle: "/images/councils/shuffle.png",
+  gesture: "/images/councils/gesture.jpg",
+  otaku: "",
+  fashion: "",
 };
 
 const coords = {
   infocus: [
     {
-      name: "Uttej",
-      email: "ms21btech11016@iith.ac.in",
-      position: "Coordinator",
+      name: "Ishwarya A",
+      email: "bm23btech11009@iith.ac.in",
+      position: "Head",
     },
     {
-      name: "Shane Ali",
-      email: "me21btech11046@iith.ac.in",
-      position: "Coordinator",
-    },
-    {
-      name: "Sahil Kushwaha ",
-      email: "ch22btech11030@iith.ac.in",
+      name: "Abhiram A",
+      email: "ch24btech11002@iith.ac.in",
       position: "Coordinator",
     },
   ],
   btl: [
     {
-      name: "Snehil Singh",
-      email: "ee22btech11050@iith.ac.in",
+      name: "B. Venu Naik",
+      email: "me22btech11012@iith.ac.in",
+      position: "Mentor",
+    },
+    {
+      name: "Gaurav Lamba",
+      email: "ic23btech11007@iith.ac.in",
       position: "Coordinator",
     },
     {
-      name: "Parlapalli Teja",
-      email: "Ic22btech11010@iith.ac.in",
-      position: "Coordinator",
-    },
-    {
-      name: "Kotichintala Aravind Siddhartha",
-      email: "ce21btech11021@iith.ac.in",
+      name: "Karthi Gnana Ezhil",
+      email: "ep23btech11016@iith.ac.in",
       position: "Coordinator",
     },
   ],
   shuffle: [
     {
-      name: "Shreyas Wankhede",
-      email: "ai21btech11028@iith.ac.in",
+      name: "Harini Kovoor",
+      email: "ms22btech11014@iith.ac.in",
+      position: "Head",
+    },
+    {
+      name: "Ujjwal Kalra",
+      email: "es23btech11038@iith.ac.in",
       position: "Coordinator",
     },
     {
-      name: "Diva Jaiwar",
-      email: "me21btech11014@iith.ac.in",
+      name: "B. Abhivardhan Nayak",
+      email: "bm23btech11005@iith.ac.in",
       position: "Coordinator",
     },
     {
-      name: "Niha Maloth",
-      email: "es22btech11024@iith.ac.in",
+      name: "Tejaswi",
+      email: "co23btech11008@iith.ac.in",
+      position: "Coordinator",
+    },
+    {
+      name: "Athiradh R N",
+      email: "ch24mtech14005@iith.ac.in",
       position: "Coordinator",
     },
   ],
   rang: [
     {
-      name: "Dibyanshu Kumar",
-      email: "ep21btech11011@iith.ac.in",
-      position: "Overall Coordinator",
+      name: "Piyush Shyam Kothawade",
+      email: "es22btech11026@iith.ac.in",
+      position: "Head",
     },
     {
-      name: "Pragya Yadav",
-      email: "ch21btech11023@iith.ac.in",
-      position: "Swaang Coordinator",
+      name: "Mayank Pippal",
+      email: "ce24btech11037@iith.ac.in",
+      position: "Coordinator",
     },
     {
-      name: "Ashwin Kumar",
-      email: "ce21btech11008@iith.ac.in",
-      position: "Irshaad Coordinator",
+      name: "Chirag Veerwani",
+      email: "ic24btech11005@iith.ac.in",
+      position: "Coordinator",
     },
     {
-      name: "Karthik Nambiar",
-      email: "ep21btech11015@iith.ac.in",
-      position: "Awwfense Coordinator",
+      name: "Sourabh Tambi",
+      email: "ma24mscst11022@iith.ac.in",
+      position: "Coordinator",
     },
   ],
   vibes: [
     {
-      name: "Tanishq Bhattacharjee",
-      email: "ms22btech11027@iith.ac.in",
+      name: "Venkat Raghav",
+      email: "ep23btech11035@iith.ac.in",
+      position: "Head",
+    },
+    {
+      name: "Amogh Kulkarni",
+      email: "bt24btech11002@iith.ac.in",
       position: "Coordinator",
     },
     {
-      name: "Divya Mehul Rajparia",
-      email: "es22btech11013@iith.ac.in",
-      position: "Coordinator",
-    },
-    {
-      name: "Rishit D",
-      email: "cs21btech11053@iith.ac.in",
+      name: "Kshiteesh S.",
+      email: "ep24btech11023@iith.ac.in",
       position: "Coordinator",
     },
   ],
   gesture: [
     {
-      name: "Arthi GJ",
-      email: "bd21bdes11005@iith.ac.in",
+      name: "B H Shashaank",
+      email: "ch23btech11009@iith.ac.in",
+      position: "Head",
+    },
+    {
+      name: "Abhinaba Das",
+      email: "ic24btech11001@iith.ac.in",
       position: "Coordinator",
     },
     {
-      name: "Anubhav Singh",
-      email: "ms21btech11008@iith.ac.in",
-      position: "Coordinator",
-    },
-    {
-      name: "Avani Gupta",
-      email: "me21btech11007@iith.ac.in",
-      position: "Coordinator",
-    },
-  ],
-  // beaumonde: [
-  //   {
-  //     name: 'Swadhin',
-  //     email: 'md22mdes14003@iith.ac.in',
-  //     position: 'Coordinator',
-  //   },
-  // ],
-  writingclub: [
-    {
-      name: "Swarnima Siddhartha",
-      email: "bd22bdes11017@iith.ac.in",
-      position: "Coordinator",
-    },
-    {
-      name: "Anek Anjireddy",
-      email: "ee22btech11007@iith.ac.in",
+      name: "Isha Mhatre",
+      email: "bd24bdes11005@iith.ac.in",
       position: "Coordinator",
     },
   ],
-  bmc: [
+  otaku: [
     {
-      name: "Ananya Thakur",
-      email: "bd22bdes11002@iith.ac.in",
-      position: "Coordinator",
+      name: "Karthik Kumar",
+      email: "co23btech11014@iith.ac.in",
+      position: "Head",
     },
     {
-      name: "Hitesh Donepudi",
-      email: "bm20btech11003@iith.ac.in",
-      position: "Coordinator",
-    },
-  ],
-  quizclub: [
-    {
-      name: "Umair Parwez",
-      email: "ee22btech11054@iith.ac.in",
-      position: "Coordinator",
-    },
-    {
-      name: "Harshit Thakur",
-      email: "bm21btech11010@iith.ac.in",
+      name: "Sashim Suryawanshi",
+      email: "ep23btech11026@iith.ac.in",
       position: "Coordinator",
     },
   ],
-  debateclub: [
+  fashion: [
     {
-      name: "Anirudh Saikrishnan",
-      email: "cs22btech11004@iith.ac.in",
-      position: "Coordinator",
+      name: "Nidhi",
+      email: "bd24bdes11006@iith.ac.in",
+      position: "Head",
     },
     {
-      name: "Arsh Arora",
-      email: "bm22btech11004@iith.ac.in",
+      name: "Nitya V",
+      email: "bd24bdes11025@iith.ac.in",
       position: "Coordinator",
     },
   ],
@@ -253,44 +231,51 @@ function CulturalMobile() {
         </SwiperSlide>
         <SwiperSlide className="">
           <Card
-            imgUrl={clubLogos["litsoc"]}
-            title={"Litsoc"}
-            desc={clubs[1].desc}
-          />
-        </SwiperSlide>
-        <SwiperSlide className="">
-          <Card
             imgUrl={clubLogos["btl"]}
             title={"Behind The Lens"}
-            desc={clubs[2].desc}
+            desc={clubs[1].desc}
           />
         </SwiperSlide>
         <SwiperSlide className="">
           <Card
             imgUrl={clubLogos["vibes"]}
             title={"Vibes"}
-            desc={clubs[3].desc}
+            desc={clubs[2].desc}
           />
         </SwiperSlide>
         <SwiperSlide className="">
           <Card
             imgUrl={clubLogos["shuffle"]}
             title={"Shuffle"}
-            desc={clubs[4].desc}
+            desc={clubs[3].desc}
           />
         </SwiperSlide>
         <SwiperSlide className="">
           <Card
             imgUrl={clubLogos["gesture"]}
             title={"Gesture"}
+            desc={clubs[4].desc}
+          />
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <Card
+            imgUrl={clubLogos["rang"]}
+            title={"Rang de Manch"}
             desc={clubs[5].desc}
           />
         </SwiperSlide>
         <SwiperSlide className="">
           <Card
-            imgUrl={clubLogos["rdm"]}
-            title={"Rang de Manch"}
+            imgUrl={clubLogos["otaku"]}
+            title={"Otaku"}
             desc={clubs[6].desc}
+          />
+        </SwiperSlide>
+        <SwiperSlide className="">
+          <Card
+            imgUrl={clubLogos["fashion"]}
+            title={"Fashion Club"}
+            desc={clubs[7].desc}
           />
         </SwiperSlide>
       </Swiper>
@@ -334,9 +319,8 @@ function Cultural() {
           className={`lg:col-span-1 hidden text-2xl lg:flex lg:flex-col gap-3 [&>li]:cursor-pointer bg-[#2F2F2F] p-8 flex-col justify-center items-start rounded-xl`}
         >
           <li
-            className={`px-4 py-2 rounded-md ${
-              club === "infocus" ? "bg-[#B74224]" : "text-opacity-40"
-            }`}
+            className={`px-4 py-2 rounded-md ${club === "infocus" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
             onClick={() => {
               setClub("infocus");
             }}
@@ -344,19 +328,8 @@ function Cultural() {
             Infocus
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${
-              club === "litsoc" ? "bg-[#B74224]" : "text-opacity-40"
-            }`}
-            onClick={() => {
-              setClub("litsoc");
-            }}
-          >
-            Litsoc
-          </li>
-          <li
-            className={`px-4 py-2 rounded-md ${
-              club === "vibes" ? "bg-[#B74224]" : "text-opacity-40"
-            }`}
+            className={`px-4 py-2 rounded-md ${club === "vibes" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
             onClick={() => {
               setClub("vibes");
             }}
@@ -364,9 +337,8 @@ function Cultural() {
             Vibes
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${
-              club === "rang" ? "bg-[#B74224]" : "text-opacity-40"
-            }`}
+            className={`px-4 py-2 rounded-md ${club === "rang" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
             onClick={() => {
               setClub("rang");
             }}
@@ -374,9 +346,8 @@ function Cultural() {
             Rang De Manch
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${
-              club === "btl" ? "bg-[#B74224]" : "text-opacity-40"
-            }`}
+            className={`px-4 py-2 rounded-md ${club === "btl" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
             onClick={() => {
               setClub("btl");
             }}
@@ -384,9 +355,8 @@ function Cultural() {
             Behind The Lens
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${
-              club === "shuffle" ? "bg-[#B74224]" : "text-opacity-40"
-            }`}
+            className={`px-4 py-2 rounded-md ${club === "shuffle" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
             onClick={() => {
               setClub("shuffle");
             }}
@@ -394,27 +364,43 @@ function Cultural() {
             Shuffle
           </li>
           <li
-            className={`px-4 py-2 rounded-md ${
-              club === "gesture" ? "bg-[#B74224]" : "text-opacity-40"
-            }`}
+            className={`px-4 py-2 rounded-md ${club === "gesture" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
             onClick={() => {
               setClub("gesture");
             }}
           >
             Gesture
           </li>
+          <li
+            className={`px-4 py-2 rounded-md ${club === "otaku" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
+            onClick={() => {
+              setClub("otaku");
+            }}
+          >
+            Otaku
+          </li>
+          <li
+            className={`px-4 py-2 rounded-md ${club === "fashion" ? "bg-[#B74224]" : "text-opacity-40"
+              }`}
+            onClick={() => {
+              setClub("fashion");
+            }}
+          >
+            Fashion Club
+          </li>
         </ul>
         <div
-          className={`lg:col-span-4 col-span-6 grid grid-cols-6 gap-6 lg:gap-[2rem] items-center relative z-0 ${
-            club === "litsoc" ? "hidden" : "block"
-          }`}
+          className={`lg:col-span-4 col-span-6 grid grid-cols-6 gap-6 lg:gap-[2rem] items-center relative z-0`}
         >
           <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full m-8">
             <p className="mt-8 justify-self-start">{desc}</p>
             <div className="grid grid-cols-2 gap-2">
-              {coords[club]?.map((coord) => {
+              {coords[club]?.map((coord, index) => {
                 return (
                   <TCard
+                    key={index}
                     name={coord.name}
                     mobile={""}
                     position={coord.position}
@@ -429,75 +415,6 @@ function Cultural() {
             <img
               className="w-full object-contain"
               src={clubLogos[club]}
-              alt=""
-            />
-          </div>
-        </div>
-        <div
-          className={`lg:col-span-4 col-span-6 grid grid-cols-6 gap-6 lg:gap-[2rem] items-center relative ${
-            club === "litsoc" ? "block" : "hidden"
-          }`}
-        >
-          <div className="lg:col-span-4 lg:text-[18px] col-span-full lg:row-span-full m-8">
-            <p className="mt-8 justify-self-start">{clubs[1].desc}</p>
-            <div className="grid grid-cols-2 gap-2">
-              <h2 className="text-2xl mt-8 font-bold">Quiz Club</h2> <br />
-              {coords.quizclub?.map((coord) => {
-                return (
-                  <TCard
-                    name={coord.name}
-                    mobile={""}
-                    position={"Coordinator"}
-                    email={coord.email}
-                    activePosition="Coordinator"
-                  />
-                );
-              })}
-              <h2 className="text-2xl mt-8 font-bold">Books and Movies Club</h2>
-              <br />
-              {coords.bmc?.map((coord) => {
-                return (
-                  <TCard
-                    name={coord.name}
-                    mobile={""}
-                    position={"Coordinator"}
-                    email={coord.email}
-                    activePosition="Coordinator"
-                  />
-                );
-              })}
-              <h2 className="text-2xl mt-8 font-bold">Debate Club</h2>
-              <br />
-              {coords.debateclub?.map((coord) => {
-                return (
-                  <TCard
-                    name={coord.name}
-                    mobile={""}
-                    position={"Coordinator"}
-                    email={coord.email}
-                    activePosition="Coordinator"
-                  />
-                );
-              })}
-              <h2 className="text-2xl mt-8 font-bold">Writing Club</h2>
-              <br />
-              {coords.writingclub?.map((coord) => {
-                return (
-                  <TCard
-                    name={coord.name}
-                    mobile={""}
-                    position={"Coordinator"}
-                    email={coord.email}
-                    activePosition="Coordinator"
-                  />
-                );
-              })}
-            </div>
-          </div>
-          <div className="lg:col-span-2 pointer-events-none h-full col-span-full lg:row-span-full relative flex justify-center items-center">
-            <img
-              className="w-full object-contain"
-              src={clubLogos.litsoc}
               alt=""
             />
           </div>

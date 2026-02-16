@@ -9,47 +9,24 @@ export default interface Props{
     initial ?: boolean
 }
 const {name,position, email, linkedin,mobile, imgUrl, initial=false} = Astro.props;
-// import linkedinIcon from '../images/linkedinIcon.png';
-import emailIcon from '../images/email-icon.png';
 ---
-
-<div class="card h-[31.625rem] w-[18.75rem] bg-white flex flex-col rounded-[20px] items-center py-10 px-6 lg:mt-7 relative">
+<div class="group relative flex w-[18rem] flex-col items-center gap-4 overflow-hidden rounded-2xl bg-white p-6 text-center shadow-lg transition-all hover:scale-105 hover:shadow-xl">
+    <div class="relative h-40 w-40 overflow-hidden rounded-full border-4 border-[#eeeeee]">
+        <img class="h-full w-full object-cover" src={initial===true ? imgUrl : ''} alt={position} width={160} height={160}/>
+    </div>
     
-    <div class="flex">   
-        <div class="h-[12.125rem] w-[12.125rem] bg-[#eeeeee] text-[#eeeeee] rounded-full overflow-hidden">
-            <img class="lazy" src={initial===true ? imgUrl : ''} data-src={imgUrl} alt={position} width={194} height={220}/>
-        </div>
-    </div>
-    <div class="text-center text-2xl mt-5 flex flex-col">
-        <div class="relative font-semibold">{name}</div> 
-        <div class="font-medium top-1 relative text-[1.2rem] leading-5">{position}</div>
-        {mobile !=='' && <div class="font-semibold my-6 text-[1.2rem] leading-5 text-r">(+91) {mobile}</div>}
-    </div>
-    <div class="absolute bottom-8">
-        <!-- <span class="inline-block h-[4rem] w-[4rem] top-4 relative">
-            <a href={linkedin} class="cursor-pointer"><img src={linkedinIcon} alt="linkedin" class="object-fill"></a>
-        </span> -->
-        <span class="inline-block h-[3rem] w-[3.9rem] ml-5">
-           <a href={email} class="cursor-pointer"> <img src={emailIcon} alt="email" class="h-[4.5rem]"></a>
-        </span>
+    <div class="flex flex-col gap-1">
+        <h3 class="text-xl font-bold text-gray-900">{name}</h3>
+        <p class="text-sm font-medium text-gray-500">{position}</p>
+        {mobile && <p class="text-sm font-semibold text-p">(+91) {mobile}</p>}
     </div>
 
+    <a href={email} target="_blank" rel="noopener noreferrer" class="mt-2 flex items-center gap-2 rounded-full bg-p px-6 py-2 text-sm font-semibold text-gray-900 transition-colors hover:bg-gray-900 hover:text-white group-hover:bg-gray-900 group-hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+        </svg>
+        <span>Contact</span>
+    </a>
 </div>
 
-<style>
-
-    @keyframes appear{
-        from {
-            transform: translateX(-30px);
-            opacity: 0;
-        }
-        to{
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    .card{
-        animation: appear 0.5s ease-out;
-    }
-
-</style>

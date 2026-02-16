@@ -2,215 +2,103 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/freshers-guide/Card.astro";
 import generalCouncilIcon from "../images/icons/general_council.png";
+import messCouncilIcon from "../images/icons/mess_council.png";
+import elanIcon from "../images/icons/elan.png";
+import ecellIcon from "../images/icons/ecell.png";
+import busIcon from "../images/icons/bus.svg";
+import mapIcon from "../images/icons/map.svg";
+// Fallback/Generic icon if needed, or reuse generalCouncilIcon
 ---
 
 <Layout title={"Fresher's guide"}>
-  <div
-    class="text-white w-full h-40 bg-[url('/images/councils_hero.png')] bg-no-repeat bg-cover flex items-center z-30"
-  >
-    <h2 class="lg:text-5xl md:text-4xl text-3xl font-bold lg:ml-20">
-      Students Guide
-    </h2>
-  </div>
-  <div class="text-white lg:mx-40 mx-20 mt-[8rem]">
-    <h2 class="lg:text-2xl text-4xl font-bold text-center lg:text-left">
-      Important Links
-    </h2>
-    <div class="flex justify-center">
-      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:m-16 m-2 gap-8">
-        <a href="https://aims.iith.ac.in/aims/" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-             <!-- Replace src with your custom icon -->
-            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
-            <span class="text-lg text-center">AIMS Portal</span>
-          </div>
-        </a>
-        <a href="https://support.comp.iith.ac.in/kb/faq.php?id=21" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-             <!-- Replace src with your custom icon -->
-            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
-            <span class="text-lg text-center">IITH VPN Guide</span>
-          </div>
-        </a>
-        <a href="https://sva.iith.ac.in/" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-            <!-- Replace src with your custom icon -->
-            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
-            <span class="text-lg text-center">SVA Portal (Mess)</span>
-          </div>
-        </a>
-        <a href="https://iithbus.vercel.app/" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-             <!-- Replace src with your custom icon -->
-            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
-            <span class="text-lg text-center">Bus Schedule</span>
-          </div>
-        </a>
-        <a href="https://cabsharing.iith.dev/" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-             <!-- Replace src with your custom icon -->
-            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
-            <span class="text-lg text-center">Cab Sharing</span>
-          </div>
-        </a>
-         <a href="https://cins.iith.ac.in/" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-             <!-- Replace src with your custom icon -->
-            <img src={generalCouncilIcon} class="w-12 h-12" alt="lol" />
-            <span class="text-lg text-center">Campus Navigation</span>
-          </div>
-        </a>
+  <div class="p-8 md:p-12">
+    <div class="">
+      <div class="bg-r h-[6px] w-full self-center mb-6">
+        <div class="bg-p h-[6px] w-16 ml-16"></div>
       </div>
     </div>
-    <h2 class="lg:text-2xl text-4xl font-bold text-center lg:text-left">
-      Constitutions & Documents
-    </h2>
-    <div class="flex justify-center">
-      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:m-16 m-2 gap-8">
-        <a href="https://gymkhana.iith.ac.in/documents/gymkhana%20constitution.pdf" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-            <span class="text-lg">Constitution</span>
-          </div>
-        </a>
-        <a href="https://gymkhana.iith.ac.in/documents/Elan%20&%20%CE%B7Vision%202023%20Documentation.pdf" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-            <span class="text-lg">Elan and Nvision </span>
-          </div>
-        </a>
-        <a href="https://gymkhana.iith.ac.in/documents/E-Cell%20IITH%20Prospectus.pdf" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-            <span class="text-lg">E-Cell Prospectus</span>
-          </div>
-        </a>
-        <a href="https://gymkhana.iith.ac.in/documents/Academic%20Handbook%202022%20(50th%20senate).pdf" target="_blank">
-          <div class="p-4 bg-[#040404] hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-48 h-40 justify-center items-center rounded-xl">
-            <span class="text-lg">Students handbook</span>
-          </div>
-        </a>
-      </div>
-      
-    </div>
-    <!-- <h2 class="lg:text-2xl text-4xl font-bold text-center lg:text-left">
-      How to Reach IITH
-    </h2> -->
+    <h1 class="font-bold text-center text-5xl md:text-7xl md:text-left lg:text-8xl text-white">
+      Student's Guide
+    </h1>
   </div>
-  <!-- <div class="md:px-[4rem] lg:px-[8rem]">
-    <div class="pb-8 px-8">
-      <h2
-        class="font-bold text-center text-4xl py-4 sm:text-5xl lg:text-6xl lg:pb-3 md:text-left text-p"
-      >
-        Important Links
-      </h2>
-      <ul class="font-semibold px-6 sm:text-3xl lg:text-4xl md:mt-5">
-        <li class="py-1 md:py-2">
-          <a
-            href="https://iith.ac.in/about/aboutiith/#reach"
-            class="hover:text-r"
-            target="_blank"
-            rel="noopener noreferrer">How to reach IIT Hyderabad</a
-          >
-        </li>
-        <li class="py-1 md:py-2">
-          <a
-            href="https://support.comp.iith.ac.in/kb/faq.php?id=21"
-            class="hover:text-r"
-            target="_blank"
-            rel="noopener noreferrer">IITH VPN Guide</a
-          >
-        </li>
-        <li class="py-1 md:py-2">
-          <a
-            href="https://htos.iith.ac.in/"
-            class="hover:text-r"
-            target="_blank"
-            rel="noopener noreferrer">HTOS</a
-          >
-        </li>
-        <li class="py-1 md:py-2">
-          <a
-            href="https://hostel.iith.ac.in/"
-            class="hover:text-r"
-            target="_blank"
-            rel="noopener noreferrer">HCU</a
-          >
-        </li>
-        <li class="py-1 md:py-2">
-          <a
-            href="https://sva.iith.ac.in/"
-            class="hover:text-r"
-            target="_blank"
-            rel="noopener noreferrer">SVA Portal(For Mess Registration)</a
-          >
-        </li>
-        <li class="py-1 md:py-2">
-          <a
-            href="https://cins.iith.ac.in/"
-            class="hover:text-r"
-            target="_blank"
-            rel="noopener noreferrer">IITH Map</a
-          >
-        </li>
-      </ul>
-    </div>
-    <div class="pb-8 px-8">
-      <h2
-        class="font-bold text-center text-4xl py-4 sm:text-5xl lg:text-6xl lg:pb-3 md:text-left text-p"
-      >
-        Constitutions & Documents
-      </h2>
-      <div
-        class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:mt-8"
-      >
+
+  <div class="p-8 lg:px-[6rem] pt-0 text-white">
+    <h2 class="text-3xl font-bold mb-8 text-center md:text-left">Important Links</h2>
+    <div class="flex justify-center mb-16">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
         <Card
-          title={'Gymkhana Constitution'}
-          link={'/documents/gymkhana constitution.pdf'}
-          img={'https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/iith_syornf.png'}
-          alt={'Gymkhana IITH Logo'}
+          title="AIMS Portal"
+          link="https://aims.iith.ac.in/aims/"
+          img={generalCouncilIcon}
+          alt="AIMS"
         />
         <Card
-          title={'Elan & ηVision Fest Docs (For Students)'}
-          link={'/documents/Elan & ηVision 2023 Documentation.pdf'}
-          img={'https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/elan_lkitmb.png'}
-          alt={'IITH logo'}
+          title="IITH VPN Guide"
+          link="https://support.comp.iith.ac.in/kb/faq.php?id=21"
+          img={generalCouncilIcon}
+          alt="VPN"
         />
         <Card
-          title={'E-Cell Prospectus'}
-          link={'/documents/E-Cell IITH Prospectus.pdf'}
-          img={'https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/ecell_jcjlth.png'}
-          alt="E-Cell IITH logo"
+          title="SVA Portal (Mess)"
+          link="https://sva.iith.ac.in/"
+          img={messCouncilIcon}
+          alt="SVA"
         />
         <Card
-          title={"Student's Handbook"}
-          link={'/documents/Academic Handbook 2022 (50th senate).pdf'}
-          img={'https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/iith_syornf.png'}
-          alt="IITH logo"
+          title="Bus Schedule"
+          link="https://iith.ac.in/bus_schedule/"
+          img={busIcon}
+          alt="Bus"
         />
-        <Card
-          title={'Acad FAQ Docs 2021'}
-          link={'/documents/Acad-FAQ-PhD-17-05-2021.pdf'}
-          img="https://res.cloudinary.com/dwsverefw/image/upload/v1672969573/media%20council/docs/iith_syornf.png"
-          alt="IITH logo"
+        <!-- <Card
+          title="Cab Sharing"
+          link="https://cabsharing.iith.dev/"
+          img={generalCouncilIcon}
+          alt="Cab"
         /> -->
-  <!-- <Card title={'UG Course Booklet'} link={'/documents/Acad-FAQ-PhD-17-05-2021.pdf'}/>
-            <Card title={'PG Course Booklet'} link={'/documents/Acad-FAQ-PhD-17-05-2021.pdf'}/> -->
-  <!-- </div>
-    </div> -->
-  <!-- <div class="pb-8 px-8">
-      <h2
-        class="font-bold text-center text-4xl py-4 sm:text-5xl lg:text-6xl lg:pb-3 md:text-left text-p"
-      >
-        Recreational Room
-      </h2>
-      <ul class="font-semibold px-6 sm:text-3xl lg:text-4xl md:mt-5">
-        <li class="py-1 md:py-2">
-          <a
-            href="https://gymkhana.iith.ac.in/recreation-slots"
-            class="hover:text-r"
-            target="_blank"
-            rel="noopener noreferrer">Book A slot</a
-          >
-        </li>
-      </ul>
-    </div> -->
-  <!-- </div> -->
+        <Card
+          title="Campus Map"
+          link="https://www.scribblemaps.com/maps/view/IITH-Map/SIH2019"
+          img={mapIcon}
+          alt="Map"
+        />
+        <Card
+          title="Mess Menu"
+          link="https://docs.google.com/spreadsheets/d/1EkUAw7OacEpP9bd8d7E1Uc_PJjr4mwUw/edit?gid=673805417#gid=673805417"
+          img={messCouncilIcon}
+          alt="Map"
+        />
+      </div>
+    </div>
+
+    <h2 class="text-3xl font-bold mb-8 text-center md:text-left">Constitutions & Documents</h2>
+    <div class="flex justify-center mb-16">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+        <Card
+          title="Constitution"
+          link="/documents/gymkhana constitution.pdf"
+          img={generalCouncilIcon}
+          alt="Constitution"
+        />
+        <Card
+          title="Elan & nVision"
+          link="/documents/Elan & ηVision 2023 Documentation.pdf"
+          img={elanIcon}
+          alt="Elan"
+        />
+        <Card
+          title="E-Cell Prospectus"
+          link="/documents/E-Cell IITH Prospectus.pdf"
+          img={ecellIcon}
+          alt="E-Cell"
+        />
+        <Card
+          title="Student's Handbook"
+          link="/documents/Academic Handbook 2022 (50th senate).pdf"
+          img={generalCouncilIcon}
+          alt="Handbook"
+        />
+      </div>
+    </div>
+  </div>
 </Layout>

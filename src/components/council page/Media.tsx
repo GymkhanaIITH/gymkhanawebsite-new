@@ -43,8 +43,8 @@ import TCard from "./teamCard";
 //     mobile: "",
 //     mail: "es24btech11013@iith.ac.in",
 //   }
-  
-  
+
+
 // ];
 // const Des = [];
 // const Content = [];
@@ -56,17 +56,17 @@ import TCard from "./teamCard";
 const teams = {
   PR: [
     [
-      "Neel", 
-      "7075310192", 
-      "ms23btech11014@iith.ac.in", 
+      "Neel",
+      "7075310192",
+      "ms23btech11014@iith.ac.in",
       "head"
     ],
-    [
-      "Disha",
-      "7981565134",
-      "ch23btech11015@iith.ac.in",
-      "head"
-    ],
+    // [
+    //   "Disha",
+    //   "7981565134",
+    //   "ch23btech11015@iith.ac.in",
+    //   "head"
+    // ],
     [
       "Krishna Chaitanya",
       "",
@@ -150,7 +150,7 @@ const teams = {
   ],
   Edit: [
     ["Aryan", "+91-9108548555", "bt23btech11004@iith.ac.in", "head"],
-    ["Harini","+91-7416447993","me23btech11054@iith.ac.in","head"],
+    ["Harini", "+91-7416447993", "me23btech11054@iith.ac.in", "head"],
     [
       "Vishnu Anand",
       "",
@@ -165,8 +165,8 @@ const teams = {
     ],
     [
       "Shanyu Bihani",
-      "", 
-      "bd24bdes11019@iith.ac.in", 
+      "",
+      "bd24bdes11019@iith.ac.in",
       "coordinator"
     ],
     [
@@ -332,7 +332,7 @@ const teams = {
       "coordinator"
     ]
   ],
-  Logistics:[
+  Logistics: [
     [
       "Hanokk",
       "8885211202",

@@ -21,6 +21,7 @@ interface LinkButton {
     menuIndex: number
   ) => void;
   deactivateSubMenu: () => void;
+  target?: string;
 }
 interface Children {
   name: string;
@@ -31,10 +32,11 @@ interface Link {
   children?: Array<Children | null>;
   menuIndex: number;
   href?: string;
+  target?: string;
 }
 
 function LinkButton(props: LinkButton) {
-  const { type, children, href = "#", activateSubMenu, menuIndex } = props;
+  const { type, children, href = "#", activateSubMenu, menuIndex, target } = props;
 
   if (type === "BUTTON") {
     return (
@@ -51,7 +53,7 @@ function LinkButton(props: LinkButton) {
       </>
     );
   }
-  return <a href={href}>{children}</a>;
+  return <a href={href} target={target} rel={target === "_blank" ? "noopener noreferrer" : undefined}>{children}</a>;
 }
 
 const updatedLinks: Link[] = [
@@ -63,10 +65,11 @@ const updatedLinks: Link[] = [
     menuIndex: 2,
     href: "/councils/general",
   },
-  { parent: "Forms", menuIndex: 3, href: "/forms" },
+  { parent: "Elan", menuIndex: 3, href: "https://elan.org.in/", target: "_blank" },
   {
     parent: "Research Scholars",
     menuIndex: 4,
+    target: "_blank",
     href: "https://researchers-iith.netlify.app/",
   },
   { parent: "Student's Guide", menuIndex: 5, href: "/freshers-guide" },
@@ -256,6 +259,7 @@ function MainNavbar({ blackOn, disableAnimation }) {
                   deactivateSubMenu={deactivateSubMenu}
                   type={el.children ? "BUTTON" : "ANCHOR"}
                   href={el?.href}
+                  target={el.target}
                 >
                   {el.parent}
                 </LinkButton>

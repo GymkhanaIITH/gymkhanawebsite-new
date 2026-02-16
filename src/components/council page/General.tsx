@@ -6,13 +6,35 @@ function General() {
     <div className="my-8">
       <div>
         <h2 className="lg:text-4xl text-3xl font-bold text-center lg:text-left">
+          President
+        </h2>
+        <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start">
+          <div className="bg-[#2F2F2F] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
+            <h4 className="italic text-p">President</h4>
+            <h3 className="lg:text-2xl text-xl font-semibold">
+              KURAPATI VENKATA DHEERAJ
+            </h3>
+            <address className="pt-3">
+              <h4 className="lg:text-xl text-lg font-semibold">6281874741</h4>
+              <a
+                href="mailto:president@gymkhana.iith.ac.in"
+                className=" lg:text-xl text-[1rem]"
+              >
+                president@gymkhana.iith.ac.in
+              </a>
+            </address>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 className="lg:text-4xl text-3xl font-bold text-center lg:text-left mt-8">
           General Secretaries
         </h2>
         <div className="flex flex-col lg:flex-row gap-4 justify-center items-center mt-5 lg:justify-start">
           <div className="bg-[#2F2F2F] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
             <h4 className="italic text-p">General Secretary 1</h4>
             <h3 className="lg:text-2xl text-xl font-semibold">
-              Pitla Krishna Vardhan 
+              Pitla Krishna Vardhan
             </h3>
             <address className="pt-3">
               <h4 className="lg:text-xl text-lg font-semibold">7989400829</h4>
@@ -49,7 +71,7 @@ function General() {
           <div className="bg-[#2F2F2F] text-p px-4 py-6 lg:py-6 lg:px-8 mt-1 rounded-xl lg:rounded-2xl">
             <h4 className="italic text-p">Undergraduate Representative 1</h4>
             <h3 className="lg:text-2xl text-xl font-semibold">
-              Bonda Mokshith Kumar 
+              Bonda Mokshith Kumar
             </h3>
             <address className="pt-3">
               <h4 className="lg:text-xl text-lg font-semibold">6303558869</h4>

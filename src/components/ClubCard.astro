@@ -1,0 +1,42 @@
+---
+export interface Props {
+  title: string;
+  imgUrl: any;
+  link: string;
+  headName?: string;
+  target?: string;
+}
+
+const { title, imgUrl, link, headName, target = "_self" } = Astro.props;
+---
+
+<a href={link} target={target} class="relative group">
+  <div
+    class="p-2 bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:scale-105 transition-all duration-300 flex flex-col gap-4 w-36 h-32 justify-center items-center rounded-xl relative"
+  >
+    <img src={typeof imgUrl === "string" ? imgUrl : imgUrl.src} class="w-16 h-16 object-contain" alt={title} />
+    <span class="text-sm text-center">{title}</span>
+
+    {/* Hover Popup */}
+    <div
+      class="absolute opacity-0 invisible group-hover:visible group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300 ease-out bg-black/80 backdrop-blur-md text-white text-sm p-3 rounded-xl -top-16 left-1/2 -translate-x-1/2 whitespace-nowrap pointer-events-none z-50 border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.5)] ring-1 ring-white/20"
+    >
+      <div class="font-bold mb-1 text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        {title}
+      </div>
+      {
+        headName && (
+          <div class="text-xs text-gray-300 font-light flex items-center gap-1 justify-center">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-500 inline-block" />
+            {headName}
+          </div>
+        )
+      }
+      {/* Arrow */}
+      <div
+        class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-black/80 backdrop-blur-md rotate-45 border-r border-b border-white/10"
+      >
+      </div>
+    </div>
+  </div>
+</a>

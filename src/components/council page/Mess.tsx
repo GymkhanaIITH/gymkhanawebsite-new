@@ -2,62 +2,52 @@ import React from "react";
 import TCard from "./teamCard";
 
 const teams = {
-  "Mess Coordinator": [["Chaitanya Reddy", "cs20resch11001@iith.ac.in"]],
-  "Daily Inspection Team": [
-    ["Srishti Banarjee", "bo21resch11006@iith.ac.in"],
-    ["Sai Sujith Reddy Sandhi", "ee21btech11048@iith.ac.in"],
-    ["Yapamanu Ujwa Sai Simha", "me20btech11056@iith.ac.in"],
-    ["Jas Chaudhary", "bo21mtech14004@iith.ac.in"],
-    ["Kasi Dhanvi", "me21btech11025@iith.ac.in"],
-    ["Arkajyoti Jha", "me20resch11001@iith.ac.in"],
-    ["Kshitiz Kumar", "ai22mtech02002@iith.ac.in"],
-    ["Nabeel Mohammed P T", "ch20btech11024@iith.ac.in"],
-    ["Gopika K T", "ce19btech11004@iith.ac.in"],
-    ["P Padmini", "ce19resch11009@iith.ac.in"],
-    ["Uppulapu Manikanta", "bt21btech11005@iith.ac.in"],
+  "Inspection Team": [
+    ["G Bhanu Ganesh", "9030435668", "ee21resch11010@iith.ac.in", "EE21RESCH11010"],
+    ["GAURAB PATNAIK", "8455066769", "gs24mtech11001@iith.ac.in", "GS24MTECH11001"],
+    ["K TULASI AKSHY KUMAR", "9989579441", "me24mtech11019@iith.ac.in", "ME24MTECH11019"],
+    ["Krutideepa Rout", "9348454154", "bt24resch11008@iith.ac.in", "Bt24resch11008"],
+    ["Meet Gor", "9427904467", "id21resch11018@iith.ac.in", "ID21RESCH11018"],
+    ["Nimisha Tripathi", "8081603625", "bt23resch12002@iith.ac.in", "Bt23resch12002"],
+    ["Prasanth G", "8012315072", "ch24mtech14006@iith.ac.in", "CH24MTECH14006"],
+    ["SAISHUBHAM LAISETTI", "6300654096", "cs24mtech12015@iith.ac.in", "CS24MTECH12015"],
+    ["Sanidhya Jain", "6269176354", "op24mtech11006@iith.ac.in", "Op24mtech11006"],
+    ["Siddharth Jain", "8460455625", "cs23resch11005@iith.ac.in", "CS23RESCH11005"],
+    ["Ujjwal Sharma", "8077014357", "la23resch11009@iith.ac.in", "LA23RESCH11009"],
+    ["SUMITRO DEY", "7003229594", "id23resch11014@iith.ac.in", "id23resch11014"],
+    ["Sai Charan G", "8309900474", "ch24btech11011@iith.ac.in", "Ch24BTECH11011"],
+    ["Jatavath Ajay", "6304459285", "ai23btech11011@iith.ac.in", "ai23btech11011"],
+    ["Ankur Kalyan", "8708755352", "ms23btech11005@iith.ac.in", "ms23btech11005"],
+    ["Sammeta Saipoorna", "6301503053", "ee23btech11055@iith.ac.in", "ee23btech11055"],
+    ["Parvez", "8341765885", "cs22btech11052@iith.ac.in", "cs22btech11052"],
+    ["Soumik Kumar Basu", "9163784761", "cs21resch11004@iith.ac.in", "cs21resch11004"],
+    ["Apparao Garaga", "7396401111", "ch24btech11010@iith.ac.in", "ch24btech11010"],
+    ["Rahul Porika", "6300421678", "bt24btech11016@iith.ac.in", "BT24BTECH11016"],
+    ["Jyothish J", "7012228022", "me24btech11029@iith.ac.in", "me24btech11029"],
+    ["Pabbuleti Venkata Charan Teja", "9100637422", "ai24btech11022@iith.ac.in", "AI24BTECH11022"],
+    ["TANUSH SRI SAI PETLA", "8797740704", "ai24btech11034@iith.ac.in", "AI24BTECH11034"],
+    ["Tanish Reddy", "9440725957", "ch22btech11031@iith.ac.in", "Ch22btech11031"],
+    ["Shravya Kantayapalam", "7670918911", "ee23btech11030@iith.ac.in", "ee23btech11030"],
+    ["Shashank", "9347974643", "ma24btech11010@iith.ac.in", "ma24btech11010"],
+    ["Chandrahas", "7093309555", "cs22btech11027@iith.ac.in", "CS22BTECH11027"],
+    ["Samith prakash", "6304858037", "ch24btech11040@iith.ac.in", "Ch24btech11040"],
+    ["Shreyas Kulkarni", "9356662796", "me24btech11037@iith.ac.in", "ME24BTECH11037"],
+    ["Meda Ashok Kumar", "9392963679", "es23btech11027@iith.ac.in", "es23btech11027"],
   ],
-  "Milk Inspection Team": [
-    ["Tejaswi S", "es20tech11027@iith.ac.in"],
-    ["Chiranjeevi", "ms20btech11016@iith.ac.in"],
-    ["Vaibhav Racinhalwar", "mi21mtech14004@iith.ac.in"],
-    ["Harshal Verma", "ai21mtech02003@iith.ac.in"],
-    ["Akshay Pudari", "ce19btech11038@iith.ac.in"],
-    ["Nethish Gorantla", "ce20btech11012@iith.ac.in"],
-    ["Thumu Johar Reddy", "ce19btech11011@iith.ac.in"],
-    ["Manikanta Vallepu", "ai20btech11014@iith.ac.in"],
+  "Menu Team": [
+    ["Kirti Garg", "9711718888", "bt23resch11005@iith.ac.in", "bt23resch11005"],
+    ["Siddharth Jain", "8460455625", "cs23resch11005@iith.ac.in", "CS23RESCH11005"],
+    ["Shashank", "9347974643", "ma24btech11010@iith.ac.in", "ma24btech11010"],
+    ["Shreyas Kulkarni", "9356662796", "me24btech11037@iith.ac.in", "ME24BTECH11037"],
+    ["Mohana Priya S", "7358444133", "ch23resch11005@iith.ac.in", "Ch23resch11005"],
+    ["Subham Bhattacharjee", "6202417870", "cs23resch01002@iith.ac.in", "CS23RESCH01002"],
+    ["Vuddagiri Rajesh Guptha", "9059876323", "ic24btech11024@iith.ac.in", "ic24btech11024"],
+    ["Sahasra Garuvandula", "6301313736", "me24btech11050@iith.ac.in", "me24btech11050"],
+    ["Yashwanth Narra", "8341137485", "co24btech11016@iith.ac.in", "CO24BTECH11016"],
+    ["Satya Chopra", "9819026005", "ch24btech11033@iith.ac.in", "ch24btech11033"],
   ],
-  "Mess Hygiene Team": [
-    ["Sankalp Deshmukh", "ce20btech11034@iith.ac.in"],
-    ["Akash", "cy21mscst11041@iith.ac.in"],
-    ["Surya Teja Cheruku", "ce20btech11007@iith.ac.in"],
-    ["Surya Sudeep", "me20btech11013@iith.ac.in"],
-    ["Diptasri Ghosh", "ee21mtech14004@iith.ac.in"],
-    ["Anuraag Manda", "ee20btech11027@iith.ac.in"],
-    ["Harsha S R", "id21resch11022@iith.ac.in.in"],
-    ["Rishitha Surisetty", "ch21btech11030@iith.ac.in"],
-    ["Vijayakrishna", "ce20btech11035@iith.ac.in"],
-    ["Ashutosh", "ce21btech11018@iith.ac.in"],
-    ["Vamsi Preetam", "cs20btech11058@iith.ac.in"],
-  ],
-  "Menu Preparation Team": [
-    ["Harish Madireddi", "ee21btech11047@iith.ac.in"],
-    ["Mohit", "cy21mscst11040@iith.ac.in"],
-    ["Suraj Telugu", "cs20btech11050@iith.ac.in"],
-    ["K Satya Sandesh", "ma19btech11008@iith.ac.in"],
-    ["Karri Trinadha Rao", "ee22resch01003@iith.ac.in"],
-    ["Anuj Sharma", "ew21mtech14004@iith.ac.in"],
-  ],
-  "Mess Technical Team": [
-    ["Murugappan N", "ch21mtech14001@iith.ac.in"],
-    ["Uttej", "ms21btech11016@iith.ac.in"],
-    ["Siddharth Reddy", "me21btech11015@iith.ac.in"],
-    ["B Vishwajith Reddy", "ee21btech11012@iith.ac.in"],
-  ],
-  "Mess Grievance Cell": [
-    ["Adamya Dubey", "cy21mscst11011@iith.ac.in"],
-    ["Ajay Bachiphale", "ew21mtech11002@iith.ac.in"],
-    ["Uday Kiran Timmala", "ce20btech11042@iith.ac.in"],
-    ["Dhatri Nanda", "ai20btech11002@iith.ac.in"],
+  "Technical Team": [
+    ["J D Chandana", "9591546089", "ai23btech11008@iith.ac.in", "AI23BTECH11008"],
   ],
 };
 
@@ -96,9 +86,9 @@ function Mess() {
                   return (
                     <TCard
                       name={member[0]}
-                      mobile={member[1]}
-                      email={""}
-                      position={""}
+                      mobile={"+91 " + member[1]}
+                      email={member[2]}
+                      position={member[3]}
                     />
                   );
                 })}
